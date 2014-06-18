@@ -14,7 +14,7 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 3
 
 
 // Remove a barra de atualização do Admin
-// add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
+ add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
 
 //Adiciona as Minhas Opções
 require_once (get_stylesheet_directory() . '/options/admin_options.php');
@@ -77,15 +77,15 @@ return $output;
 	
 function meu_logo_login()
 {
-    echo '<style  type="text/css"> h1 a {  background-image:url('.get_bloginfo('stylesheet_directory').'/imagens/logo_header_peq.png)  !important;  height: 170px !important;
-    margin-top: -50px !important;  margin-left: 15px !important; } </style>';
+    echo '<style  type="text/css"> h1 a {  background-image:url('.get_bloginfo('stylesheet_directory').'/imagens/logo_header_peq.png)  !important;  height: 150px !important; width: 182px !important;
+    margin-top: -50px !important;  margin-left: 75px !important; background-size: 182px 150px !important; } </style>';
 }
 add_action('login_head',  'meu_logo_login');
 	
 // Para mudar o rodapé do wp-admin
 function alt_admin_footer ()
 {
-    echo '<span id="footer-thankyou">Desenvolvido por <a href="http://www.etedesign.com.br" target="_blank">Eté Design</a> e <a href="http://www.ethymos.com.br" target="_blank">Ethymos</a> com o maravilhoso <a href="http://br.wordpress.org" target="_blank">WordPress</a></span>';
+    echo '<span id="footer-thankyou">Desenvolvido pela <a href="http://www.brasa.art.br" target="_blank">Brasa</a> e pela <a href="http://www.ethymos.com.br" target="_blank">Ethymos</a> com o maravilhoso <a href="http://br.wordpress.org" target="_blank">WordPress</a></span>';
 }
 add_filter('admin_footer_text', 'alt_admin_footer');
 
