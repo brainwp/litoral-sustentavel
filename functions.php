@@ -1,4 +1,6 @@
 <?php
+/* OPTIONS ODIN */
+require_once get_stylesheet_directory() . '/inc/options.php';
 
 // Redefine o tamanho do Cabeçalho
 define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 639 ) );
@@ -107,6 +109,9 @@ function show_post($path) {
   echo $content;
 }
 
-
-
+function admin_scripts() {
+  wp_enqueue_style( 'odin-admin-css', get_stylesheet_directory_uri() . '/css/odin-admin.css' );
+  wp_enqueue_script( 'odin-admin-js',  get_stylesheet_directory_uri() . '/js/odin-admin.js', array( 'jquery' ), '1.0', true );
+}
+add_action( 'admin_enqueue_scripts', 'admin_scripts' );
 ?>
