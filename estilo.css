@@ -344,6 +344,31 @@ a:hover {
 	width:100%;
 	display:block;
 }
+#creditos-footer{
+	background:#5aa9dc;
+}
+#creditos-footer h2{
+	color:white;
+	font-weight: bold;
+	font-family:'Source Sans Pro',sans-serif;
+	text-transform: uppercase;
+}
+#creditos-footer p{
+	font-size:1.3em;
+	color:white;
+	font-weight: normal;
+	font-family:'Source Sans Pro',sans-serif;
+}
+#creditos-footer .padding{
+	padding:20px;
+}
+#creditos-footer .copyright{
+	padding-top:30px;
+}
+#creditos-footer .copyright p{
+	display:inline-block;
+	padding-top:20px;
+}
 #logos {
 
    background: url("imagens/logos_rodape.png") no-repeat scroll 0 0 transparent;

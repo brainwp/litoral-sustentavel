@@ -86,11 +86,16 @@ $odin_theme_options->set_fields(
                     'type' => 'text'
                     //'description' => __( 'Descrition Example', 'odin' )
                 ),
-                 array(
+                array(
                     'id' => 'footer_infos',
                     'label' => __('Contatos no rodapé','litoral-sustentavel'),
                     'type' => 'textarea',
                     'description' => __( 'Adicione a Rua, Número, Bairro, Cidade, CEP e e-mail de contato.', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_tel',
+                    'label' => __('Telefone','litoral-sustentavel'),
+                    'type' => 'text',
                 ),
                 array(
                     'id' => 'footer_realizacao',
