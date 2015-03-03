@@ -289,11 +289,21 @@ a:hover {
 }
 
 /* RODAPE */
-
-#footer {
-   margin-top: 170px;
+#footer{
+	background:url('imagens/bg-footer.jpg') no-repeat;
+	background-size:cover;
+	padding:20px;
 }
+#footer h2.sitemap{
+	color:white;
+	font-size:1.4em;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#footer .coluna-sitemap a{
 
+}
 #top-rodape {
 	height: 145px;
 	width: 998px;
@@ -324,12 +334,16 @@ a:hover {
 }
 
 #footer-widget-area {
-    margin: 20px 0 0 35px;
-	width: 730px;
 	padding: 0;
 	min-height: 230px;
 }
-
+#footer .apoio h2.sitemap{
+	font-weight: 600;
+}
+#footer .apoio a, #footer .apoio a img{
+	width:100%;
+	display:block;
+}
 #logos {
 
    background: url("imagens/logos_rodape.png") no-repeat scroll 0 0 transparent;
@@ -652,42 +666,41 @@ select.postform{
 
 	}
 
-
-#coluna-sitemap {
-	width: 130px;
+.coluna-sitemap.first{
+	margin-left:0;
+}
+.coluna-sitemap {
 	float: left;
 	line-height: 1.8em;
 	margin-left: 13px;
 	margin-left: 20px;
-    width: 130px;
 }
 
-#coluna-sitemap ul {
+.coluna-sitemap ul {
 	list-style: none;
 	margin: 0;
 	}
 
-#coluna-sitemap.ultima {
+.coluna-sitemap.ultima {
 	width: 100px;
 }
 
-#coluna-sitemap a{
+.coluna-sitemap a{
     color: #B3CB43 !important;
     font-family: 'Open Sans',sans-serif;
     font-size: 1.1em;
-	font-weight: bolder;
+	font-weight: 700;
 	text-transform: uppercase;
 	
 }
 
-#coluna-sitemap ul.sub-menu a{
-    font-family: 'Open Sans',sans-serif;
+.coluna-sitemap ul.sub-menu a{
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1em;
 	color: #FFF !important;
-	font-weight: normal;
+	font-weight: 300;
 	text-transform: none;
 	list-style: none;
-
 }
 
 ul.sub-menu {

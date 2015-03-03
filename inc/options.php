@@ -92,6 +92,42 @@ $odin_theme_options->set_fields(
                     'type' => 'textarea',
                     'description' => __( 'Adicione a Rua, Número, Bairro, Cidade, CEP e e-mail de contato.', 'litoral-sustentavel' )
                 ),
+                array(
+                    'id' => 'footer_realizacao',
+                    'label' => __('Realização - Imagem','litoral-sustentavel'),
+                    'type' => 'image',
+                    'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_realizacao_link',
+                    'label' => __('Realização - Link','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_convenio',
+                    'label' => __('Convênio - Imagem','litoral-sustentavel'),
+                    'type' => 'image',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_convenio_link',
+                    'label' => __('Convênio - Link','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_apoio',
+                    'label' => __('Apoio - Imagem','litoral-sustentavel'),
+                    'type' => 'image',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_apoio_link',
+                    'label' => __('Apoio - Link','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
             )
         ),
     )
