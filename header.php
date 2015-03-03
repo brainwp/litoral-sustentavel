@@ -8,6 +8,7 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */
+$options = get_option('social_cfg');
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -43,9 +44,6 @@
  <!-- Google Fonts END -->
  <!-- jQuery (required) -->
  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css" />
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory') ?>/js/custom.js"></script>
-
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <?php
@@ -86,54 +84,28 @@
 </head>
 
 <body <?php body_class(); ?>>
+<nav id="primary-menu" class="col-md-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 pull-left">
+				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'depth' => -1 ) ); ?>
+		    </div><!-- .col-md-6 pull-left -->
+		    <div class="col-md-3 pull-right icons">
+		    	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		    		<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="search-input" placeholder="<?php _e('Pressione enter','litoral-sustentavel');?>" />
+		    	</form>
+		    	<a id="search-toggle" class="genericon genericon-search" href="#" data-open="false"></a>
+				<?php $link = (!empty($options['facebook']))? $options['facebook'] : '#'; ?>
+		    	<a class="genericon genericon-facebook-alt" href="<?php echo $link; ?>"></a>
+		    	<?php $link = (!empty($options['twitter']))? $options['twitter'] : '#'; ?>
+		    	<a class="genericon genericon-twitter" href="<?php echo $link; ?>"></a>
+		    </div><!-- .col-md-5 pull-right -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</nav><!-- #primary-menu -->
 <div id="bg-wrapper">
 <div id="wrapper" class="hfeed">
-	<div id="header">
-		<div id="masthead">
-			<div id="branding" role="banner">
-				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-				<<?php echo $heading_tag; ?> id="site-title">
-				<a href="<?php echo home_url( '/' ); ?>" class="link_home" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
-					<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-				</a>
-				</<?php echo $heading_tag; ?>>
-		
-				<div id="img-cabecalho" >
-			
-			<?php
-					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-					if ( is_singular() && current_theme_supports( 'post-thumbnails' ) &&
-							has_post_thumbnail( $post->ID ) &&
-							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
-							$image[1] >= HEADER_IMAGE_WIDTH ) :
-						// Houston, we have a new header image!
-						echo get_the_post_thumbnail( $post->ID );
-					elseif ( get_header_image() ) : ?>
-						<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-					<?php endif; ?>
-			
-			</div>
-			</div><!-- #branding -->
-
-			<div id="access" role="navigation">
-				<div id="top-header">
-					<div id="header-search">
-				<?php get_search_form(); ?>
-					</div>
-				</div>
-				<div id="bottom-header">
-					<div id="midias-sociais">
-					<a href="<?php echo stripslashes (get_option('mo_url_twitter')); ?>" class="link_twitter" target="_blank"></a>
-					<a href="<?php echo stripslashes (get_option('mo_url_face')); ?>" class="link_facebook" target="_blank"></a>
-					<a href="<?php echo stripslashes (get_option('mo_url_youtube')); ?>" class="link_youtube" target="_blank"></a>
-					</div>
-			  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
-				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-				</div><!-- #bottom-header -->
-			</div><!-- #access -->
-		</div><!-- #masthead -->
-	</div><!-- #header -->
+	<header id="header">
+	</header><!-- #header -->
 
 	<div id="main">

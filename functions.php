@@ -114,4 +114,9 @@ function admin_scripts() {
   wp_enqueue_script( 'odin-admin-js',  get_stylesheet_directory_uri() . '/js/odin-admin.js', array( 'jquery' ), '1.0', true );
 }
 add_action( 'admin_enqueue_scripts', 'admin_scripts' );
+function scripts(){
+    wp_enqueue_script( 'custom-js',  get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_style( 'source-sans', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,200,200italic,300,300italic,900italic,900,700italic,700,600italic,600' );
+}
+add_action('init','scripts');
 ?>

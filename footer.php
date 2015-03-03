@@ -11,16 +11,11 @@
  */
 ?>
 	</div><!-- #main -->
+</div><!-- #wrapper -->
 	<div style="clear:both;"> </div>
 	<div id="footer" role="contentinfo">
-		<div id="top-rodape">
-		
-		<div id="logos">
-				<div id="polis"><a href="http://www.polis.org.br" target="_blank" alt="Instituto Polis" class="link_polis"></a></div>
-				<div id="petrobras"><a href="http://www.petrobras.com.br" target="_blank" alt="Projeto Apoiado pela Petrobras" class="link_petrobras"></a></div>
-			</div><!-- fecha logos -->
-		</div>
-		<div id="rodape">
+		<div id="footer-cont"></div><!-- #footer-content -->
+		<div id="rodape" class="container">
 		<div id="colophon">
 		
 		<div id="footer-widget-area" role="complementary">
@@ -57,7 +52,6 @@
 		</div><!-- #colophon -->
 		</div><!-- fecha rodape -->
 	</div><!-- fecha footer -->
-</div><!-- #wrapper -->
 
 <?php
 	/* Always have wp_footer() just before the closing </body>
