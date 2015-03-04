@@ -369,6 +369,40 @@ a:hover {
 	display:inline-block;
 	padding-top:20px;
 }
+#destaques-footer{
+	background:url('imagens/bg-destaques.jpg') no-repeat;
+	background-size:cover;
+}
+#destaques-footer .padding{
+	padding-top:100px;
+}
+#destaques-footer .content{
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size:1.0em;
+	font-weight: normal;
+}
+#destaques-footer .bt-readmore{
+	color:white;
+	float:right;
+	display:inline-block;
+	background:#5aa9dc;
+	padding:5px;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size:1.3em;
+	border-radius: 5px;
+}
+#destaques-footer article{
+	padding-bottom:30px;
+}
+#destaques-footer article h2{
+	color:white;
+	font-weight: 700;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size:2.1em;
+}
+
 #logos {
 
    background: url("imagens/logos_rodape.png") no-repeat scroll 0 0 transparent;

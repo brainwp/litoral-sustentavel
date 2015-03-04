@@ -133,6 +133,40 @@ $odin_theme_options->set_fields(
                     'type' => 'text',
                     //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
                 ),
+                array(
+                    'id' => 'footer_destaque_1_title',
+                    'label' => __('Destaque no footer 1 (Esquerda) - Titulo','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_destaque_1_text',
+                    'label' => __('Destaque no footer 1 (Esquerda) - Texto','litoral-sustentavel'),
+                    'type' => 'editor',
+                ),
+                array(
+                    'id' => 'footer_destaque_1_link',
+                    'label' => __('Destaque no footer 1 (Esquerda) - Link','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_destaque_2_title',
+                    'label' => __('Destaque no footer 2 (Direita) - Titulo','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
+                array(
+                    'id' => 'footer_destaque_2_text',
+                    'label' => __('Destaque no footer 2 (Direita) - Texto','litoral-sustentavel'),
+                    'type' => 'editor',
+                ),
+                array(
+                    'id' => 'footer_destaque_2_link',
+                    'label' => __('Destaque no footer 2 (Direita) - Link','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
+                ),
             )
         ),
     )
