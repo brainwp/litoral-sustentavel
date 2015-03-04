@@ -11,8 +11,6 @@
  */
 $options = get_option('footer_cfg');
 ?>
-	</div><!-- #main -->
-</div><!-- #wrapper -->
    <?php /* dois destaques */ ?>
    <?php get_template_part('parts/destaques-footer'); ?>
 	<div style="clear:both;"> </div>

@@ -103,9 +103,3 @@ $options = get_option('social_cfg');
 		</div><!-- .row -->
 	</div><!-- .container -->
 </nav><!-- #primary-menu -->
-<div id="bg-wrapper">
-<div id="wrapper" class="hfeed">
-	<header id="header">
-	</header><!-- #header -->
-
-	<div id="main">
