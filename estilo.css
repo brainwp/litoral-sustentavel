@@ -342,7 +342,7 @@ a:hover {
 	font-weight: 600;
 }
 #footer .apoio a, #footer .apoio a img{
-	width:100%;
+/*	width:100%;*/
 	display:block;
 }
 #creditos-footer{
@@ -1898,9 +1898,10 @@ img#logo-home{
 	
 }
 #slider-section{
-	background-size:cover;
 	background-repeat:no-repeat;
 	padding-top:40px;
+	background-image:url('imagens/depois-destaque.png');
+	background-position:bottom right;
 }
 #slider-section .title-section{
 }

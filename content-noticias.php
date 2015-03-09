@@ -2,7 +2,7 @@
 /* content noticias */
 ?>
 <article class="col-md-4 content-noticias">
-	<?php the_post_thumbnail('medium'); ?>
+	<?php the_post_thumbnail('thumb-noticias'); ?>
 	<?php $category = get_the_category(); ?>
 	<a class="permalink" href="<?php the_permalink();?>"><h2><?php the_title(); ?></h2></a>
 	<a href="<?php echo get_category_link($category[0]->term_id);?>" class="category">

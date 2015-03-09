@@ -121,5 +121,6 @@ function scripts(){
 add_action('init','scripts');
 ///adiciona resumo ás páginas
 add_post_type_support('page','excerpt');
+add_filter('show_admin_bar', '__return_false');
 
 ?>

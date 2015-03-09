@@ -55,7 +55,6 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<img id="depois-destaque" src="<?php echo get_stylesheet_directory_uri();?>/imagens/depois-destaque.png">
 	
 </section>
 <?php get_template_part('parts/query-noticias'); ?>
