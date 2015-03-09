@@ -222,11 +222,12 @@
 /* CSS Document */
 
 body {
-	background: url("imagens/bg_cinzatext.jpg") repeat scroll top center #ebe9e8;
+	background: url("imagens/fundo-geral.png") no-repeat scroll #ebe9e8;
+	background-size:cover;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-size:12px;	
 	margin: 0;
-
+	overflow-x:hidden;
 	}
 	
 li a {
@@ -1376,10 +1377,8 @@ h1.query-destaques {
 }
 
 #img-cabecalho {
-float: right;
-width: 639px;
-height: 329px;
-margin: 0;
+
+
 }
 
 #bg-wrapper {
@@ -1767,6 +1766,7 @@ font-family: 'Passion One', cursive;
 	transition:400ms ease all;
 }
 #primary-menu .icons a{
+	float:right;
 	transition:400ms ease all;
 	font-size:27px;
 	color:white;
@@ -1794,8 +1794,10 @@ font-family: 'Passion One', cursive;
 	background-size:cover;
 	min-height:800px;
 	clear:both;
+	position:relative;
+	z-index:100;
 }
-#query-noticias .title-section{
+#query-noticias .title-section, #slider-section .title-section{
 	font-family: 'Source Sans Pro',sans-serif;
 	font-size:2.4em;
 	font-weight: 700;
@@ -1851,4 +1853,111 @@ font-family: 'Passion One', cursive;
 	background:#5AA9DC;
 	padding:5px;
 	border-radius:3px;
+}
+ #mascara{
+	position:relative;
+	height:268px;
+	margin-right:-224px;
+	display:inline-block;
+}
+#img-cabecalho{
+	position:relative;
+	height:266px;
+	overflow:hidden;
+}
+#img-cabecalho img{
+	position:absolute;
+}
+img#logo-home{
+	position:relative;
+	height:266px;
+	margin-right:-224px;
+	padding:77px 224px 77px 20px;
+	z-index:9;
+}
+#mascara{
+	z-index:99;
+}
+#oque-resumo a{
+	margin-top: 30px;
+  
+}
+#primary-menu .menu{
+	margin-left:0;
+}
+#slider-resumo{
+  	margin-top: -2px;
+  	position: relative;
+}
+
+#slider img{
+
+}
+#slider-resumo .row{
+	padding: 30px 0 ;
+	
+}
+#slider-section{
+	background-size:cover;
+	background-repeat:no-repeat;
+	padding-top:40px;
+}
+#slider-section .title-section{
+}
+#fundo-destaque{
+	position:absolute;
+	z-index:99;
+	top: -150px;
+  	left: -347px;
+  	
+}
+#fundo-destaque  g{
+	-webkit-transform: scale(1.5);
+  
+}
+.slick-slider{
+	position:relative;
+	z-index:100;
+}
+.slick-list {
+	height:22vw;	
+}
+#container-slider .title-section{
+	position:relative;
+	z-index:100;
+	margin-left:60px;
+}
+#depois-destaque {
+	position: absolute;
+  	bottom: -100px;
+	  right: -124px;
+}
+.row{
+	
+}
+#widgets li{
+	list-style:none;
+}
+#widgets .textwidget img{
+	max-width:100%;
+}
+#slider .slick-next, #slider .slick-prev {
+	font-size:0px;
+	background-image:url('imagens/seta.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:94px;
+	width:23px;
+	margin-top:-47px;
+}
+#slider .slick-next:before, #slider .slick-prev:before {
+	content:none;
+}
+#slider .slick-prev{
+	background-position:-25px;
+}
+#forma-noticias{
+	position: absolute;
+  
+	
 }

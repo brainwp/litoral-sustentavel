@@ -5,6 +5,8 @@
 	<div class="container">
 		<div class="row">
 			<h2 class="title-section"><?php _e('Notícias','litoral-sustentavel'); ?></h2>
+			<img id="forma-noticias" src="<?php echo get_stylesheet_directory_uri();?>/imagens/forma-noticias.png">
+			
 			<?php
 			// WP_Query arguments
 			$args = array (

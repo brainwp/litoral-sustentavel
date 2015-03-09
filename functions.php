@@ -3,8 +3,8 @@
 require_once get_stylesheet_directory() . '/inc/options.php';
 
 // Redefine o tamanho do Cabeçalho
-define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 639 ) );
-define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 329 ) );
+define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 946 ) );
+define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 266 ) );
 
 // post thumbnail support
 	if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
@@ -119,4 +119,7 @@ function scripts(){
     wp_enqueue_style( 'source-sans', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,200,200italic,300,300italic,900italic,900,700italic,700,600italic,600' );
 }
 add_action('init','scripts');
+///adiciona resumo ás páginas
+add_post_type_support('page','excerpt');
+
 ?>
