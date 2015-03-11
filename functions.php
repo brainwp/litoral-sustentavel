@@ -12,6 +12,8 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 2
 	add_image_size( 'thumb-municipios', 280, 130, true );
 	add_image_size( 'thumb-noticias', 255, 130, true );
 	add_image_size( 'thumb-boletins', 255, 255, true );
+	add_image_size( 'thumb-destaques', 710, 260, true );
+	
 }
 
 
@@ -121,6 +123,41 @@ function scripts(){
 add_action('init','scripts');
 ///adiciona resumo ás páginas
 add_post_type_support('page','excerpt');
+///esconde a barra de admin quando logado
 add_filter('show_admin_bar', '__return_false');
 
+///brasa slider resum
+function slider_resumo($str){
+  	global $brasa_slider_id, $brasa_slider_item_id;
+	
+    
+  if(get_the_title($brasa_slider_id) != 'home'){
+	return $str;
+	}
+ else{
+
+	//aqui vc retorna o resumo
+    	$the_post = get_post($brasa_slider_item_id);
+		$category = get_the_category($brasa_slider_item_id); 
+		$ultimo = end($category);
+		foreach ($category as $categoria){
+			$categoria_html .= '<h3><a href="'.get_category_link($categoria->term_id ).'"> '.$categoria->cat_name;
+			if ($categoria != $ultimo){
+				$categoria_html .=", ";
+			}
+			$categoria_html .='</a></h3>';
+		}
+		
+		$permalink = get_permalink( $brasa_slider_item_id);
+		$str .= "<div class='excerpt-slider'><h2>".$the_post->post_title."</h2>".$categoria_html."<p>".$the_post->post_excerpt."</p></div><a href=".$permalink."' class='bt-readmore'>Leia Mais</a>";
+		return $str;
+	}
+}
+add_filter('brasa_slider_loop_after_image','slider_resumo');
+
+function size($size){
+	$size="thumb-destaques";
+	return $size;
+}
+add_filter('brasa_slider_img_size','size');
 ?>

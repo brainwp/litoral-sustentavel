@@ -13,7 +13,7 @@
 				'post_type'              => 'post',
 				'posts_per_page'         => 6,
 				);
-
+				$count=1;
 			// The Query
 			$query = new WP_Query( $args );
 
@@ -21,13 +21,19 @@
 			if ( $query->have_posts() ):
 				while ( $query->have_posts() ): $query->the_post();
 			        get_template_part('content','noticias');
+					if ($count%3==0){
+					?>
+						<div class="clearfix"></div>
+						<?php
+					}
+					$count++;
 			    endwhile;
 		    endif;
 
 		    // Restore original Post Data
 		    wp_reset_postdata();
 			?>
-			<div id="pagination-noticias" class="col-md-6 col-md-offset-4">
+			<div id="pagination-noticias" class="">
 				<?php echo paginate_links(
 				array(
 					'total' => $query->max_num_pages,

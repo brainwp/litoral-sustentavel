@@ -5,7 +5,7 @@ get_header();
 <?php /* query noticias */ ?>
 
 	<div id="img-cabecalho" class="container">
-		<img style="background:url('<?php echo get_stylesheet_directory_uri();?>/imagens/mascara2.png') no-repeat 100%;" id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
+		<img style="background:url('<?php echo get_stylesheet_directory_uri();?>/imagens/mascara.png') no-repeat 100%;" id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
 		
 			
 			<?php
@@ -33,29 +33,30 @@ get_header();
 	</div>
 	<div class="container" id="container-slider">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-7">
 				<div id="oque-resumo" class="col-md-12">
 					<?php echo $the_excerpt;?>
 					<a href="http://rede.com.br/litoral/2015/03/09/post-de-teste/" class="bt-readmore">
 						Leia Mais	
 					</a>
 				</div>
+				
 				<h2 class="title-section">Destaques</h2>	
 				<div id="slider" class="col-md-12">
 					<img id="fundo-destaque" src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-destaque.png">
 					<?php 
-						echo do_shortcode('[brasa_slider name="home"]"');
+						echo do_shortcode('[brasa_slider name="home"]');
 					?>
 				</div>
 				
 				
 			</div>
+			<div class="col-md-1"></div>
 			<div id="widgets" class="col-md-4">
 				<?php dynamic_sidebar( 'secondary-widget-area' ); ?>
 			</div>
 		</div>
 	</div>
-	
 </section>
 <?php get_template_part('parts/query-noticias'); ?>
 <?php get_footer();?>
