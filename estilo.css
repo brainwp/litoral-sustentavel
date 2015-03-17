@@ -348,12 +348,16 @@ a:hover {
 	background:#5aa9dc;
 }
 #creditos-footer h2{
+	 margin-top: 7px; 
+	margin-bottom:0px;
 	color:white;
 	font-weight: bold;
 	font-family:'Source Sans Pro',sans-serif;
 	text-transform: uppercase;
 }
 #creditos-footer p{
+	margin-bottom:0px;
+	
 	font-size:1.3em;
 	color:white;
 	font-weight: normal;
@@ -401,6 +405,7 @@ a:hover {
 	padding-bottom:30px;
 }
 #destaques-footer article h2{
+	margin-top: 15px;
 	color:#446a46;
 	font-weight: 700;
 	font-family: 'Source Sans Pro',sans-serif;
@@ -2028,10 +2033,10 @@ html .widget-title{
 }
 #fundo{
 	  z-index: 99;
-	  background: url('imagens/fundo.png') top right;
+	  background: url('imagens/fundo.png') center -62px;
 	  position: relative;
-	  background-position-y: 63px;
-	  background-size: 1170px;
+/*	  background-position-y: 63px;
+	  background-size: 1170px;*/
 	  /* background-repeat: no-repeat; */
 	  max-width: 1300px;
 	margin:0 auto;
@@ -2042,3 +2047,7 @@ html .widget-title{
 	  margin: 0 auto;
 	  position: relative;
 }
+.logo-footer{
+	margin-bottom:20px;
+}
+

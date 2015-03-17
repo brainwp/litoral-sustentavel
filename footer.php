@@ -36,7 +36,7 @@ $options = get_option('footer_cfg');
 					</div>
 				</div><!-- footer-widget-area -->
 				<div class="col-md-4 pull-right apoio">
-					<div class="col-md-12">
+					<div class="logo-footer col-md-12">
 						<h2 class="sitemap"><?php _e('Realização','litoral-sustentavel'); ?></h2><!-- .sitemap -->
 						<?php $link = (!empty($options['footer_realizacao_link']))? $options['footer_realizacao_link'] : '#footer'; ?>
 						<a href="<?php echo $link; ?>">
