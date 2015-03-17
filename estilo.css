@@ -222,8 +222,6 @@
 /* CSS Document */
 
 body {
-	background: url("imagens/fundo-geral.png") no-repeat scroll #ebe9e8;
-	background-size:cover;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight:bold;
 	font-size:12px;	
@@ -1742,6 +1740,8 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Passion One', cursive;
 }
 #primary-menu{
+	position:relative;
+	z-index:999;
 	background:#5aa9dc;
 }
 #primary-menu ul{
@@ -1882,7 +1882,6 @@ font-family: 'Passion One', cursive;
 	height:266px;
 	overflow:hidden;
 	width: 1300px;
-	background-color: #ffffff;
   
   
 }
@@ -1891,10 +1890,9 @@ font-family: 'Passion One', cursive;
 }
 img#logo-home{
 	position:relative;
-	height:266px;
-	margin-right:-224px;
-	padding:77px 224px 77px 20px;
+	height:150px;
 	z-index:9;
+	margin:38px 10% 0;
 }
 #mascara{
 	z-index:99;
@@ -1954,11 +1952,8 @@ img#logo-home{
 	
 }
 #slider-section{
-	border-top: solid 10px #77C244;
-	background-repeat:no-repeat;
 	padding-top:40px;
-	background-image:url('imagens/depois-destaque.png');
-	background-position:bottom right;
+
 }
 #slider-section .title-section{
 }
@@ -2024,4 +2019,26 @@ html .widget-title{
 }
 .is_slider .excerpt-slider p{
 	clear:both;
+}
+#img_header{
+	top:63px;
+	right:0;
+	position:absolute;
+	z-index:9;
+}
+#fundo{
+	  z-index: 99;
+	  background: url('imagens/fundo.png') top right;
+	  position: relative;
+	  background-position-y: 63px;
+	  background-size: 1170px;
+	  /* background-repeat: no-repeat; */
+	  max-width: 1300px;
+	margin:0 auto;
+
+}
+#div_img_header{
+	max-width: 1300px;
+	  margin: 0 auto;
+	  position: relative;
 }
