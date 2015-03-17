@@ -1799,7 +1799,7 @@ font-family: 'Passion One', cursive;
 	display:none;
 }
 /* query noticias */
-#query-noticias{
+#query-noticias, #query-categories{
 	background:url('imagens/bg-loop-noticias.jpg') no-repeat;
 	background-size:cover;
 	min-height:800px;
@@ -1809,16 +1809,22 @@ font-family: 'Passion One', cursive;
 	padding-bottom: 110px;
   
 }
-#query-noticias .title-section{
+#query-noticias .title-section, #query-categories #content .page-title{
 	padding-bottom:30px;
 }
-#query-noticias .title-section, #slider-section .title-section{
+#query-noticias .title-section, #slider-section .title-section, #query-categories #content .page-title,#content span.category-boletins{
 	font-family: 'Source Sans Pro',sans-serif;
 	font-size:2.4em;
 	font-weight: 400;
 	text-transform:uppercase;
 	color:white;
 	padding-top:10px;
+}
+#content span.category-boletins{
+	font-size:1.4em;
+}
+#content span.category-boletins{
+	color:white;
 }
 .content-noticias{
 	margin-top:20px;
