@@ -401,7 +401,7 @@ a:hover {
 	padding-bottom:30px;
 }
 #destaques-footer article h2{
-	color:white;
+	color:#446a46;
 	font-weight: 700;
 	font-family: 'Source Sans Pro',sans-serif;
 	font-size:2.1em;
@@ -1881,7 +1881,6 @@ font-family: 'Passion One', cursive;
 	position:relative;
 	height:266px;
 	overflow:hidden;
-	width: 1300px;
   
   
 }
@@ -1889,10 +1888,11 @@ font-family: 'Passion One', cursive;
 	position:absolute;
 }
 img#logo-home{
-	position:relative;
-	height:150px;
-	z-index:9;
-	margin:38px 10% 0;
+	max-width: 402px;
+	position: relative;
+	z-index: 9;
+	width: 32vw;
+	margin: 37px 0 0 15px;
 }
 #mascara{
 	z-index:99;

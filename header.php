@@ -87,10 +87,10 @@ $options = get_option('social_cfg');
 <nav id="primary-menu" class="col-md-12">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 pull-left">
+			<div class="col-md-9 pull-left">
 				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'depth' => -1 ) ); ?>
 		    </div><!-- .col-md-6 pull-left -->
-		    <div class="col-md-3 pull-right icons">
+		    <div class="col-md-2 pull-right icons">
 		    	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		    		<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="search-input" placeholder="<?php _e('Pressione enter','litoral-sustentavel');?>" />
 		    	</form>
