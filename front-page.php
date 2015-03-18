@@ -64,5 +64,11 @@ get_header();
 	</section>
 </div>
 <?php /* query noticias */ ?>
+<div id="fundo-content-top">
+	<img  src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-top.png">
+</div>
 <?php get_template_part('parts/query-noticias'); ?>
+<div id="fundo-content-bottom">
+	<img id="fundo-content-bottom" src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-bottom.png">
+</div>
 <?php get_footer();?>
