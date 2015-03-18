@@ -515,7 +515,7 @@ span.mais {
 
 .entry-title {
     color: #004494;
-	font-family: 'Candal', sans-serif;
+	font-family: 'Source Sans Pro',sans-serif;
     font-weight: bolder;
     letter-spacing: 0;
 	margin-bottom: 10px;
@@ -615,7 +615,7 @@ a.link_youtube:hover {
 
 .numero-release {
     color: #FFF !important;
-	font-family: 'Candal', sans-serif;
+	font-family: 'Source Sans Pro',sans-serif;
     font-weight: normal !important;
     letter-spacing: 0;
 	margin: 0 !important;
@@ -2057,4 +2057,40 @@ position: absolute;
 	background:url('imagens/fundo-destaque-cat.png') bottom right no-repeat;
 	
 	
+}
+#section-single{
+	border-bottom:10px solid #FDEB0F;
+}
+.single-post #oque-resumo{
+	margin-top: 66px;
+  
+}
+#thumb-single img {
+	max-width:100%;
+	height:auto;
+}
+.single-post img#logo-home, .single-post #content{
+	margin-left:0;
+	padding-left:0;
+}
+.single-post #primary{
+	width: 25%; 
+  
+}
+.single-post #content h1.entry-title{
+	font-size:4em;
+	font-weight:400;
+	font-family: 'Source Sans Pro',sans-serif;
+	color:#58585b;
+}
+.single-post .entry-meta a, .single-post .entry-meta a:visited,.single-post .entry-meta a:hover{
+	color:#5ba8d9;
+	font-weight:300;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size:3em;
+	
+	
+}
+.single-post #primary-menu .container{
+	padding:0 9.3%;
 }

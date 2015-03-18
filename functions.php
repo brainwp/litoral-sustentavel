@@ -13,6 +13,8 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 2
 	add_image_size( 'thumb-noticias', 255, 130, true );
 	add_image_size( 'thumb-boletins', 255, 255, true );
 	add_image_size( 'thumb-destaques', 710, 260, true );
+	add_image_size( 'thumb-single', 1023, 320, true );
+	
 	
 }
 
