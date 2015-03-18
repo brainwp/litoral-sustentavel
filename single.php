@@ -7,7 +7,7 @@
  * @since Twenty Ten 1.0
  */
 
-get_header('single'); ?>
+get_header('single-post'); ?>
 <div class="col-md-1"></div>
 <div id="thumb-single" class="col-md-10">
 	<?php echo get_the_post_thumbnail( $post->ID, 'thumb-single', $attr ); ?> 
@@ -31,5 +31,5 @@ get_header('single'); ?>
 			
 		</div><!-- #container -->
 
-<?php get_sidebar('single'); ?>
+<?php get_sidebar('single-post'); ?>
 <?php get_footer('single-post'); ?>
