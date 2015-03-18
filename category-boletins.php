@@ -9,10 +9,7 @@
 
 get_header(); ?>
 		<?php get_template_part('parts/comp-header'); ?>
-		<div id="fundo-content-top">
-			<img  src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-top.png">
-		</div>
-		<section id="query-categories">
+		
 			<div id="container">
 	
 				<div id="content" role="main">
@@ -70,11 +67,6 @@ get_header(); ?>
 			?>
 				</div><!-- #content -->
 			</div><!-- #container -->
-		<div class="clearfix"></div>
-		</section>
-		<div id="fundo-content-bottom">
-			<img id="fundo-content-bottom" src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-bottom.png">
-		</div>
 		
 
-<?php get_footer(); ?>
+<?php get_footer('cat'); ?>

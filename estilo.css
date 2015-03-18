@@ -291,6 +291,8 @@ a:hover {
 
 /* RODAPE */
 #footer{
+	position: relative;
+	z-index: 1000;
 	background:url('imagens/bg-footer.jpg') no-repeat;
 	background-size:cover;
 	padding:20px;
@@ -603,36 +605,6 @@ a.link_youtube:hover {
     width: 23px;
 }
 
-#content span.category-name {
-    font-family: 'Candal',sans-serif;
-    font-size: 1.6em;
-    text-transform: uppercase;
-	color: #004494;
-}
-
-
-#content span.category-noticias {
-   font-family: 'Candal',sans-serif;
-    font-size: 1.6em;
-	text-transform: uppercase;
-	color: #00A3D9;
-
-}
-
-#content span.category-destaques {
-   font-family: 'Candal',sans-serif;
-    font-size: 1.6em;
-	text-transform: uppercase;
-	color: #F3C700;
-
-}
-
-#content span.category-releases {
-   font-family: 'Candal',sans-serif;
-    font-size: 1.6em;
-	text-transform: uppercase;
-	color: #E0C761;
-}
 
 .etiqueta-releases {
 	padding: 10px;
@@ -669,21 +641,8 @@ a.link_youtube:hover {
 	border: 0;
 }
 
-#content span.category-newsletter {
-   font-family: 'Candal',sans-serif;
-    font-size: 1.6em;
-	text-transform: uppercase;
-	color: #3CAA8B;
-
-}
 
 
-#content span.category-eventos {
-   font-family: 'Candal',sans-serif;
-    font-size: 1.6em;
-	text-transform: uppercase;
-	color: #74B34A;
-}
 
 .cada-evento {
 	width: 91%;
@@ -705,21 +664,8 @@ a.link_youtube:hover {
 	font-size: 0.9em;
 }
 
-#content span.category-apresentacoes {
-   font-family: 'Candal',sans-serif;
-    font-size: 1.6em;
-	text-transform: uppercase;
-    color: #362477;
 
-}
 
-#content span.category-editais {
-   font-family: 'Candal',sans-serif;
-    font-size: 1.6em;
-	text-transform: uppercase;
-    color: #EAB42D;
-
-}
 
 select.postform{
 
@@ -1808,8 +1754,7 @@ font-family: 'Passion One', cursive;
 }
 #content h1 span{
 	font-family: 'Source Sans Pro',sans-serif;
-	
-	font-size:2.4em;
+	font-size:1em;
 	font-weight: 400;
 	text-transform:uppercase;
 	color:white;
@@ -2105,3 +2050,11 @@ position: absolute;
 .category .page-title span{ 
 	padding: 54px 15px;
 	}
+#query-categories{
+	border-bottom:10px solid #407D3C;
+}
+.category #slider-section{
+	background:url('imagens/fundo-destaque-cat.png') bottom right no-repeat;
+	
+	
+}

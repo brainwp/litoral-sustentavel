@@ -2,6 +2,7 @@
 /* Template Name: Inicial */
 
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
 
 		<div id="container-home">
 			<div id="primeira-linha">			
@@ -44,4 +45,5 @@ get_header(); ?>
 						
 		</div><!-- #content-home  -->
 
-<?php get_footer(); ?>
+		<?php get_footer('cat'); ?>
+

@@ -13,6 +13,7 @@
  */
 
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
 
 		<div id="container">
 			<div id="content" role="main">
@@ -29,4 +30,5 @@ get_header(); ?>
 		</div><!-- #container -->
 
 <?php get_sidebar(); ?>
-<?php get_footer('page'); ?>
+<?php get_footer('cat'); ?>
+

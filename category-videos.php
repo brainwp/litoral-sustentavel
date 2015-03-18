@@ -8,6 +8,10 @@
  */
 
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
+
+
+
 
 		<div id="container">
 			
@@ -62,4 +66,9 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 
-<?php get_footer(); ?>
+		<div class="clearfix"></div>
+	
+
+
+		<?php get_footer('cat'); ?>
+
