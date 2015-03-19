@@ -15,6 +15,8 @@ $options = get_option('footer_cfg');
 <div class="col-md-1"></div>
 
 <div class="clearfix"></div>
+</div><!--class="container"-->
+
 </section>
 <div id="fundo-content-bottom">
 	<img id="fundo-content-bottom" src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-bottom.png">
