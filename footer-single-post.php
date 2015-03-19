@@ -17,56 +17,49 @@ $options = get_option('footer_cfg');
 <div id="fundo-content-bottom">
 	<img id="fundo-content-bottom" src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-bottom.png">
 </div>
-<section id="query-noticias">
-	<div class="container">
-		<div class="row">
-			
-	<?php /* Posts Relacionados */
-	
-	$orig_post = $post;
-	global $post;
-	$categories = get_the_category($post->ID);
-	if ($categories) {
-	$category_ids = array();
-	foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
-	$args=array(
-	'category__in' => $category_ids,
-	'post__not_in' => array($post->ID),
-	'posts_per_page'=> 3, // Numero de posts relacionados para serem mostrados
-	'caller_get_posts'=>1
-	);
-	$count=1;
-	$my_query = new wp_query( $args );
-	if( $my_query->have_posts() ) {
-	echo '<div id="related_posts"><h2>Posts Relacionados</h2><ul>';
-	while( $my_query->have_posts() ) {?>
-		<article class="col-md-4 content-noticias">
-			<?php the_post_thumbnail('thumb-noticias'); ?>
-			<?php $category = get_the_category(); ?>
-			<a class="permalink" href="<?php the_permalink();?>"><h2><?php the_title(); ?></h2></a>
-			<a href="<?php echo get_category_link($category[0]->term_id);?>" class="category">
-				<h3><?php echo $category[0]->cat_name; ?></h3>
-			</a>
-			<div class="content"><?php the_excerpt();?></div><!-- .content -->
-			<a href="<?php the_permalink();?>" class="bt-readmore">
-				<?php _e('Leia Mais','litoral-sustentavel');?>
-			</a>
-		</article><!-- .col-md-4 content-noticias -->		
-		<?php if ($count%3==0){
-		?>
-			<div class="clearfix"></div>
-			<?php
+
+<section id="posts-relacionados">
+<div class="container">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<?php /* Posts Relacionados */
+		$count=1;
+		$orig_post = $post;
+		global $post;
+		$categories = get_the_category($post->ID);
+		if ($categories) {
+		$category_ids = array();
+		foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+		$args=array(
+		'orderby'=> 'rand',
+		'category__in' => $category_ids,
+		'post__not_in' => array($post->ID),
+		'posts_per_page'=> 3, // Numero de posts relacionados para serem mostrados
+		'caller_get_posts'=>1
+		);
+		$my_query = new wp_query( $args );
+		if( $my_query->have_posts() ) {
+		echo '<div id="related_posts"><h2>Posts Relacionados</h2><ul>';
+		while ( $my_query->have_posts() ): $my_query->the_post();
+	        get_template_part('content','noticias');
+			if ($count%3==0){
+			?>
+				<div class="clearfix"></div>
+				<?php
+			}
+			$count++;
+	    endwhile;
+		echo '</ul></div>';
 		}
-		$count++;
-	}
-	echo '</ul></div>';
-	}
-	}
-	$post = $orig_post;
-	wp_reset_query(); ?>
-		</div><!-- .row -->
-	</div><!-- .container -->
-</section><!-- #query-noticias -->
+		}
+		$post = $orig_post;
+		wp_reset_query(); ?>
+	</div>
+	</div class="col-md-1"></div>
+	<div class="clearfix"></div>
+</div><!--container-->
+</section>
+
 	<div style="clear:both;"> </div>
 	<footer id="footer" class="col-md-12">
 		<div class="container">

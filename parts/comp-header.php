@@ -15,8 +15,9 @@
 		
 <div id="fundo">
 	<div id="img-cabecalho" class="container">
-		<img id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
-		
+		<a href="<?php echo get_site_url(); ?>">
+			<img id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
+		</a>
 			
 			
 	</div>

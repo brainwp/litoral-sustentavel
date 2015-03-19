@@ -13,26 +13,10 @@ get_header(); ?>
 
 
 
-		<div id="container">
+	<div class="col-md-1"></div>
+		<div id="" class="col-md-10" role="main">
 		
-		    <div id="area-select" class="noticias">
-			<h2 class="filtro"><?php _e('Filtro'); ?></h2>
-				<form>
-				<select name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-				<option value='#'>Selecione o Munic&iacute;pios</option>
-				<?php 
-				$taxonomies = array('category');
-				$args = array(
-				'orderby'=>'menu',
-				'hide_empty'=>true,
-				'taxonomy'=>'category',
-				'exclude'=>'57,10,5,6,59,68,11,62,3,4,60,58,9,5,29,26,30,32,27,37,35,36,34,31,28,33,25,66,64,8,56,63,1'
-				);
-				echo get_terms_dropdown($taxonomies, $args); 
-				?>
-				</select>
-				</form>
-			</div><!-- #area-select -->		
+		    
 	
 			<div id="content" role="main">
 
@@ -41,6 +25,24 @@ get_header(); ?>
 					printf( __( '%s', 'twentyten' ), '<span class="category-noticias">' . single_cat_title( '', false ) . '</span>' );?>
 					
 				</h1>
+				<div id="area-select" class="noticias">
+				<h2 class="filtro"><?php _e('Filtro'); ?></h2>
+					<form>
+					<select name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+					<option value='#'>Selecione o Munic&iacute;pios</option>
+					<?php 
+					$taxonomies = array('category');
+					$args = array(
+					'orderby'=>'menu',
+					'hide_empty'=>true,
+					'taxonomy'=>'category',
+					'exclude'=>'57,10,5,6,59,68,11,62,3,4,60,58,9,5,29,26,30,32,27,37,35,36,34,31,28,33,25,66,64,8,56,63,1'
+					);
+					echo get_terms_dropdown($taxonomies, $args); 
+					?>
+					</select>
+					</form>
+				</div><!-- #area-select -->
 						<div id="primeira-linha">		
 						 <!-- Inicio Loop -->
 						<?php $category_description = category_description();

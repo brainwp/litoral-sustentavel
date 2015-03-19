@@ -107,7 +107,9 @@ $options = get_option('social_cfg');
 	<div id="img-cabecalho" class="container">
 		<div class="col-md-1"></div>
 		<div id="logo-single" class="col-md-6">
-			<img id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
+			<a href="<?php echo get_site_url(); ?>">
+				<img id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
+			</a>
 		</div>
 	<?php 
 		$page_data = get_page_by_title( 'O que é o projeto' );

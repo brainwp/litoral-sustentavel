@@ -6,8 +6,9 @@ Template name: Municipios
 get_header(); ?>
 <?php get_template_part('parts/comp-header'); ?>
 
-		<div id="container">
-			<div id="content" role="main">
+		<div class="container">
+			<div class="col-md-1"></div>
+			<div id="" class="col-md-10" role="main">
 
 		<div id="resumo">	
 					<?php

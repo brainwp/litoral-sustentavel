@@ -774,8 +774,9 @@ color: #104493;
 
 #content {
     float: left;
-    margin: 0 0 30px 45px;
-    width:660px;
+margin:0;
+/*    margin: 0 0 30px 45px;
+*/    width:660px;
 }
 
 #mapa-home {
@@ -1704,8 +1705,8 @@ font-family: 'Passion One', cursive;
 	display:inline-block;
 	padding-top:20px;
 	padding-bottom:20px;
-	padding-right:10px;
-	padding-left:10px;
+	padding-right: 6px;
+  	padding-left: 6px;
 	transition:400ms ease all;
 }
 #primary-menu ul li:hover{
@@ -1786,9 +1787,9 @@ font-family: 'Passion One', cursive;
 	height:auto;
 }
 .content-noticias h2{
-	font-size:1.6em;
+	font-size:2em;
 	color:black;
-	font-weight: 600;
+	font-weight: 400;
 	font-family: 'Source Sans Pro',sans-serif;
 	margin:0;
 }
@@ -2030,10 +2031,10 @@ html .widget-title{
 	width: 130px;
 }
 #fundo-content-bottom img{ 
-position: absolute;
-  bottom: -18px;
-  left: -25px;
-  z-index: 999;
+	position: absolute;
+	bottom: -9px;
+	left: -25px;
+	z-index: 999;
 }
  h1.page-title {
 	background:url('imagens/fundo-titulo-cat.png') no-repeat;
@@ -2059,7 +2060,6 @@ position: absolute;
 	
 }
 #section-single{
-	border-bottom:10px solid #FDEB0F;
 }
 .single-post #oque-resumo{
 	margin-top: 66px;
@@ -2093,4 +2093,20 @@ position: absolute;
 }
 .single-post #primary-menu .container{
 	padding:0 9.3%;
+}
+#posts-relacionados{
+	border-top:10px solid #FDEB0F;
+}
+#related_posts > h2{
+	text-transform:uppercase;
+	margin:20px 0 0 15px;
+	font-size:2em;
+}
+#cada-post:nth-child(3n):before{
+	content: " ";
+	display: table;
+}
+#cada-post:nth-child(3n):after{
+	content: '\A';
+    white-space: pre;
 }

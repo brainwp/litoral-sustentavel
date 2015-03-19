@@ -50,7 +50,7 @@
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-utility -->
 				</div><!-- #post-## -->
-
+				
 				
 
 <?php endwhile; // end of the loop. ?>
