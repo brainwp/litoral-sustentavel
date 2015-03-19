@@ -15,9 +15,8 @@
 get_header(); ?>
 <?php get_template_part('parts/comp-header'); ?>
 
-		<div class="container">
-			<div class="col-md-1"></div>
-				<div id="content-page" class="col-md-10" role="main">
+		<div class="">
+				<div id="content-page" class="" role="main">
 
 				<?php
 				/* Run the loop to output the page.

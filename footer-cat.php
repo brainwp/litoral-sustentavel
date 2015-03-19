@@ -11,6 +11,8 @@
  */
 $options = get_option('footer_cfg');
 ?>
+</div>
+<div class="col-md-1"></div>
 
 <div class="clearfix"></div>
 </section>
