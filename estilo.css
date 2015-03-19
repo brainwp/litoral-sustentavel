@@ -1373,7 +1373,7 @@ h1.query-destaques {
 
 /* Municipios*/
 
-#cada-municipio {
+.cada-municipio {
 	width: 280px;
 	min-height: 410px;
 	float: left;
@@ -2107,4 +2107,9 @@ html .widget-title{
 }
 .page-template-page-imprensa iframe{
 	margin-top:0.67em;
+}
+.cada-municipio:nth-child(3n):after{
+	height:1px;
+	display: block;
+  	width:100%;
 }
