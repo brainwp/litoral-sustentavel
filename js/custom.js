@@ -10,5 +10,12 @@ jQuery(function($) {
 			$('#search-input').fadeOut('slow');
 			$(this).attr('data-open','false');
 		}
-	})
+	});
+	$(window).load(function(e){
+		if(window.location.hash == '#goto-query-noticias'){
+			$('html, body').animate({
+				scrollTop: parseInt($('#forma-noticias').offset().top) - 130
+			}, 1300);
+		}
+	});
 })
