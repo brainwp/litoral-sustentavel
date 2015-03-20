@@ -887,9 +887,8 @@ a.tela-cheia {
 
 #terceira-linha {
     float: left;
-    margin: 25px 0 0 0;
     min-height: 340px;
-    width: 998px;
+
 }
 
 #flickr-linha {
@@ -2117,4 +2116,7 @@ html .widget-title{
 }
 .page-template-page-imprensa iframe{
 	margin-top:0.67em;
+}
+#container{
+	margin:0;
 }
