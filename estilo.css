@@ -1252,9 +1252,8 @@ color: #fff;
 
 .municipios-querypost {
     float: left;
-    margin: 0 20px 10px 0;
+
     min-height: 125px;
-    width: 280px;
 }
 
 h1.title-query {
@@ -1374,10 +1373,17 @@ h1.query-destaques {
 /* Municipios*/
 
 .cada-municipio {
-	width: 280px;
 	min-height: 410px;
 	float: left;
-	margin: 0 35px 20px 0;
+
+}
+.cada-municipio:nth-child(3n):after {
+	content:'';
+	height:40px;
+	width:100%;
+	clear:both;
+	display:block;
+	float:none;
 }
 
 #thumb-municipio {
@@ -2108,9 +2114,4 @@ html .widget-title{
 }
 .page-template-page-imprensa iframe{
 	margin-top:0.67em;
-}
-.cada-municipio:nth-child(3n):after{
-	height:1px;
-	display: block;
-  	width:100%;
 }
