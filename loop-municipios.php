@@ -1,10 +1,9 @@
 <?php
-/* Template Name: Loop municipios */
 global $post;
 ?>
 <?php if ( query_posts( array ( 'category_name' => 'de-'.$post->post_name, 'posts_per_page' => 4)) ) while ( have_posts() ) : the_post(); ?>
 	
-		<div id="municipios-querypost" <?php post_class(); ?>>
+		<div class="municipios-querypost" <?php post_class(); ?>>
 
 			<h1 class="entry-title-query"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 

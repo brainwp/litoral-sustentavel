@@ -31,7 +31,7 @@ get_header(); ?>
 			
 			</div>
 			
-			<div id="query-post">
+			<div class="query-post">
 		 <?php $attachment_page = get_attachment_link($id); ?> 				
 		 <h1 class="title-query"><span class="query-destaques">Fotos</span></h1> 
 

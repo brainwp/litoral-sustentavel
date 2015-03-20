@@ -872,7 +872,7 @@ a.tela-cheia {
 }
 
 #primeira-linha {
-	width: 998px;
+
 	min-height: 340px;
 	margin: 0;
 	float: left;
@@ -882,7 +882,7 @@ a.tela-cheia {
     float: left;
     margin: 25px 0 0 0;
     min-height: 340px;
-    width: 998px;
+
 }
 
 #terceira-linha {
@@ -972,7 +972,7 @@ float: left;
 }
 
 
-#query-post {
+.query-post {
 
     float: left;
     margin: 0 0 0 30px;
@@ -1247,10 +1247,10 @@ color: #fff;
 
 #noticias-municipios-query {
     float: left;
-    margin: 0 0 0 30px;
+
 }
 
-#municipios-querypost {
+.municipios-querypost {
     float: left;
     margin: 0 20px 10px 0;
     min-height: 125px;
@@ -1791,6 +1791,7 @@ font-family: 'Passion One', cursive;
 	font-weight: 400;
 	font-family: 'Source Sans Pro',sans-serif;
 	margin:0;
+	line-height:initial;
 }
 .content-noticias h3{
 	font-size:1.5em;

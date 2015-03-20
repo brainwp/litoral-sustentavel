@@ -103,7 +103,7 @@ $options = get_option('social_cfg');
 		</div><!-- .row -->
 	</div><!-- .container -->
 </nav><!-- #primary-menu -->
-<div id="fundo">
+<div id="">
 	<div id="img-cabecalho" class="container">
 		<div class="col-md-1"></div>
 		<div id="logo-single" class="col-md-6">
@@ -116,12 +116,14 @@ $options = get_option('social_cfg');
 		$the_excerpt = $page_data->post_excerpt;
 		$trimmed = wp_trim_words( $the_excerpt, $num_words = 30, $more = null );
 		
+		
 	?>
 		<div id="oque-resumo" class="col-md-4">
 			<?php echo $trimmed;?>
-			<a href="http://rede.com.br/litoral/2015/03/09/post-de-teste/" class="bt-readmore">
-			Leia Mais	
+			<a class="bt-readmore" href="<?php echo get_permalink( $page_data->ID ); ?>">
+				Leia Mais	
 			</a>
+			
 		</div>
 		<div class="col-md-1"></div>
 	</div>

@@ -24,7 +24,7 @@ get_header(); ?>
 		while ( $loop->have_posts() ) : $loop->the_post();        
         $slug_do_post = basename(get_permalink());
         $slug_home = get_bloginfo ( 'home' );?> 
-		<div class="cada-municipio">
+		<div class="cada-municipio col-md-4">
         <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
         <div id="thumb-municipio">
         <a href="<?php the_permalink() ?>" rel="bookmark">
