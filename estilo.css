@@ -1377,13 +1377,16 @@ h1.query-destaques {
 	float: left;
 
 }
-.cada-municipio:nth-child(3n):after {
+.cada-municipio:nth-child(3n):after, .cada-post:nth-child(3n):after {
 	content:'';
 	height:40px;
 	width:100%;
 	clear:both;
 	display:block;
 	float:none;
+}
+.cada-post:nth-child(3n):after {
+	height:80px;
 }
 
 #thumb-municipio {
