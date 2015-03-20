@@ -33,16 +33,16 @@ get_header(); ?>
         </div>
         <?php echo excerpt( 25 ); ?>
         <div id="icones-municipios">
-        <div id="cada-icone">
+        <div id="cada-icone" class="col-md-3">
 		<a href="<?php echo $slug_home . '/category/noticias/de-' . $slug_do_post; ?>" class="icone-noticia"><span class="icone-txt">Noticias</span></a>
 		</div>
-		 <div id="cada-icone">
+		 <div id="cada-icone" class="col-md-3">
 		<a href="<?php echo $slug_home . '/cat_agenda/' . $slug_do_post; ?>" class="icone-agenda"><span class="icone-txt">Agenda</span></a>
 		</div>
-		 <div id="cada-icone">
+		 <div id="cada-icone" class="col-md-3">
 		<a href="<?php echo $slug_home . '/municipios/' . $slug_do_post; ?>" class="icone-diagnostico"><span class="icone-txt-diagnostico">Diagnostico</span></a>
 		</div>
-		 <div id="cada-icone">
+		 <div id="cada-icone" class="col-md-3">
 		<a href="<?php echo $slug_home . '/mapas/mapa-de-' . $slug_do_post; ?>" class="icone-mapa"><span class="icone-txt-mapa">Mapa</span></a>
 		</div>
 

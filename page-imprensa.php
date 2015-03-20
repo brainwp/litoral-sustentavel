@@ -6,7 +6,7 @@ get_header(); ?>
 	<div id="" class="" role="main">
 		<div id="">
 			<div id="primeira-linha">			
-					<div id="content" class="home">	
+					<div id="content" class="home col-md-5">	
 						<?php
 
 						get_template_part( 'loop', 'page' );
@@ -14,7 +14,7 @@ get_header(); ?>
 								
 					</div><!-- #content -->
 					
-					<div id="video-institucional">
+					<div id="video-institucional" class="col-md-7">
 						<iframe width="639" height="369" src="http://www.youtube.com/embed/Wv4WY35OwMM" frameborder="0" allowfullscreen></iframe>
 					</div>
 				

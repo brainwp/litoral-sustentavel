@@ -624,15 +624,19 @@ a.link_youtube:hover {
 
 
 .thumb-boletins {
-	width: 255px;
-	height: 255px;
+	width: 100%;
+	height: auto;
 	overflow: hidden;
 	margin: 0 0 8px 0;
 	border: 0 !important;
 }
+.thumb-boletins img{
+	max-width:100%;
+	height: auto;
+	
+}
 
 .thumb-noticias img {
-	min-width: 255px;
 	height: auto;
 	border: 0;
 }
@@ -645,8 +649,6 @@ a.link_youtube:hover {
 
 
 .cada-evento {
-	width: 91%;
-	margin: 10px 0;
 	background: #FFF;
 	min-height: 130px;
 	clear: both;
@@ -807,7 +809,7 @@ a.tela-cheia {
 
 #mapa-home  p {
     color: #FFF;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 2.3em;
     font-weight: bolder;
     letter-spacing: 0;
@@ -840,7 +842,7 @@ a.tela-cheia {
 #video-institucional-soon p{
 
     color: #CCCCCC;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 2.3em;
     font-weight: bolder;
     letter-spacing: 0;
@@ -861,7 +863,7 @@ a.tela-cheia {
 #mapas-soon p{
 
 	color: #CCCCCC;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     font-weight: bolder;
     letter-spacing: 0;
@@ -874,7 +876,8 @@ a.tela-cheia {
 #primeira-linha {
 
 	min-height: 340px;
-	margin: 0;
+  	margin: 30px 0 0;
+
 	float: left;
 }
 
@@ -887,9 +890,8 @@ a.tela-cheia {
 
 #terceira-linha {
     float: left;
-    margin: 25px 0 0 0;
     min-height: 340px;
-    width: 998px;
+
 }
 
 #flickr-linha {
@@ -1017,7 +1019,7 @@ h1.linkcat {
 }
 
 #municipios-widget h2{
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     height: 28px;
     text-transform: uppercase;
@@ -1026,7 +1028,7 @@ h1.linkcat {
 }
 
 #municipios-widget h1, h3, h4 {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
 	line-height: 1.1em;
     width: auto;
 	color: #004494;
@@ -1094,7 +1096,7 @@ color: #fff;
 }
 
 h1.negrito {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.2em;
     text-transform: uppercase;
     width: auto;
@@ -1105,7 +1107,7 @@ h1.negrito {
 h2.filtro {
     color: #00ABE5;
     float: left;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.6em;
     letter-spacing: 1px;
     margin-right: 10px;
@@ -1116,7 +1118,7 @@ h2.filtro {
 h2.filtro-agenda {
 	color: #007757;
     float: left;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.6em;
     letter-spacing: 1px;
     margin-right: 10px;
@@ -1157,7 +1159,7 @@ color: #B2CC42;
 }
 
 h1.category-agenda {
-   font-family: 'Candal',sans-serif;
+   font-family: 'Source Sans Pro',sans-serif;
     font-size: 3.2em;
 	text-transform: uppercase;
 	color: #007757 !important;
@@ -1165,7 +1167,7 @@ h1.category-agenda {
 }
 
 h1.diagnostico-box {
-   font-family: 'Candal',sans-serif;
+   font-family: 'Source Sans Pro',sans-serif;
     font-size: 2.6em;
 	text-transform: uppercase;
 	color: #FFF !important;
@@ -1257,7 +1259,7 @@ color: #fff;
 }
 
 h1.title-query {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     text-transform: uppercase;
 	height: 28px;
@@ -1266,7 +1268,7 @@ h1.title-query {
 }
 
 h1.title-query-bookmarks {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     text-transform: uppercase;
 	height: 28px;
@@ -1276,7 +1278,7 @@ h1.title-query-bookmarks {
 }
 
 h1.title-query-link {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     text-transform: uppercase;
 	height: 28px;
@@ -1308,7 +1310,7 @@ color: #f3c700;
 
 h1.query-destaques {
 	color: #f3c700;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     height: 28px;
     text-transform: uppercase;
@@ -1377,7 +1379,7 @@ h1.query-destaques {
 	float: left;
 
 }
-.cada-municipio:nth-child(3n):after {
+/*.cada-municipio:nth-child(3n):after, .cada-post:nth-child(3n):after {
 	content:'';
 	height:40px;
 	width:100%;
@@ -1385,7 +1387,15 @@ h1.query-destaques {
 	display:block;
 	float:none;
 }
+*/
+.cada-municipio:nth-child(3n + 1), .cada-post:nth-child(3n + 1) {
+	 clear: left;
+	 }
 
+/*.cada-post:nth-child(3n):after {
+	height:80px;
+}
+*/
 #thumb-municipio {
 	width:  280px;
 	height: 130px;
@@ -1396,23 +1406,20 @@ h1.query-destaques {
 
 #icones-municipios{
 	background: xurl("imagens/icones-municipios.png") no-repeat scroll center top;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 0.8em;
     letter-spacing: 1px;
     text-transform: uppercase;
-	width: 276x;
-	height: 72px;
-	margin: 20px 0;
+	width: 100%;
+
 
 }
 
 #cada-icone {
 
     float: left;
-	margin: 0 5px;
+	margin: 0 ;
     position: relative;
-	width: 60px;
-	height: 70px;
 	
 	}
 #icones-municipios a.icone-noticia{
@@ -1593,20 +1600,15 @@ width: 910px;
 	
 }
 
-#cada-post {
-    background: none repeat scroll 0 0 #FFFFFF;
+.cada-post {
     float: left;
-    margin: 0 20px 20px 0;
-    min-height: 410px;
-    padding: 15px 15px 5px;
-    width: 260px;
+
+    min-height: 250px;
+
 	}
 	
 #conteudo-post {
     float: left;
-    margin: 10px 0 0 0;
-    width: 255px;
-	
 }
 
 #agenda-archive-titulo {
@@ -2036,6 +2038,10 @@ html .widget-title{
 	right:0;
 	width: 130px;
 }
+.single-post #fundo-content-bottom img{ 
+	bottom: -19px;
+}
+
 #fundo-content-bottom img{ 
 	position: absolute;
 	bottom: -9px;
@@ -2048,11 +2054,16 @@ html .widget-title{
 	background-size:contain;
 	
 }
+
 .category #content .page-title{
 	margin: 0;
 	  display: inline-block;
 	  padding: 45px 51px 10px;
 	  margin-top: -1px;
+}
+.category-de-bertioga #content .page-title, .category-de-ilhabela #content .page-title, .category-de-mongagua #content .page-title, .category-de-peruibe #content .page-title,.category-de-ubatuba #content .page-title, .category-diagnostico #content .page-title, .category-em-bertioga #content .page-title, .category-em-ilhabela #content .page-title, .category-em-santos #content .page-title, .category-em-ubatuba #content .page-title, .category-inscricao #content .page-title, .category-transmissao #content .page-title{
+	padding: 23px 51px 10px;
+  
 }
 .category .page-title span{ 
 	padding: 54px 15px;
@@ -2114,4 +2125,19 @@ html .widget-title{
 }
 .page-template-page-imprensa iframe{
 	margin-top:0.67em;
+}
+#container{
+	margin:0;
+}
+.category-noticias-sobre-o-projeto #content .page-title {
+  margin: 0;
+  display: inline-block;
+  padding: 105px 58px 10px;
+  margin-top: -3px;
+}
+@media (max-width: 992px){
+	#cada-icone {
+	  margin: 0 20px;
+
+	}
 }

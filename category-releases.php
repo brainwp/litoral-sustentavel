@@ -24,7 +24,7 @@ get_header(); ?>
 					if ( ! empty( $category_description ) )
 						echo '<div class="archive-meta">' . $category_description . '</div>'; ?>
         <?php while ( have_posts() ) : the_post();	?>       
-        <div id="cada-post">
+        <div class="col-md-4 cada-post">
         	<!-- <div class="etiqueta-releases">
             	<?php //$num_release = get_post_meta(get_the_ID(), 'num_text', true); ?>
                 <h2 class="numero-release">Release n&deg; <?php // echo $num_release; ?></h2>
