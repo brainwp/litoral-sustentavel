@@ -32,6 +32,7 @@
 	<img  src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-top.png">
 </div>
 <section id="query-categories">
-	<div class="col-md-1"></div>
-	<div class="col-md-10">
+	<div class="container">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
 	

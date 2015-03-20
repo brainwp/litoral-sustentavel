@@ -10,11 +10,7 @@
 get_header(); ?>
 <?php get_template_part('parts/comp-header'); ?>
 
-
-
-
-	<div class="col-md-1"></div>
-		<div id="" class="col-md-10" role="main">
+		<div id="" class="" role="main">
 		
 		    
 	
