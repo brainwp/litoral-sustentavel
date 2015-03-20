@@ -876,7 +876,8 @@ a.tela-cheia {
 #primeira-linha {
 
 	min-height: 340px;
-	margin: 0;
+  	margin: 30px 0 0;
+
 	float: left;
 }
 
@@ -1378,7 +1379,7 @@ h1.query-destaques {
 	float: left;
 
 }
-.cada-municipio:nth-child(3n):after, .cada-post:nth-child(3n):after {
+/*.cada-municipio:nth-child(3n):after, .cada-post:nth-child(3n):after {
 	content:'';
 	height:40px;
 	width:100%;
@@ -1386,10 +1387,15 @@ h1.query-destaques {
 	display:block;
 	float:none;
 }
-.cada-post:nth-child(3n):after {
+*/
+.cada-municipio:nth-child(3n + 1), .cada-post:nth-child(3n + 1) {
+	 clear: left;
+	 }
+
+/*.cada-post:nth-child(3n):after {
 	height:80px;
 }
-
+*/
 #thumb-municipio {
 	width:  280px;
 	height: 130px;
@@ -2032,6 +2038,10 @@ html .widget-title{
 	right:0;
 	width: 130px;
 }
+.single-post #fundo-content-bottom img{ 
+	bottom: -19px;
+}
+
 #fundo-content-bottom img{ 
 	position: absolute;
 	bottom: -9px;
@@ -2044,11 +2054,16 @@ html .widget-title{
 	background-size:contain;
 	
 }
+
 .category #content .page-title{
 	margin: 0;
 	  display: inline-block;
 	  padding: 45px 51px 10px;
 	  margin-top: -1px;
+}
+.category-de-bertioga #content .page-title, .category-de-ilhabela #content .page-title, .category-de-mongagua #content .page-title, .category-de-peruibe #content .page-title,.category-de-ubatuba #content .page-title, .category-diagnostico #content .page-title, .category-em-bertioga #content .page-title, .category-em-ilhabela #content .page-title, .category-em-santos #content .page-title, .category-em-ubatuba #content .page-title, .category-inscricao #content .page-title, .category-transmissao #content .page-title{
+	padding: 23px 51px 10px;
+  
 }
 .category .page-title span{ 
 	padding: 54px 15px;
@@ -2113,6 +2128,12 @@ html .widget-title{
 }
 #container{
 	margin:0;
+}
+.category-noticias-sobre-o-projeto #content .page-title {
+  margin: 0;
+  display: inline-block;
+  padding: 105px 58px 10px;
+  margin-top: -3px;
 }
 @media (max-width: 992px){
 	#cada-icone {
