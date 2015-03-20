@@ -809,7 +809,7 @@ a.tela-cheia {
 
 #mapa-home  p {
     color: #FFF;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 2.3em;
     font-weight: bolder;
     letter-spacing: 0;
@@ -842,7 +842,7 @@ a.tela-cheia {
 #video-institucional-soon p{
 
     color: #CCCCCC;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 2.3em;
     font-weight: bolder;
     letter-spacing: 0;
@@ -863,7 +863,7 @@ a.tela-cheia {
 #mapas-soon p{
 
 	color: #CCCCCC;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     font-weight: bolder;
     letter-spacing: 0;
@@ -1018,7 +1018,7 @@ h1.linkcat {
 }
 
 #municipios-widget h2{
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     height: 28px;
     text-transform: uppercase;
@@ -1027,7 +1027,7 @@ h1.linkcat {
 }
 
 #municipios-widget h1, h3, h4 {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
 	line-height: 1.1em;
     width: auto;
 	color: #004494;
@@ -1095,7 +1095,7 @@ color: #fff;
 }
 
 h1.negrito {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.2em;
     text-transform: uppercase;
     width: auto;
@@ -1106,7 +1106,7 @@ h1.negrito {
 h2.filtro {
     color: #00ABE5;
     float: left;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.6em;
     letter-spacing: 1px;
     margin-right: 10px;
@@ -1117,7 +1117,7 @@ h2.filtro {
 h2.filtro-agenda {
 	color: #007757;
     float: left;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.6em;
     letter-spacing: 1px;
     margin-right: 10px;
@@ -1158,7 +1158,7 @@ color: #B2CC42;
 }
 
 h1.category-agenda {
-   font-family: 'Candal',sans-serif;
+   font-family: 'Source Sans Pro',sans-serif;
     font-size: 3.2em;
 	text-transform: uppercase;
 	color: #007757 !important;
@@ -1166,7 +1166,7 @@ h1.category-agenda {
 }
 
 h1.diagnostico-box {
-   font-family: 'Candal',sans-serif;
+   font-family: 'Source Sans Pro',sans-serif;
     font-size: 2.6em;
 	text-transform: uppercase;
 	color: #FFF !important;
@@ -1258,7 +1258,7 @@ color: #fff;
 }
 
 h1.title-query {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     text-transform: uppercase;
 	height: 28px;
@@ -1267,7 +1267,7 @@ h1.title-query {
 }
 
 h1.title-query-bookmarks {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     text-transform: uppercase;
 	height: 28px;
@@ -1277,7 +1277,7 @@ h1.title-query-bookmarks {
 }
 
 h1.title-query-link {
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     text-transform: uppercase;
 	height: 28px;
@@ -1309,7 +1309,7 @@ color: #f3c700;
 
 h1.query-destaques {
 	color: #f3c700;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
     height: 28px;
     text-transform: uppercase;
@@ -1400,23 +1400,20 @@ h1.query-destaques {
 
 #icones-municipios{
 	background: xurl("imagens/icones-municipios.png") no-repeat scroll center top;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 0.8em;
     letter-spacing: 1px;
     text-transform: uppercase;
-	width: 276x;
-	height: 72px;
-	margin: 20px 0;
+	width: 100%;
+
 
 }
 
 #cada-icone {
 
     float: left;
-	margin: 0 5px;
+	margin: 0 ;
     position: relative;
-	width: 60px;
-	height: 70px;
 	
 	}
 #icones-municipios a.icone-noticia{
@@ -2116,4 +2113,10 @@ html .widget-title{
 }
 #container{
 	margin:0;
+}
+@media (max-width: 992px){
+	#cada-icone {
+	  margin: 0 20px;
+
+	}
 }
