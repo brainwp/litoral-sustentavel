@@ -1723,7 +1723,6 @@ font-family: 'Passion One', cursive;
 	margin: 20px 0px 0px;
 	position: absolute;
 	display: block;
-	left: 15px;
 }
 #primary-menu li:hover>ul>li{
 	padding: 3px 5px;
