@@ -222,9 +222,8 @@
 /* CSS Document */
 
 body {
-	line-height: 2;
+	line-height: 1.5;
 	font-family: "Open Sans", Arial, sans-serif;
-	font-weight:bold;
 	font-size:12px;	
 	margin: 0;
 	overflow-x:hidden;
@@ -360,8 +359,7 @@ a:hover {
 }
 #creditos-footer p{
 	margin-bottom:0px;
-	
-	font-size:1.3em;
+	font-size:1.1em;
 	color:white;
 	font-weight: normal;
 	font-family:'Source Sans Pro',sans-serif;
@@ -370,7 +368,7 @@ a:hover {
 	padding:20px;
 }
 #creditos-footer .copyright{
-	padding-top:30px;
+	padding-top: 12px;
 }
 #creditos-footer .copyright p{
 	display:inline-block;
@@ -395,7 +393,7 @@ a:hover {
 	background:#5aa9dc;
 	padding:5px;
 	font-family: 'Source Sans Pro',sans-serif;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	font-size:1.3em;
 	border-radius: 5px;
@@ -405,34 +403,31 @@ a:hover {
 	text-decoration:none;
 }
 #destaques-footer article{
-	padding-bottom:30px;
+	padding-bottom: 30px;
+    padding-top: 20px;
 }
 #destaques-footer article h2{
-	margin-top: 15px;
 	color:#446a46;
 	font-weight: 700;
 	font-family: 'Source Sans Pro',sans-serif;
 	font-size:2.1em;
+    margin-top: 15px;
+    line-height: 1em;
 }
-
 #logos {
-
-   background: url("imagens/logos_rodape.png") no-repeat scroll 0 0 transparent;
+    background: url("imagens/logos_rodape.png") no-repeat scroll 0 0 transparent;
     float: right;
     height: 315px;
     margin: 90px 20px 0 0;
     width: 200px;
-
 }
-
 #petrobras {
     background: none repeat scroll 0 0 transparent;
     float: left;
     height: 40px;
     margin: 75px 0 0 10px;
     width: 170px;
-	}
-
+}
 #polis {
     background: none repeat scroll 0 0 transparent;
     float: left;
@@ -440,19 +435,16 @@ a:hover {
     margin: 45px 0 0 9px;
     width: 110px;
 }
-
 a.link_petrobras {
     height: 40px;
     position: absolute;
     width: 170px;
 }
-
 a.link_polis {
     height: 140px;
     position: absolute;
     width: 110px;
 }
-
 #rodape-description {
     color: #FFFFFF;
     float: left;
@@ -694,7 +686,6 @@ select.postform{
 .coluna-sitemap.ultima {
 	width: 100px;
 }
-
 .coluna-sitemap a{
     color: #B3CB43 !important;
     font-family: 'Open Sans',sans-serif;
@@ -703,7 +694,6 @@ select.postform{
 	text-transform: uppercase;
 	
 }
-
 .coluna-sitemap ul.sub-menu a{
     font-family: 'Source Sans Pro',sans-serif;
     font-size: 1em;
@@ -712,29 +702,21 @@ select.postform{
 	text-transform: none;
 	list-style: none;
 }
-
 ul.sub-menu {
 	margin-left: 0;
 }
-
 .page_nav {
-float: left;
-width: 100%;
-margin: 0 auto;
-font-size: 1.2em;
-font-weight: bold;
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: bold;
 }
-
-a.page-numbers {
-padding: 0 6px 0 0;
-
-}
-
+a.page-numbers { padding: 0 6px 0 0; }
 span.current {
-padding: 0 6px 0 0;
-color: #104493;
+    padding: 0 6px 0 0;
+    color: #104493;
 }
-
 span.dots {
 color: #104493;
 }
@@ -1078,21 +1060,20 @@ margin-top: -15px;
 }
 
 #leia-mais-categoria {
-    background: none repeat scroll 0 0 #BABABA;
+    color: #FFF !important;
     float: right;
-    font-family: 'Passion One',sans-serif;
-    font-size: 0.8em;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    margin-right: 0;
-    margin-top: 5px;
-    padding: 0 6px;
+    display: inline-block;
+    background: #BABABA none repeat scroll 0% 0%;
+    padding: 5px;
+    font-family: "Source Sans Pro",sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
-    width: 55px;
+    font-size: 1.3em;
+    border-radius: 5px;
 }
 
 #leia-mais-categoria a {
-color: #fff;
+    color: #fff;
 }
 
 h1.negrito {
@@ -1726,10 +1707,13 @@ font-family: 'Passion One', cursive;
 	margin-left: -6px;
 }
 #primary-menu li:hover>ul>li{
-	padding: 3px 5px;
+	padding: 5px 10px;
 	background: #348CBB;
 	display: block;
 	margin: 0px;
+}
+#primary-menu li:hover>ul>li:hover {
+    background-color: #26678A;
 }
 #primary-menu ul li:hover{
 	background:#348cbb;
@@ -1802,6 +1786,7 @@ font-family: 'Passion One', cursive;
 	width:100%;
 }
 .content-noticias{
+    margin-bottom: 20px;
 	margin-top:20px;
 }
 .content-noticias img{
@@ -1809,26 +1794,33 @@ font-family: 'Passion One', cursive;
 	height:auto;
 }
 .content-noticias h2{
-	font-size:2em;
-	color:black;
+	font-size: 2.4em;
+	color: #444;
 	font-weight: 400;
 	font-family: 'Source Sans Pro',sans-serif;
-	margin:0;
+	margin: 5px 0 5px 0; 
 	line-height:initial;
+    text-transform: uppercase;
 }
 .content-noticias h3{
-	font-size:1.5em;
-	font-weight: 500;
+	font-size: 1.2em;
+	font-weight: 300;
 	font-family: 'Source Sans Pro',sans-serif;
 	text-transform: uppercase;
 	text-decoration: none !important
 }
+.content-noticias h3:hover {
+    color: #000;
+}
+
 .content-noticias a{
 	text-decoration: none !important;
 }
 .content-noticias .content{
+    color: #444;
 	font-family: 'Source Sans Pro',sans-serif;
-	font-size:1.1em;
+	font-size: 1.1em;
+    line-height: 1.4em;
 }
 .content-noticias .content a{
 	display:none;
@@ -1971,16 +1963,19 @@ img#logo-home{
 	margin-bottom:10px;
 }
 .excerpt-slider h2{
-	font-size: 27px;
+	font-size: 2.4em;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 .excerpt-slider h3{
-	font-size:20px;
+	font-size: 20px;
 	font-weight:200;
 	font-family: 'Source Sans Pro',sans-serif;
 	color:#5aa9da;
 }
 .excerpt-slider{
 	margin-bottom:15px;
+    padding: 15px;
 }
 
 #forma-noticias{
@@ -1991,6 +1986,8 @@ img#logo-home{
 }
 html .widget-title{
 	font-family: "Open Sans", Arial, sans-serif;
+    font-size: 2.4em;
+    font-weight: 400;
 }
 .is_slider a.bt-readmore{
 	padding:5px!important;
@@ -2001,9 +1998,12 @@ html .widget-title{
 .is_slider .excerpt-slider a{
 	width:initial;
 }
+.is_slider .excerpt-slider a:hover {
+    color: #000;
+}
 .is_slider .excerpt-slider h3{
 	display:inline-block;
-	margin-left:5px;
+    margin-bottom: 0;
 }
 .is_slider .excerpt-slider p{
 	clear:both;
