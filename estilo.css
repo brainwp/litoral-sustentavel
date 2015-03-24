@@ -497,22 +497,20 @@ a.leia-mais {
     width: 16px;
 	
 }
-
 span.mais {
     margin: -2px 0 0 -2px;
     padding-left: 4px;
 	position: absolute;
-
 }
-
 .entry-title {
     color: #004494;
 	font-family: 'Source Sans Pro',sans-serif;
-    font-weight: bolder;
+    font-size: 2.4em;
+    font-weight: 400;
     letter-spacing: 0;
 	margin-bottom: 10px;
-	}
-
+    text-transform: uppercase;
+}
 .entry-title-query {
     color: #231f20;
 	font-family: 'Open Sans', sans-serif;
@@ -521,8 +519,7 @@ span.mais {
     letter-spacing: 0;
 	font-weight: bold;
 	margin: 0;
-	}
-	
+}
 #midias-sociais {
 	height: 34px;
 	width: 113px;
@@ -530,11 +527,7 @@ span.mais {
     margin-right: 17px;
     margin-top: -2px;
 }
-
-#footer-widget-area ul.children {
-display: none;
-}
-
+#footer-widget-area ul.children { display: none; }
 a.link_twitter {
    background: url("imagens/midias-sociais.png") no-repeat scroll 0 0 transparent;
     height: 35px;
@@ -542,11 +535,9 @@ a.link_twitter {
     position: absolute;
     width: 35px;
 }
-
 a.link_twitter:hover {
 	background: url("imagens/midias-sociais.png") no-repeat scroll 0 -43px transparent;
 }
-
 a.link_facebook {
    background: url("imagens/midias-sociais.png") no-repeat scroll -36px 0 transparent;
     height: 35px;
@@ -555,7 +546,6 @@ a.link_facebook {
 	padding: 0 !important;
 	margin-left: 35px;
 }
-
 a.link_facebook:hover {
 	background: url("imagens/midias-sociais.png") no-repeat scroll -36px -43px transparent;
 }
@@ -596,15 +586,12 @@ a.link_youtube:hover {
     text-indent: -999999px;
     width: 23px;
 }
-
-
 .etiqueta-releases {
 	padding: 10px;
 	margin: 0 0 10px 0;
 	width: auto;
 	background-color: #b9b9b9;
 }
-
 .numero-release {
     color: #FFF !important;
 	font-family: 'Source Sans Pro',sans-serif;
@@ -613,32 +600,28 @@ a.link_youtube:hover {
 	margin: 0 !important;
 	padding: 2px 0;
 }
-
-
 .thumb-boletins {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	margin: 0 0 8px 0;
-	border: 0 !important;
+    border-radius: 3px;
+    height: 130px;
+    overflow: hidden;
+    margin: 0 0 8px 0;
+    width: 92%;
 }
-.thumb-boletins img{
-	max-width:100%;
-	height: auto;
-	
+.thumb-boletins img {
+    min-width: 255px;
+    height: auto;
+    overflow: hidden;
 }
-
+.thumb-boletins.default img {
+    margin-top: -22px;
+}
 .thumb-noticias img {
 	height: auto;
 	border: 0;
 }
-
 .thumb-noticias a img {
 	border: 0;
 }
-
-
-
 
 .cada-evento {
 	background: #FFF;
@@ -711,6 +694,7 @@ ul.sub-menu {
     margin: 0 auto;
     font-size: 1.2em;
     font-weight: bold;
+    text-align: center;
 }
 a.page-numbers { padding: 0 6px 0 0; }
 span.current {
@@ -1066,7 +1050,7 @@ margin-top: -15px;
     background: #BABABA none repeat scroll 0% 0%;
     padding: 5px;
     font-family: "Source Sans Pro",sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
     font-size: 1.3em;
     border-radius: 5px;
@@ -1204,41 +1188,32 @@ display: none;
     margin-top: -15px;
 	margin-bottom: 2px;
 }
-
-#leia-mais-agenda a {
-color: #fff;
-}
-
+#leia-mais-agenda a { color: #fff; }
 #noticias-query {
     float: left;
     margin: 0 0 0 30px;
     width: 285px;
 }
-
 .thumb-noticias {
-	width: 255px;
+    border-radius: 3px;
 	height: 130px;
 	overflow: hidden;
 	margin: 0 0 8px 0;
+    width: 92%;
 }
-
 .thumb-noticias img {
 	min-width: 255px;
 	height: auto;
 	overflow: hidden;
 }
-
-#noticias-municipios-query {
-    float: left;
-
+.thumb-noticias.default img {
+    margin-top: -22px;
 }
-
+#noticias-municipios-query { float: left; }
 .municipios-querypost {
     float: left;
-
     min-height: 125px;
 }
-
 h1.title-query {
     font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.8em;
@@ -1583,10 +1558,9 @@ width: 910px;
 
 .cada-post {
     float: left;
-
     min-height: 250px;
-
-	}
+    margin-bottom: 30px;
+}
 	
 #conteudo-post {
     float: left;
@@ -1790,6 +1764,7 @@ font-family: 'Passion One', cursive;
 	margin-top:20px;
 }
 .content-noticias img{
+    border-radius: 3px;
 	width:100%;
 	height:auto;
 }
@@ -1830,24 +1805,26 @@ font-family: 'Passion One', cursive;
 	margin: 45px auto 0;
 	float: none;
   	clear: both;
-  	width: 150px;
+    text-align: center;
+  	width: 100%;
 
 }
 #pagination-noticias *{
 	font-size: 1.5em;
 	font-family: 'Source Sans Pro',sans-serif;
-	font-weight: 600;
-	color:black !important;
-	text-decoration: none !important
+	font-weight: 400;
+	color: #444 !important;
+	text-decoration: none !important;
+    padding:5px 10px;
 }
 #pagination-noticias .prev, #pagination-noticias .next{
 	color:#5AA9DC !important;
-	font-weight: 900;
+	font-weight: 400;
 }
 #pagination-noticias .current{
 	color:white !important;
 	background:#5AA9DC;
-	padding:5px;
+	padding:5px 10px;
 	border-radius:3px;
 }
  #mascara{
@@ -2110,10 +2087,11 @@ html .widget-title{
   
 }
 .single-post #content h1.entry-title{
-	font-size:3em;
-	font-weight:400;
+	font-size: 2.4em;
+	font-weight: 400;
 	font-family: 'Source Sans Pro',sans-serif;
 	color:#58585b;
+    text-transform: uppercase;
 }
 .single-post .entry-meta a, .single-post .entry-meta a:visited,.single-post .entry-meta a:hover{
 	color:#5ba8d9;

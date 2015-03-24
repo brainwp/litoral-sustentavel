@@ -35,13 +35,19 @@ get_header(); ?>
 				</div><!-- .entry-meta -->
 				<div id="conteudo-post">
                 
-                <?php if ( has_post_thumbnail()) { ?>
-				<div class="thumb-noticias">
-                    <a href="<?php the_permalink() ?>" rel="bookmark">
-                    <?php the_post_thumbnail('thumb-noticias'); ?>
-                    </a>
-                </div>
-                <?php } ?>
+                <?php if ( has_post_thumbnail()) : ?>
+					<div class="thumb-noticias">
+		                <a href="<?php the_permalink() ?>" rel="bookmark">
+		                	<?php the_post_thumbnail( 'thumb-noticias' ); ?>
+		                </a>
+		            </div>
+	            <?php else : ?>
+		            <div class="thumb-noticias default">
+		                <a href="<?php the_permalink() ?>" rel="bookmark">
+		                	<img src="<?php echo get_stylesheet_directory_uri(); ?>/imagens/default-thumb.jpg" alt="<?php the_title(); ?>">
+		                </a>
+		            </div>
+	        	<?php endif; ?>
                 
 				<?php echo excerpt( 25 ); ?><span>...</span>
 				</div>
