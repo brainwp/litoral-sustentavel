@@ -7,6 +7,10 @@
  * @since Twenty Ten 1.0
  */
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
+
+
+
 
 		<div id="container">
 			<div id="content" role="main">
@@ -20,7 +24,7 @@ get_header(); ?>
 					if ( ! empty( $category_description ) )
 						echo '<div class="archive-meta">' . $category_description . '</div>'; ?>
         <?php while ( have_posts() ) : the_post();	?>       
-        <div id="cada-post">
+        <div class="col-md-4 cada-post">
         	<!-- <div class="etiqueta-releases">
             	<?php //$num_release = get_post_meta(get_the_ID(), 'num_text', true); ?>
                 <h2 class="numero-release">Release n&deg; <?php // echo $num_release; ?></h2>
@@ -61,4 +65,7 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 
-<?php get_footer(); ?>
+
+
+		<?php get_footer('cat'); ?>
+

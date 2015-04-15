@@ -8,61 +8,69 @@
  */
 
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
 
-		<div id="container">
-		
-		    <div id="area-select" class="noticias">
-			<h2 class="filtro"><?php _e('Filtro'); ?></h2>
-				<form>
-				<select name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-				<option value='#'>Selecione o Munic&iacute;pios</option>
-				<?php 
-				$taxonomies = array('category');
-				$args = array(
-				'orderby'=>'menu',
-				'hide_empty'=>true,
-				'taxonomy'=>'category',
-				'exclude'=>'57,10,5,6,59,68,11,62,3,4,60,58,9,5,29,26,30,32,27,37,35,36,34,31,28,33,25,66,64,8,56,63,1'
-				);
-				echo get_terms_dropdown($taxonomies, $args); 
-				?>
-				</select>
-				</form>
-			</div><!-- #area-select -->		
+		<div id="" class="" role="main">
 	
 			<div id="content" role="main">
 
 				<h1 class="page-title">
 					<?php
 					printf( __( '%s', 'twentyten' ), '<span class="category-noticias">' . single_cat_title( '', false ) . '</span>' );?>
-					
 				</h1>
+				<div id="area-select" class="noticias">
+				<h2 class="filtro"><?php _e('Filtro'); ?></h2>
+					<form>
+					<select name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+					<option value='#'>Selecione o Munic&iacute;pios</option>
+					<?php 
+					$taxonomies = array('category');
+					$args = array(
+					'orderby'=>'menu',
+					'hide_empty'=>true,
+					'taxonomy'=>'category',
+					'exclude'=>'57,10,5,6,59,68,11,62,3,4,60,58,9,5,29,26,30,32,27,37,35,36,34,31,28,33,25,66,64,8,56,63,1'
+					);
+					echo get_terms_dropdown($taxonomies, $args); 
+					?>
+					</select>
+					</form>
+				</div><!-- #area-select -->
 						<div id="primeira-linha">		
 						 <!-- Inicio Loop -->
 						<?php $category_description = category_description();
 					if ( ! empty( $category_description ) )
 						echo '<div class="archive-meta">' . $category_description . '</div>'; ?>
+        
         <?php while ( have_posts() ) : the_post();	?>       
-        <div id="cada-post">
-			<div id="categoria-archive-titulo"> <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
-				<div class="entry-meta">
-					<?php twentyten_posted_on(); ?>
-				</div><!-- .entry-meta -->
-				<div id="conteudo-post">
-				
-				<?php if ( has_post_thumbnail()) { ?>
-				<div class="thumb-noticias">
-                    <a href="<?php the_permalink() ?>" rel="bookmark">
-                    <?php the_post_thumbnail('thumb-noticias'); ?>
-                    </a>
-                </div>
-                <?php } ?>
-				
-				<?php echo excerpt( 25 ); ?><span>...</span>
-				</div>
-				<div id="leia-mais-categoria">
+        <div class="cada-post col-md-4">
+			<div id="categoria-archive-titulo">
+				<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			</div>
+			<div class="entry-meta">
+				<?php twentyten_posted_on(); ?>
+			</div><!-- .entry-meta -->
+			<div id="conteudo-post">			
+			
+			<?php if ( has_post_thumbnail()) : ?>
+				<div class="thumb-boletins">
+	                <a href="<?php the_permalink() ?>" rel="bookmark">
+	                	<?php the_post_thumbnail( 'thumb-boletins' ); ?>
+	                </a>
+	            </div>
+            <?php else : ?>
+	            <div class="thumb-boletins default">
+	                <a href="<?php the_permalink() ?>" rel="bookmark">
+	                	<img src="<?php echo get_stylesheet_directory_uri(); ?>/imagens/default-thumb.jpg" alt="<?php the_title(); ?>">
+	                </a>
+	            </div>
+        	<?php endif; ?>
+			
+			<?php echo excerpt( 25 ); ?><span>...</span>
+			</div><!-- conteudo-post -->
+			<div id="leia-mais-categoria">
 				<a href="<?php the_permalink() ?>">Leia mais</a>
-				</div>
+			</div>
         </div><!-- #cada-dia -->
 
 		<?php endwhile;	?>
@@ -90,4 +98,6 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 
-<?php get_footer(); ?>
+
+
+		<?php get_footer('cat'); ?>

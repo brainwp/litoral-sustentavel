@@ -13,20 +13,22 @@
  */
 
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
 
-		<div id="container">
-			<div id="content" role="main">
+		<div class="">
+				<div id="content-page" class="" role="main">
 
-			<?php
-			/* Run the loop to output the page.
-			 * If you want to overload this in a child theme then include a file
-			 * called loop-page.php and that will be used instead.
-			 */
-			get_template_part( 'loop', 'page' );
-			?>
-
-			</div><!-- #content -->
+				<?php
+				/* Run the loop to output the page.
+				 * If you want to overload this in a child theme then include a file
+				 * called loop-page.php and that will be used instead.
+				 */
+				get_template_part( 'loop', 'page' );
+				?>
+			</div><!-- #content-page -->
+			<div class="col-md-1"></div>
+			
 		</div><!-- #container -->
 
-<?php get_sidebar(); ?>
-<?php get_footer('page'); ?>
+<?php get_footer('cat'); ?>
+

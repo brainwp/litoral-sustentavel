@@ -4,9 +4,10 @@ Template name: Municipios
  */
 
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
 
-		<div id="container">
-			<div id="content" role="main">
+		<div class="">
+			<div id=""  role="main">
 
 		<div id="resumo">	
 					<?php
@@ -23,7 +24,7 @@ get_header(); ?>
 		while ( $loop->have_posts() ) : $loop->the_post();        
         $slug_do_post = basename(get_permalink());
         $slug_home = get_bloginfo ( 'home' );?> 
-		<div id="cada-municipio">
+		<div class="cada-municipio col-md-4">
         <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
         <div id="thumb-municipio">
         <a href="<?php the_permalink() ?>" rel="bookmark">
@@ -32,16 +33,16 @@ get_header(); ?>
         </div>
         <?php echo excerpt( 25 ); ?>
         <div id="icones-municipios">
-        <div id="cada-icone">
+        <div id="cada-icone" class="col-md-3">
 		<a href="<?php echo $slug_home . '/category/noticias/de-' . $slug_do_post; ?>" class="icone-noticia"><span class="icone-txt">Noticias</span></a>
 		</div>
-		 <div id="cada-icone">
+		 <div id="cada-icone" class="col-md-3">
 		<a href="<?php echo $slug_home . '/cat_agenda/' . $slug_do_post; ?>" class="icone-agenda"><span class="icone-txt">Agenda</span></a>
 		</div>
-		 <div id="cada-icone">
+		 <div id="cada-icone" class="col-md-3">
 		<a href="<?php echo $slug_home . '/municipios/' . $slug_do_post; ?>" class="icone-diagnostico"><span class="icone-txt-diagnostico">Diagnostico</span></a>
 		</div>
-		 <div id="cada-icone">
+		 <div id="cada-icone" class="col-md-3">
 		<a href="<?php echo $slug_home . '/mapas/mapa-de-' . $slug_do_post; ?>" class="icone-mapa"><span class="icone-txt-mapa">Mapa</span></a>
 		</div>
 
@@ -56,4 +57,9 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 
-<?php get_footer(); ?>
+
+
+		<div class="clearfix"></div>
+		
+
+		<?php get_footer('cat'); ?>

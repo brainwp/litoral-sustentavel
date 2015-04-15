@@ -1,7 +1,7 @@
 /*
-Theme Name: Site Litoral Sustentavel
+Theme Name: Site Litoral Sustentavel V2
 Template: twentyten
-Description: Tema do Site Litoral Susutentavel
+Description: Tema do Site Litoral Susutentavel Versão 2
 Author: Ete Design e Ethymos
 Version: 1.3.2
 License: GNU General Public License
@@ -85,7 +85,15 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 	clear: both;
 	width: 100%;
 }
-
+.convenio {
+	background-color: #FFF;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+.convenio img {
+	height: auto;
+	max-width: 100%;
+}
 #player {
 	height: auto;
     margin: 20px 0 0 25px;
@@ -515,7 +523,7 @@ div.menu li {
 	color: #004494;
 	line-height: 1.3em;
 	margin: 0 0 20px 0;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
 }
 #content table {
 	border: 1px solid #e7e7e7;
@@ -931,7 +939,7 @@ img.aligncenter {
 h3#comments-title,
 h3#reply-title {
     color: #00ABE5;
-    font-family: 'Candal',sans-serif;
+    font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.6em;
     text-transform: uppercase;
 	margin-bottom: 0;
@@ -1136,7 +1144,7 @@ h3#reply-title {
 }
 .widget-title {
 	color: #00abe5;
-	font-family: 'Candal',sans-serif;
+	font-family: 'Source Sans Pro',sans-serif;
     font-size: 1.6em;
     margin-bottom: 20px;
 	margin-top: 5px;

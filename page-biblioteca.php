@@ -2,6 +2,7 @@
 /* Template Name: Biblioteca */
 
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
 
 		<div id="container-home">		
 
@@ -50,4 +51,4 @@ get_header(); ?>
 
 		</div><!-- #content-home  -->
 
-<?php get_footer(); ?>
+		<?php get_footer('cat'); ?>

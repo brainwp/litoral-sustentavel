@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+<?php get_template_part('parts/comp-header'); ?>
 
 		<div id="container">
 	
@@ -24,7 +25,7 @@ get_header(); ?>
 					if ( ! empty( $category_description ) )
 						echo '<div class="archive-meta">' . $category_description . '</div>'; ?>
         <?php while ( have_posts() ) : the_post();	?>       
-        <div id="cada-post">
+        <div class="cada-post col-md-4">
 			<div id="categoria-archive-titulo"> <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
 
 				<div id="conteudo-post">
@@ -59,4 +60,4 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 
-<?php get_footer(); ?>
+		<?php get_footer('cat'); ?>

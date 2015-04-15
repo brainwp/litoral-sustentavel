@@ -1,15 +1,25 @@
 <?php
+/* OPTIONS ODIN */
+require_once get_stylesheet_directory() . '/inc/options.php';
+//mascara da imagem da home
+require_once get_stylesheet_directory() . '/inc/mask-image.php';
+
 
 // Redefine o tamanho do Cabeçalho
-define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 639 ) );
-define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 329 ) );
+define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 946 ) );
+define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 266 ) );
 
 // post thumbnail support
 	if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
 	if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'thumb-municipios', 280, 130, true );
 	add_image_size( 'thumb-noticias', 255, 130, true );
+	add_image_size( 'thumb-apresentacoes', 255, 195, true );
 	add_image_size( 'thumb-boletins', 255, 255, true );
+	add_image_size( 'thumb-destaques', 710, 260, true );
+	add_image_size( 'thumb-single', 1023, 320, true );
+	
+	
 }
 
 
@@ -17,12 +27,12 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 3
  add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
 
 //Adiciona as Minhas Opções
-require_once (get_stylesheet_directory() . '/options/admin_options.php');
+// require_once (get_stylesheet_directory() . '/options/admin_options.php');
 
 // Codigo da Agenda
 
 //Adiciona o CustomPostType Agenda
-require_once (get_stylesheet_directory() . '/requires-agenda.php');
+// require_once (get_stylesheet_directory() . '/requires-agenda.php');
 
 
 
@@ -106,6 +116,63 @@ function show_post($path) {
   $content = apply_filters('the_content', $post->post_content);
   echo $content;
 }
+
+function admin_scripts() {
+  wp_enqueue_style( 'odin-admin-css', get_stylesheet_directory_uri() . '/css/odin-admin.css' );
+  wp_enqueue_script( 'odin-admin-js',  get_stylesheet_directory_uri() . '/js/odin-admin.js', array( 'jquery' ), '1.0', true );
+}
+add_action( 'admin_enqueue_scripts', 'admin_scripts' );
+function scripts(){
+    wp_enqueue_script( 'custom-js',  get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_style( 'source-sans', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,200,200italic,300,300italic,900italic,900,700italic,700,600italic,600' );
+}
+add_action('init','scripts');
+///adiciona resumo ás páginas
+add_post_type_support('page','excerpt');
+///esconde a barra de admin quando logado
+
+///brasa slider resum
+function slider_resumo($str){
+  	global $brasa_slider_id, $brasa_slider_item_id;
+	
+    
+  if(get_the_title($brasa_slider_id) != 'Home'){
+	return $str;
+	}
+ else{
+
+	//aqui vc retorna o resumo
+		$categoria_html ="";
+    	$the_post = get_post($brasa_slider_item_id);
+		$category = get_the_category($brasa_slider_item_id); 
+		$ultimo = end($category);
+		$content = $the_post->post_content;
+		$excerpt = wp_trim_words( $content, 60, $more = null );
+
+		foreach ($category as $categoria){
+			$categoria_html .= '<h3><a href="'.get_category_link($categoria->term_id ).'"> '.$categoria->cat_name;
+			if ($categoria != $ultimo){
+				$categoria_html .=", ";
+			}
+			$categoria_html .='</a></h3>';
+		}
+		
+		$permalink = get_permalink( $brasa_slider_item_id);
+		if ($str){
+			$str .= "<div class='excerpt-slider'><h2>".$the_post->post_title."</h2>".$categoria_html."<p>".$excerpt."</p></div><a href=".$permalink." class='bt-readmore'>Leia Mais</a>";
+			return $str;
+		}
+		
+	}
+}
+add_filter('brasa_slider_loop_after_image','slider_resumo');
+
+function size($size){
+	$size="thumb-destaques";
+	return $size;
+}
+add_filter('brasa_slider_img_size','size');
+
 
 
 
