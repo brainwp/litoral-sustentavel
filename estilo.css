@@ -2207,6 +2207,12 @@ p{
  	  -o-transition: all 0.2s ease-in-out;
  	  transition: all 0.2s ease-in-out;
 }
+.fotos-eventos{
+	overflow:hidden;
+}
+.cada-evento{
+	margin-bottom:10px;
+}
 @media (max-width: 992px){
 	#cada-icone {
 	  margin: 0 20px;

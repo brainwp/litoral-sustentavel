@@ -39,10 +39,9 @@ get_header(); ?>
         ?>
         
         <div class="cada-evento col-md-12">
-        <div class="cada-evento-div">
+        <div class=" col-md-3">
 			<div id="fotos-archive-titulo"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>        
         </div><!-- cada-evento-div -->
-          <a href="<?php the_permalink() ?>">      
         <?php
 				// Imprime os ATTACHMENTs do $attachments //
                 if ( $imgs )
@@ -50,13 +49,17 @@ get_header(); ?>
                     foreach ( $imgs as $img )
                     {
                     // Imprimi todas as imagens do post com a div class img_post //
-                    echo '<div class="cada-evento-div">';
+                    echo '<div class=" fotos-eventos col-md-3">';
+					?>
+					<a  href="<?php the_permalink() ?>">      
+		          <?php 
                     echo wp_get_attachment_image( $img->ID, array(280,280));
+					?></a>
+					<?php
                     echo '</div>';
                     }
                 }
         ?>
-        </a>
         </div><!-- .cada-evento -->
         
         <?php		
