@@ -16,7 +16,7 @@ get_header(); ?>
 
 				<h1 class="page-title">
 					<?php
-					printf( __( '%s', 'twentyten' ), '<br /><span class="category-name">' . single_cat_title( '', false ) . '</span>' );?>
+					printf( __( '%s', 'twentyten' ), '<span class="category-name">' . single_cat_title( '', false ) . '</span>' );?>
 					
 				</h1>
 						<div id="primeira-linha">		
