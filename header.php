@@ -105,31 +105,3 @@ $options = get_option('social_cfg');
 		</div><!-- .row -->
 	</div><!-- .container -->
 </nav><!-- #primary-menu -->
-image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-					<?php endif; ?>
-			
-			</div>
-			</div><!-- #branding -->
-
-			<div id="access" role="navigation">
-				<div id="top-header">
-					<div id="header-search">
-				<?php get_search_form(); ?>
-					</div>
-				</div>
-				<div id="bottom-header">
-					<div id="midias-sociais">
-					<a href="<?php echo stripslashes (get_option('mo_url_twitter')); ?>" class="link_twitter" target="_blank"></a>
-					<a href="<?php echo stripslashes (get_option('mo_url_face')); ?>" class="link_facebook" target="_blank"></a>
-					<a href="<?php echo stripslashes (get_option('mo_url_youtube')); ?>" class="link_youtube" target="_blank"></a>
-					</div>
-			  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
-				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-				</div><!-- #bottom-header -->
-			</div><!-- #access -->
-		</div><!-- #masthead -->
-	</div><!-- #header -->
-
-	<div id="main">
