@@ -580,16 +580,14 @@ a.link_youtube {
 a.link_youtube:hover {
 	background: url("imagens/midias-sociais.png") no-repeat scroll -76px -43px transparent;
 }
-.search h1.page-title{
-	background:transparent;
-}
+
 #s {
     background: none repeat scroll 0 0 #6BC6D3;
     border: medium none;
     border-radius: 8px 8px 8px 8px;
     color: #FFFFFF;
     font-family: "Open Sans",sans-serif;
-  	height: 35px;
+    height: 15px;
     margin-right: 0;
     margin-top: 8px;
     padding: 4px;
@@ -1694,13 +1692,11 @@ font-family: 'Passion One', cursive;
 #primary-menu ul.sub-menu{
 	display:none;
 }
-#primary-menu li:hover>ul {
-  margin: 0 0px 0px;
-  position: absolute;
-  display: block;
-  margin-left: 0px;
-  border: none;
-  padding: 0;
+#primary-menu li:hover>ul{
+	margin: 20px 0px 0px;
+	position: absolute;
+	display: block;
+	margin-left: -6px;
 }
 #primary-menu li:hover>ul>li{
 	padding: 5px 10px;
@@ -2217,61 +2213,9 @@ p{
 .cada-evento{
 	margin-bottom:10px;
 }
-@media (max-width: 990px){
-	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-	   clear: both;
-	}
-	#primary-menu ul li a{
-		float:left;
-	}
+@media (max-width: 992px){
 	#cada-icone {
 	  margin: 0 20px;
-	}
-	.navbar-default .navbar-toggle{
-		float:left;
-	}
-	#primary-menu li>ul, #primary-menu li:hover>ul {
-	  margin: 20px 0px 0px;
-	  position: relative;
-	  display: block;
-	  margin-left: -6px;
-	  background: transparent;
-	  box-shadow: none;
-	  border: none;
-	  clear: both;
-	
-	}
-	html .dropdown-menu > li > a:hover, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
-		background-color:transparent;
-	}
-	#img-cabecalho{
-		height:initial;
-	}
-	#primary-menu li>ul>li, #primary-menu li:hover>ul>li {
-	  padding: 5px 10px;
-	  background: transparent;
-	  display: block;
-	  margin: 0px;
-	}
-	
-	img#logo-home {
-	  width: 55vw;
-	  margin: 35px auto;
-	  display: block;
-	}
-	#fundo{
-	}
-	#div_img_header{
-		display:none	;
-	}
-	.navbar-default .navbar-collapse, .navbar-default .navbar-form{
-		border:none;
-	}
-	#primary-menu ul li{
-		display:block;
-		clear:both;
-	}
-	#primary-menu ul li:hover, #primary-menu li:hover>ul>li:hover{
-		background:transparent;
+
 	}
 }
