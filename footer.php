@@ -39,19 +39,8 @@ $options = get_option('footer_cfg');
 					</div>
 				</div><!-- footer-widget-area -->
 				<div class="col-md-4 pull-right apoio">
-					<div class="logo-footer col-md-12">
-						<h2 class="sitemap"><?php _e('Realização','litoral-sustentavel'); ?></h2><!-- .sitemap -->
-						<?php $link = (!empty($options['footer_realizacao_link']))? $options['footer_realizacao_link'] : '#footer'; ?>
-						<a href="<?php echo $link; ?>">
-							<?php echo wp_get_attachment_image($options['footer_realizacao'],'full');?>
-						</a>
-					</div><!-- .col-md-12 -->
-					<div class="col-md-12 pull-left">
-						<h2 class="sitemap"><?php _e('Convênio','litoral-sustentavel'); ?></h2><!-- .sitemap -->
-						<?php $link = (!empty($options['footer_convenio_link']))? $options['footer_convenio_link'] : '#footer'; ?>
-						<a class="convenio" href="<?php echo $link; ?>">
-							<?php echo wp_get_attachment_image($options['footer_convenio'],'full');?>
-						</a><!-- convenio -->
+					<div class="col-md-12 logos">
+						<?php echo wp_get_attachment_image($options['footer_convenio'],'full');?>
 					</div><!-- .col-md-12 -->
 				</div><!-- .col-md-4 pull-right apoio -->
 			</div><!-- .row -->

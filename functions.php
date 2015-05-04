@@ -32,7 +32,7 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 2
 // Codigo da Agenda
 
 //Adiciona o CustomPostType Agenda
-// require_once (get_stylesheet_directory() . '/requires-agenda.php');
+require_once (get_stylesheet_directory() . '/requires-agenda.php');
 
 
 
@@ -87,7 +87,7 @@ return $output;
 	
 function meu_logo_login()
 {
-    echo '<style  type="text/css"> h1 a {  background-image:url('.get_bloginfo('stylesheet_directory').'/imagens/logo_header_peq.png)  !important;  height: 150px !important; width: 182px !important;
+    echo '<style  type="text/css"> h1 a {  background-image:url('.get_bloginfo('stylesheet_directory').'/imagens/logo-login.png)  !important;  height: 150px !important; width: 182px !important;
     margin-top: -50px !important;  margin-left: 75px !important; background-size: 182px 150px !important; } </style>';
 }
 add_action('login_head',  'meu_logo_login');
