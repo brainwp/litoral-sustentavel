@@ -10,7 +10,7 @@
 get_header('single-post'); ?>
 <div class="col-md-1"></div>
 <div id="thumb-single" class="col-md-10">
-	<?php echo get_the_post_thumbnail( $post->ID, 'thumb-single', $attr ); ?> 
+	<?php echo get_the_post_thumbnail( $post->ID, 'thumb-single'); ?> 
 </div>
 <div class="clearfix"></div>
 	

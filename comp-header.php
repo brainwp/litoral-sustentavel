@@ -7,25 +7,9 @@
 				$image[1] >= HEADER_IMAGE_WIDTH ) :
 			// Houston, we have a new header image!
 			echo get_the_post_thumbnail( $post->ID );
-<<<<<<< HEAD
 		elseif ( get_header_image() ) : ?>
 			<img id="img_header"  src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 		<?php endif; 
-=======
-			elseif ( get_header_image() ) : 
-			$redimensionada = resize('946', '266', get_header_image() );
-
-			$mask = get_stylesheet_directory_uri().'/imagens/mask.png';
-			$mask = imagecreatefrompng( $mask );
-			// 
-			// // Apply mask to source
-			imagealphamask( $redimensionada, $mask );
-			// // Output
-			// header( "Content-type: image/png");
-			imagepng( $redimensionada, 'temp.png');?>
-				<img id="img_header"  src="/temp.png" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-			<?php endif;
->>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
 ?>
 </div>
 		
@@ -48,7 +32,3 @@
 	<img  src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-top.png">
 </div>
 <section id="query-categories">
-	<div class="container">
-		<div class="col-md-1"></div>
-		<div class="col-md-10">
-	

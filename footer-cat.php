@@ -73,6 +73,7 @@ $options = get_option('footer_cfg');
 					</div>
 				</div><!-- footer-widget-area -->
 				<div class="col-md-4 pull-right apoio">
+<<<<<<< HEAD
 					<div class="logo-footer col-md-12">
 						<h2 class="sitemap"><?php _e('Realização','litoral-sustentavel'); ?></h2><!-- .sitemap -->
 						<?php $link = (!empty($options['footer_realizacao_link']))? $options['footer_realizacao_link'] : '#footer'; ?>
@@ -94,6 +95,11 @@ $options = get_option('footer_cfg');
 							<?php echo wp_get_attachment_image($options['footer_apoio'],'full');?>
 						</a>
 					</div><!-- .col-md-3 -->
+=======
+					<div class="col-md-12 logos">
+						<?php echo wp_get_attachment_image($options['footer_convenio'],'full');?>
+					</div><!-- .col-md-12 -->
+>>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
 				</div><!-- .col-md-4 pull-right apoio -->
 			</div><!-- .row -->
 		</div><!-- .container -->

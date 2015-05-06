@@ -48,10 +48,13 @@ function mytheme_add_box() {
 		$meta_box['context'],
 		$meta_box['priority']);
 	
-	$date = get_post_meta( $post->ID, 'agenda-event-date', true );
-	
-	if( $date != '' )
-		$date = date( 'm-d-Y', $date );	
+	if (isset($post)){
+		$date = get_post_meta( $post->ID, 'agenda-event-date', true );
+
+		if( $date != '' )
+			$date = date( 'm-d-Y', $date );	
+		
+	}
 }
 	
 	

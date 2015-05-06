@@ -32,7 +32,7 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 2
 // Codigo da Agenda
 
 //Adiciona o CustomPostType Agenda
-require_once (get_stylesheet_directory() . '/requires-agenda.php');
+// require_once (get_stylesheet_directory() . '/requires-agenda.php');
 
 
 
@@ -174,12 +174,6 @@ function size($size){
 add_filter('brasa_slider_img_size','size');
 
 
-function enqueue_bootstrap(){
-	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/assets/js/libs/bootstrap.min.js', array(), null, true );
-	wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css' );
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_bootstrap', 1 );
 
-require_once get_stylesheet_directory() . '/inc/class-bootstrap-nav.php';
 
 ?>

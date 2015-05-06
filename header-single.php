@@ -88,13 +88,9 @@ $options = get_option('social_cfg');
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 pull-left">
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'depth' => 2 ) ); ?>
+				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'depth' => -1 ) ); ?>
 		    </div><!-- .col-md-6 pull-left -->
-<<<<<<< HEAD
-		    <div class="col-md-2 pull-right icons">
-=======
 		    <div class="col-md-3 pull-right icons">
->>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
 		    	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		    		<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="search-input" placeholder="<?php _e('Pressione enter','litoral-sustentavel');?>" />
 		    	</form>
@@ -103,45 +99,22 @@ $options = get_option('social_cfg');
 		    	<a class="genericon genericon-facebook-alt" href="<?php echo $link; ?>"></a>
 		    	<?php $link = (!empty($options['twitter']))? $options['twitter'] : '#'; ?>
 		    	<a class="genericon genericon-twitter" href="<?php echo $link; ?>"></a>
-<<<<<<< HEAD
-=======
 				<?php $link = (!empty($options['youtube']))? $options['youtube'] : '#'; ?>
 		    	<a class="genericon genericon-youtube" href="<?php echo $link; ?>"></a>
->>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
 		    </div><!-- .col-md-5 pull-right -->
 		</div><!-- .row -->
 	</div><!-- .container -->
 </nav><!-- #primary-menu -->
-<div id="">
+<div id="fundo">
 	<div id="img-cabecalho" class="container">
 		<div class="col-md-1"></div>
 		<div id="logo-single" class="col-md-6">
-			<a href="<?php echo get_site_url(); ?>">
-				<img id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
-			</a>
+			<img id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
 		</div>
-<<<<<<< HEAD
-	<?php 
-		$page_data = get_page_by_title( 'O que é o projeto' );
-		$the_excerpt = $page_data->post_excerpt;
-		$trimmed = wp_trim_words( $the_excerpt, $num_words = 30, $more = null );
-		
-		
-	?>
 		<div id="oque-resumo" class="col-md-4">
-			<?php echo $trimmed;?>
-			<a class="bt-readmore" href="<?php echo get_permalink( $page_data->ID ); ?>">
-				Leia Mais	
-			</a>
+			<img src="<?php get_stylesheet_directory_uri();?>/imagens/fundo-content-bottom.png">
 			
 		</div>
-=======
-	
-			<div id="oque-resumo" class="col-md-4">
-				<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-content-top.png">
-
-			</div>
->>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
 		<div class="col-md-1"></div>
 	</div>
 	

@@ -8,7 +8,8 @@
  */
 
 get_header(); ?>
-<?php get_template_part('parts/comp-header'); ?>
+	<?php get_template_part('parts/comp-header'); ?>
+	
 
 		<div id="container">
 	
@@ -16,7 +17,7 @@ get_header(); ?>
 
 				<h1 class="page-title">
 					<?php
-					printf( __( '%s', 'twentyten' ), '<span class="category-name">' . single_cat_title( '', false ) . '</span>' );?>
+					printf( __( '%s', 'twentyten' ), '<span class="category-apresentacoes">' . single_cat_title( '', false ) . '</span>' );?>
 					
 				</h1>
 						<div id="primeira-linha">		
@@ -27,9 +28,16 @@ get_header(); ?>
         <?php while ( have_posts() ) : the_post();	?>       
         <div class="cada-post col-md-4">
 			<div id="categoria-archive-titulo"> <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
-
 				<div id="conteudo-post">
-				<?php echo excerpt( 40 ); ?>
+				 
+				<?php
+					/* Add thumbnail for categories */
+					get_template_part( 'parts/thumb', 'category');
+				?>
+
+                <!-- <div class="entry-meta">
+					<?php twentyten_posted_on(); ?>
+				</div> -->
 				</div>
 				<div id="leia-mais-categoria">
 				<a href="<?php the_permalink() ?>">Leia mais</a>
@@ -59,5 +67,7 @@ get_header(); ?>
 		?>
 			</div><!-- #content -->
 		</div><!-- #container -->
+		<div class="clearfix"></div>
+		
 
-		<?php get_footer('cat'); ?>
+<?php get_footer('cat'); ?>

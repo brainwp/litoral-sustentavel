@@ -18,4 +18,12 @@ jQuery(function($) {
 			}, 1300);
 		}
 	});
+<<<<<<< HEAD
+=======
+	$('.close-reveal-modal').click(function() {
+		$('#fundo-modal').css('width', '0');
+		$('#reveal-modal-id').css('visibility', 'hidden');
+		
+	});
+>>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
 })

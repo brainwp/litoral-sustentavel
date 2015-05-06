@@ -12,6 +12,9 @@
 $options = get_option('footer_cfg');
 ?>
    <?php /* dois destaques */ ?>
+	<div id="div-fundo-top-rodape">
+		<img id="fundo-top-rodape" src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-top-rodape.png">
+	</div>
    <?php get_template_part('parts/destaques-footer'); ?>
 	<div style="clear:both;"> </div>
 	<footer id="footer" class="col-md-12">
@@ -36,19 +39,8 @@ $options = get_option('footer_cfg');
 					</div>
 				</div><!-- footer-widget-area -->
 				<div class="col-md-4 pull-right apoio">
-					<div class="logo-footer col-md-12">
-						<h2 class="sitemap"><?php _e('Realização','litoral-sustentavel'); ?></h2><!-- .sitemap -->
-						<?php $link = (!empty($options['footer_realizacao_link']))? $options['footer_realizacao_link'] : '#footer'; ?>
-						<a href="<?php echo $link; ?>">
-							<?php echo wp_get_attachment_image($options['footer_realizacao'],'full');?>
-						</a>
-					</div><!-- .col-md-12 -->
-					<div class="col-md-12 pull-left">
-						<h2 class="sitemap"><?php _e('Convênio','litoral-sustentavel'); ?></h2><!-- .sitemap -->
-						<?php $link = (!empty($options['footer_convenio_link']))? $options['footer_convenio_link'] : '#footer'; ?>
-						<a class="convenio" href="<?php echo $link; ?>">
-							<?php echo wp_get_attachment_image($options['footer_convenio'],'full');?>
-						</a><!-- convenio -->
+					<div class="col-md-12 logos">
+						<?php echo wp_get_attachment_image($options['footer_convenio'],'full');?>
 					</div><!-- .col-md-12 -->
 				</div><!-- .col-md-4 pull-right apoio -->
 			</div><!-- .row -->
@@ -65,7 +57,9 @@ $options = get_option('footer_cfg');
 					</div><!-- .col-md-8 -->
 					<div class="col-md-4 pull-right copyright">
 						<p><?php _e('Alguns direitos reservados','litoral-sustentavel'); ?></p>
-						<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/cc.jpg">
+						<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/br/">
+							<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/cc.jpg">
+						</a>
 						<a href="http://brasa.art.br">
 							<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/brasa.jpg">
 						</a>
