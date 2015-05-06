@@ -43,20 +43,13 @@ $options = get_option('footer_cfg');
 							<?php echo wp_get_attachment_image($options['footer_realizacao'],'full');?>
 						</a>
 					</div><!-- .col-md-12 -->
-					<div class="col-md-9 pull-left">
+					<div class="col-md-12 pull-left">
 						<h2 class="sitemap"><?php _e('Convênio','litoral-sustentavel'); ?></h2><!-- .sitemap -->
 						<?php $link = (!empty($options['footer_convenio_link']))? $options['footer_convenio_link'] : '#footer'; ?>
-						<a href="<?php echo $link; ?>">
+						<a class="convenio" href="<?php echo $link; ?>">
 							<?php echo wp_get_attachment_image($options['footer_convenio'],'full');?>
-						</a>
-					</div><!-- .col-md-10 -->
-					<div class="col-md-3">
-						<h2 class="sitemap"><?php _e('Apoio','litoral-sustentavel'); ?></h2><!-- .sitemap -->
-						<?php $link = (!empty($options['footer_convenio_link']))? $options['footer_convenio_link'] : '#footer'; ?>
-						<a href="<?php echo $link; ?>">
-							<?php echo wp_get_attachment_image($options['footer_apoio'],'full');?>
-						</a>
-					</div><!-- .col-md-3 -->
+						</a><!-- convenio -->
+					</div><!-- .col-md-12 -->
 				</div><!-- .col-md-4 pull-right apoio -->
 			</div><!-- .row -->
 		</div><!-- .container -->

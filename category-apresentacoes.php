@@ -29,13 +29,12 @@ get_header(); ?>
         <div class="cada-post col-md-4">
 			<div id="categoria-archive-titulo"> <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
 				<div id="conteudo-post">
-				 <?php if ( has_post_thumbnail()) { ?>
-				<div class="thumb-boletins">
-                    <a href="<?php the_permalink() ?>" rel="bookmark">
-                    <?php the_post_thumbnail('thumb-boletins'); ?>
-                    </a>
-                </div>
-                <?php } ?>
+				 
+				<?php
+					/* Add thumbnail for categories */
+					get_template_part( 'parts/thumb', 'category');
+				?>
+
                 <!-- <div class="entry-meta">
 					<?php twentyten_posted_on(); ?>
 				</div> -->

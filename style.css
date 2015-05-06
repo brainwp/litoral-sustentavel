@@ -85,7 +85,15 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 	clear: both;
 	width: 100%;
 }
-
+.convenio {
+	background-color: #FFF;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+.convenio img {
+	height: auto;
+	max-width: 100%;
+}
 #player {
 	height: auto;
     margin: 20px 0 0 25px;

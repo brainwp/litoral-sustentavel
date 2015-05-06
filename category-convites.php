@@ -28,13 +28,19 @@ get_header(); ?>
         <div class="col-md-4 cada-post">
 			<div id="categoria-archive-titulo"> <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
 				<div id="conteudo-post">
-				<?php if ( has_post_thumbnail()) { ?>
-				<div class="thumb-boletins">
-                    <a href="<?php the_permalink() ?>" rel="bookmark">
-                    <?php the_post_thumbnail('thumb-boletins'); ?>
-                    </a>
-                </div>
-                <?php } ?>
+				<?php if ( has_post_thumbnail()) : ?>
+					<div class="thumb-boletins">
+		                <a href="<?php the_permalink() ?>" rel="bookmark">
+		                	<?php the_post_thumbnail( 'thumb-boletins' ); ?>
+		                </a>
+		            </div>
+	            <?php else : ?>
+		            <div class="thumb-boletins default">
+		                <a href="<?php the_permalink() ?>" rel="bookmark">
+		                	<img src="<?php echo get_stylesheet_directory_uri(); ?>/imagens/default-thumb.jpg" alt="<?php the_title(); ?>">
+		                </a>
+		            </div>
+	        	<?php endif; ?>
                 <!-- <div class="entry-meta">
 					<?php // twentyten_posted_on(); ?>
 				</div> -->

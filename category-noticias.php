@@ -11,15 +11,12 @@ get_header(); ?>
 <?php get_template_part('parts/comp-header'); ?>
 
 		<div id="" class="" role="main">
-		
-		    
 	
 			<div id="content" role="main">
 
 				<h1 class="page-title">
 					<?php
 					printf( __( '%s', 'twentyten' ), '<span class="category-noticias">' . single_cat_title( '', false ) . '</span>' );?>
-					
 				</h1>
 				<div id="area-select" class="noticias">
 				<h2 class="filtro"><?php _e('Filtro'); ?></h2>
@@ -44,27 +41,36 @@ get_header(); ?>
 						<?php $category_description = category_description();
 					if ( ! empty( $category_description ) )
 						echo '<div class="archive-meta">' . $category_description . '</div>'; ?>
+        
         <?php while ( have_posts() ) : the_post();	?>       
         <div class="cada-post col-md-4">
-			<div id="categoria-archive-titulo"> <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
-				<div class="entry-meta">
-					<?php twentyten_posted_on(); ?>
-				</div><!-- .entry-meta -->
-				<div id="conteudo-post">
-				
-				<?php if ( has_post_thumbnail()) { ?>
-				<div class="thumb-noticias">
-                    <a href="<?php the_permalink() ?>" rel="bookmark">
-                    <?php the_post_thumbnail('thumb-noticias'); ?>
-                    </a>
-                </div>
-                <?php } ?>
-				
-				<?php echo excerpt( 25 ); ?><span>...</span>
-				</div>
-				<div id="leia-mais-categoria">
+			<div id="categoria-archive-titulo">
+				<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			</div>
+			<div class="entry-meta">
+				<?php twentyten_posted_on(); ?>
+			</div><!-- .entry-meta -->
+			<div id="conteudo-post">			
+			
+			<?php if ( has_post_thumbnail()) : ?>
+				<div class="thumb-boletins">
+	                <a href="<?php the_permalink() ?>" rel="bookmark">
+	                	<?php the_post_thumbnail( 'thumb-boletins' ); ?>
+	                </a>
+	            </div>
+            <?php else : ?>
+	            <div class="thumb-boletins default">
+	                <a href="<?php the_permalink() ?>" rel="bookmark">
+	                	<img src="<?php echo get_stylesheet_directory_uri(); ?>/imagens/default-thumb.jpg" alt="<?php the_title(); ?>">
+	                </a>
+	            </div>
+        	<?php endif; ?>
+			
+			<?php echo excerpt( 25 ); ?><span>...</span>
+			</div><!-- conteudo-post -->
+			<div id="leia-mais-categoria">
 				<a href="<?php the_permalink() ?>">Leia mais</a>
-				</div>
+			</div>
         </div><!-- #cada-dia -->
 
 		<?php endwhile;	?>
