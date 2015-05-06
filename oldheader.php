@@ -88,7 +88,39 @@ $options = get_option('social_cfg');
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 pull-left">
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'depth' => 2 ) ); ?>
+				<nav id="main-navigation" class="navbar navbar-default" role="navigation">
+			
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
+						<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<?php /*
+
+						<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+
+						*/ ?>
+					</div>
+
+					<div class="collapse navbar-collapse navbar-main-navigation">
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'primary',
+									'depth'          => 2,
+									'container'      => false,
+									'menu_class'     => 'nav navbar-nav',
+									'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+									'walker'         => new Odin_Bootstrap_Nav_Walker()
+								)
+							);
+						?>
+
+						
+					</div><!-- .navbar-collapse -->
+				</nav><!-- #main-menu -->
 		    </div><!-- .col-md-6 pull-left -->
 		    <div class="col-md-3 pull-right icons">
 		    	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
