@@ -88,7 +88,7 @@ $options = get_option('social_cfg');
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 pull-left">
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'depth' => -1 ) ); ?>
+				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'depth' => 2 ) ); ?>
 		    </div><!-- .col-md-6 pull-left -->
 		    <div class="col-md-2 pull-right icons">
 		    	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">

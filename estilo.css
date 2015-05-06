@@ -1716,6 +1716,21 @@ font-family: 'Passion One', cursive;
   	padding-left: 6px;
 	transition:400ms ease all;
 }
+#primary-menu ul.sub-menu{
+	display:none;
+}
+#primary-menu li:hover>ul{
+	margin: 20px 0px 0px;
+	position: absolute;
+	display: block;
+	margin-left: -6px;
+}
+#primary-menu li:hover>ul>li{
+	padding: 3px 5px;
+	background: #348CBB;
+	display: block;
+	margin: 0px;
+}
 #primary-menu ul li:hover{
 	background:#348cbb;
 }
