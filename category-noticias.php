@@ -10,11 +10,7 @@
 get_header(); ?>
 <?php get_template_part('parts/comp-header'); ?>
 
-
-
-
-	<div class="col-md-1"></div>
-		<div id="" class="col-md-10" role="main">
+		<div id="" class="" role="main">
 		
 		    
 	
@@ -49,7 +45,7 @@ get_header(); ?>
 					if ( ! empty( $category_description ) )
 						echo '<div class="archive-meta">' . $category_description . '</div>'; ?>
         <?php while ( have_posts() ) : the_post();	?>       
-        <div id="cada-post">
+        <div class="cada-post col-md-4">
 			<div id="categoria-archive-titulo"> <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
 				<div class="entry-meta">
 					<?php twentyten_posted_on(); ?>

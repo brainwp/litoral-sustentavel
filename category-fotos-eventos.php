@@ -38,7 +38,7 @@ get_header(); ?>
                 $imgs = get_posts( $args );
         ?>
         
-        <div class="cada-evento">
+        <div class="cada-evento col-md-12">
         <div class="cada-evento-div">
 			<div id="fotos-archive-titulo"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>        
         </div><!-- cada-evento-div -->

@@ -14,7 +14,9 @@
 
 get_header(); ?>
 
-		<div id="container" class="one-column">
+<?php get_template_part('parts/comp-header'); ?>
+
+		<div class="">
 			<div id="content" class="biblioteca">
 
 			<?php
@@ -28,4 +30,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 
-<?php get_footer('page'); ?>
+<?php get_footer('cat'); ?>
+
