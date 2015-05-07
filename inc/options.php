@@ -74,14 +74,11 @@ $odin_theme_options->set_fields(
                     'default' => 3
                     //'description' => __( 'Descrition Example', 'odin' )
                 ),
-<<<<<<< HEAD
-=======
 				array(
                     'id' => 'modal_na_home',
                     'label' => __('Conteúdo do modal da home'),
                     'type' => 'editor',
                 ),
->>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
             )
         ),
         'footer_section' => array(
@@ -106,50 +103,12 @@ $odin_theme_options->set_fields(
                     'type' => 'text',
                 ),
                 array(
-<<<<<<< HEAD
-                    'id' => 'footer_realizacao',
-                    'label' => __('Realização - Imagem','litoral-sustentavel'),
-                    'type' => 'image',
-                    'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
-                ),
-                array(
-                    'id' => 'footer_realizacao_link',
-                    'label' => __('Realização - Link','litoral-sustentavel'),
-                    'type' => 'text',
-                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
-                ),
-                array(
-                    'id' => 'footer_convenio',
-                    'label' => __('Convênio - Imagem','litoral-sustentavel'),
-=======
                     'id' => 'footer_convenio',
                     'label' => __('Logos Convênio - Imagem','litoral-sustentavel'),
->>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
                     'type' => 'image',
                     //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
                 ),
                 array(
-<<<<<<< HEAD
-                    'id' => 'footer_convenio_link',
-                    'label' => __('Convênio - Link','litoral-sustentavel'),
-                    'type' => 'text',
-                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
-                ),
-                array(
-                    'id' => 'footer_apoio',
-                    'label' => __('Apoio - Imagem','litoral-sustentavel'),
-                    'type' => 'image',
-                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
-                ),
-                array(
-                    'id' => 'footer_apoio_link',
-                    'label' => __('Apoio - Link','litoral-sustentavel'),
-                    'type' => 'text',
-                    //'description' => __( 'Adicione o logo do Pólis aqui', 'litoral-sustentavel' )
-                ),
-                array(
-=======
->>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
                     'id' => 'footer_destaque_1_title',
                     'label' => __('Destaque no footer 1 (Esquerda) - Titulo','litoral-sustentavel'),
                     'type' => 'text',

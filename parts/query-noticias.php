@@ -5,17 +5,10 @@ $page = isset($_GET['query_noticias']) ? $_GET['query_noticias'] : 1;
 <section id="query-noticias">
 	<div class="container">
 		<div class="row">
-<<<<<<< HEAD
-			<h2 class="title-section">
-				<?php _e('Notícias','litoral-sustentavel'); ?>
-			</h2>
-			<img id="forma-noticias" src="<?php echo get_stylesheet_directory_uri();?>/imagens/forma-noticias.png">
-=======
 			<h2 class="title-section title-section-homequery">
 				<?php _e('Notícias','litoral-sustentavel'); ?>
 			</h2>
 			
->>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
 			
 			<?php
 			// WP_Query arguments
@@ -29,7 +22,6 @@ $page = isset($_GET['query_noticias']) ? $_GET['query_noticias'] : 1;
 				$count=1;
 			// The Query
 			$query = new WP_Query( $args );
-
 			// The Loop
 			if ( $query->have_posts() ):
 				while ( $query->have_posts() ): $query->the_post();
@@ -42,7 +34,6 @@ $page = isset($_GET['query_noticias']) ? $_GET['query_noticias'] : 1;
 					$count++;
 			    endwhile;
 		    endif;
-
 		    // Restore original Post Data
 		    wp_reset_postdata();
 			?>
