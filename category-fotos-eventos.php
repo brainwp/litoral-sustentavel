@@ -16,7 +16,7 @@ get_header(); ?>
 
 				<h1 class="page-title">
 					<?php
-					printf( __( '%s', 'twentyten' ), '<br /><span class="category-name">' . single_cat_title( '', false ) . '</span>' );?>
+					printf( __( '%s', 'twentyten' ), '<span class="category-name">' . single_cat_title( '', false ) . '</span>' );?>
 				</h1>
 						<div id="primeira-linha">		
 						 <!-- Inicio Loop -->
@@ -41,8 +41,7 @@ get_header(); ?>
         <div class="cada-evento col-md-12">
        
 	 <div class=" col-md-3">
-
-			<div id="fotos-archive-titulo"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>        
+		<div id="fotos-archive-titulo"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>        
         </div><!-- cada-evento-div -->
         <?php
 				// Imprime os ATTACHMENTs do $attachments //

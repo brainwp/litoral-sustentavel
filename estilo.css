@@ -1734,9 +1734,9 @@ a:hover {
 }
 #footer h2.sitemap{
 	color:white;
-	font-size:1.4em;
+	font-size:1.5em;
 	font-family: 'Source Sans Pro',sans-serif;
-	font-weight: bold;
+	font-weight: 600;
 	text-transform: uppercase;
 }
 #footer .coluna-sitemap a{
@@ -1848,9 +1848,9 @@ a:hover {
 	float:right;
 	display:inline-block;
 	background:#5aa9dc;
-	padding:5px;
+	padding:5px 10px;
 	font-family: 'Source Sans Pro',sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	text-transform: uppercase;
 	font-size:1.3em;
 	border-radius: 5px;
@@ -1865,7 +1865,7 @@ a:hover {
 }
 #destaques-footer article h2{
 	color:#446a46;
-	font-weight: 700;
+	font-weight: 600;
 	font-family: 'Source Sans Pro',sans-serif;
 	font-size:2.1em;
     margin-top: 15px;
@@ -1949,24 +1949,25 @@ a.leia-mais {
     font-size: 1.8em;
     font-weight: bold;
     height: 16px;
-    margin: 2px 0 0 4px;
+    margin: 2px 0 0 6px;
     position: absolute;
     width: 16px;
 	
 }
 span.mais {
-    margin: -2px 0 0 -2px;
-    padding-left: 4px;
 	position: absolute;
+	margin: -9px 0px 0px -3px;
+	padding-left: 4px;
 }
 .entry-title {
-    color: #004494;
-	font-family: 'Source Sans Pro',sans-serif;
-    font-size: 2.4em;
-    font-weight: 400;
-    letter-spacing: 0;
+	color: #004494;
+	font-family: "Source Sans Pro",sans-serif;
+	font-size: 2.6em;
+	font-weight: 600;
+	letter-spacing: 0px;
 	margin-bottom: 10px;
-    text-transform: uppercase;
+	text-transform: uppercase;
+	margin-top: 30px;
 }
 .entry-title-query {
     color: #231f20;
@@ -2096,8 +2097,10 @@ a.link_youtube:hover {
 }
 
 #fotos-archive-titulo {
-	padding: 10px;
-	font-size: 0.9em;
+	padding: 10px 0px;
+	font-size: 1em;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 
@@ -2132,7 +2135,7 @@ select.postform{
     color: #B3CB43 !important;
     font-family: 'Open Sans',sans-serif;
     font-size: 1.1em;
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: uppercase;
 	
 }
@@ -2179,7 +2182,7 @@ color: #104493;
 }
 
 #content.single {
-    background: none repeat scroll 0 0 #FFFFFF;
+    background: none;
     float: left;
     margin: 0 0 40px 45px;
     padding: 30px;
@@ -2498,21 +2501,22 @@ margin-top: -15px;
 }
 
 #categoria-archive-titulo h2 {
-    font-size: 1.3em;
-    margin: 0 0 5px 0;
+	font-size: 1.5em;
+	margin: 0px 0px 10px;
 }
 
 #leia-mais-categoria {
-    color: #FFF !important;
-    float: right;
-    display: inline-block;
-    background: #BABABA none repeat scroll 0% 0%;
-    padding: 5px;
-    font-family: "Source Sans Pro",sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 1.3em;
-    border-radius: 5px;
+	color: #FFF !important;
+	float: right;
+	display: inline-block;
+	background: #BABABA none repeat scroll 0% 0%;
+	padding: 5px 10px;
+	font-family: "Source Sans Pro",sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	border-radius: 5px;
+	margin-top: 15px;
 }
 
 #leia-mais-categoria a {
@@ -2654,11 +2658,11 @@ display: none;
     width: 285px;
 }
 .thumb-noticias {
-    border-radius: 3px;
+	border-radius: 3px;
 	height: 130px;
 	overflow: hidden;
-	margin: 0 0 8px 0;
-    width: 92%;
+	margin: 0px 0px 8px;
+	width: 100%;
 }
 .thumb-noticias img {
 	min-width: 255px;
@@ -2674,30 +2678,33 @@ display: none;
     min-height: 125px;
 }
 h1.title-query {
-    font-family: 'Source Sans Pro',sans-serif;
-    font-size: 1.8em;
-    text-transform: uppercase;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size: 1.8em;
+	text-transform: uppercase;
 	height: 28px;
 	width: auto;
 	color: #104493;
-}
+	font-weight: 600;
+	}
 
 h1.title-query-bookmarks {
-    font-family: 'Source Sans Pro',sans-serif;
-    font-size: 1.8em;
-    text-transform: uppercase;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size: 1.8em;
+	text-transform: uppercase;
 	height: 28px;
 	width: auto;
 	color: #104493;
 	margin-bottom: 0;
+	font-weight: 600;
 }
 
 h1.title-query-link {
-    font-family: 'Source Sans Pro',sans-serif;
-    font-size: 1.8em;
-    text-transform: uppercase;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size: 1.8em;
+	text-transform: uppercase;
 	height: 28px;
 	width: auto;
+	font-weight: 600;
 }
 
 h1.title-query-link:hover {
@@ -3016,13 +3023,15 @@ width: 910px;
 }
 
 .cada-post {
-    float: left;
-    min-height: 250px;
-    margin-bottom: 30px;
+	margin-bottom: 30px;
+	padding: 0px 10px !important;
+	display: block;
+	overflow: hidden;
 }
 	
 #conteudo-post {
-    float: left;
+	float: left;
+	max-width: 100%;
 }
 
 #agenda-archive-titulo {
@@ -3060,12 +3069,13 @@ font-size: 1.4em;
 /* CSS POSTS RELACIONADOS */
 
 #related_posts ul{
-list-style: none outside none;
-margin-left: 0;
+	list-style: none outside none;
+	margin-left: 0;
 }
 
 #related_posts h3{
-margin-bottom: 0;
+	margin-bottom: 10px;
+	font-weight: 600;
 }
 
 .relatedcontent {
@@ -3085,19 +3095,23 @@ margin-bottom: 15px;
 }
 
 #area-select.agenda {
-    float: right;
-    margin-right: 45px;
-    margin-top: 15px;
-    min-height: 20px;
-    width: 200px;
+	float: right;
+	margin-top: 50px;
+	min-height: 20px;
+	width: 220px;
+	margin-right: -10px;
+	clear: both;
+	display: block;
 }
 
 #area-select.noticias {
-    float: right;
-    margin-right: 45px;
-    margin-top: 15px;
-    min-height: 20px;
-    width: 250px;
+	float: right;
+	margin-top: 50px;
+	min-height: 20px;
+	width: 220px;
+	margin-right: -10px;
+	clear: both;
+	display: block;
 }
 
 /* CSS GOOGLE FONTS: */
@@ -3127,10 +3141,7 @@ html .dropdown-menu{
 }
 #primary-menu ul li{
 	display:inline-block;
-	padding-top:20px;
-	padding-bottom:20px;
-	padding-right: 6px;
-  	padding-left: 6px;
+	padding:20px 18px;
 	transition:400ms ease all;
 }
 #primary-menu ul.sub-menu{
@@ -3161,7 +3172,7 @@ html .dropdown-menu{
 	transition:400ms ease all;
 }
 #primary-menu .icons a{
-	float:right;
+	float:left;
 	transition:400ms ease all;
 	font-size:27px;
 	margin-left: 7px;
@@ -3170,6 +3181,8 @@ html .dropdown-menu{
 }
 #primary-menu .searchform{
 	display:inline-block;
+	position: absolute;
+	margin-left: 10px;
 }
 #primary-menu .searchform input{
 	width: 134px;
@@ -3200,43 +3213,49 @@ html .dropdown-menu{
 	
 }
 #query-noticias .title-section.title-section-homequery {
-background: none repeat scroll 0% 0% transparent;
-font-weight: bold;
-margin-top: 20px;
-margin-bottom: 5px;
-color: #00ABE5;
+	background: none repeat scroll 0% 0% transparent;
+	font-weight: 600;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	color: #00ABE5;
+	text-transform: uppercase;
 }
 #query-noticias .title-section, #query-categories #content .page-title{
-	padding-bottom:30px;
+	padding: 40px 60px 10px 40px;
 }
 #content h1 span{
 	font-family: 'Source Sans Pro',sans-serif;
 	font-size:1em;
-	font-weight: 400;
+	font-weight: 600;
 	text-transform:uppercase;
 	color:white;
 	
 }
 #query-noticias .title-section, #slider-section .title-section{
 	font-family: 'Source Sans Pro',sans-serif;
-	padding: 10px 15%;
-  	margin-left: -10%;
+	padding: 0;
+  	margin-left: 30px;
 	font-size:2.4em;
-	font-weight: 400;
+	font-weight: 600;
 	text-transform:uppercase;
 	color:white;
 }
 #content span.category-boletins{
 	font-size:1em;
-}
-#content span.category-boletins{
+	font-weight: 600;
 	color:white;
 }
+#content span.category-name{
+	font-size:1em;
+	font-weight: 600;
+	color:white;
+}
+
 .category #container, .category #content, .category #primeira-linha{
 	width:100%;
 }
 .content-noticias{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 	margin-top:20px;
 }
 .content-noticias img{
@@ -3247,15 +3266,19 @@ color: #00ABE5;
 .content-noticias h2{
 	font-size: 2.4em;
 	color: #444;
-	font-weight: 400;
+	font-weight: 600;
 	font-family: 'Source Sans Pro',sans-serif;
 	margin: 5px 0 5px 0; 
 	line-height:initial;
-    text-transform: uppercase;
+}
+
+
+#posts-relacionados .content-noticias h2{
+	font-size: 1.6em;
 }
 .content-noticias h3{
 	font-size: 1.2em;
-	font-weight: 300;
+	font-weight: 600;
 	font-family: 'Source Sans Pro',sans-serif;
 	text-transform: uppercase;
 	text-decoration: none !important
@@ -3323,7 +3346,7 @@ img#logo-home{
 	position: relative;
 	z-index: 9;
 	width: 32vw;
-	margin: 37px 0 0 15px;
+	margin: 60px 0 0 10px;
 }
 #mascara{
 	z-index:99;
@@ -3358,7 +3381,12 @@ img#logo-home{
 	position:relative;
 	z-index:100;
 	margin-left:60px;
+	background:none;
+	padding:0;
+	text-transform: uppercase !important;
+	font-weight: 600;
 }
+
 #depois-destaque {
 	position: absolute;
   	bottom: -100px;
@@ -3392,8 +3420,7 @@ img#logo-home{
 	padding-top:40px;
 
 }
-#slider-section .title-section{
-}
+
 .slick-slider{
 	position:relative;
 	z-index:100;
@@ -3427,10 +3454,11 @@ img#logo-home{
     text-transform: uppercase;
 }
 .excerpt-slider h3{
-	font-size: 20px;
-	font-weight:200;
-	font-family: 'Source Sans Pro',sans-serif;
-	color:#5aa9da;
+	font-size: 1.4em;
+	font-weight: 600;
+	font-family: "Source Sans Pro",sans-serif;
+	color: #5AA9DA;
+	text-transform: uppercase;
 }
 .excerpt-slider{
 	margin-bottom:15px;
@@ -3444,12 +3472,14 @@ img#logo-home{
 	
 }
 html .widget-title{
-	font-family: "Open Sans", Arial, sans-serif;
-    font-size: 2.4em;
-    font-weight: 400;
+	font-family: "Open Sans",Arial,sans-serif;
+	font-weight: 600;
+	font-size: 2em;
+	text-transform: uppercase;
+	margin-top: 20px;
 }
 .is_slider a.bt-readmore{
-	padding:5px!important;
+	padding:5px 10px !important;
 	width:initial;
 	float: right;
   	margin-right: 37px;
@@ -3497,19 +3527,25 @@ html .widget-title{
 	background:url('imagens/fundo-titulo.png') no-repeat;
 	
 }
-#container-slider .title-section{
-	background:none;
-	padding:0;
-}
+
 #fundo-content-top, #fundo-content-bottom{
 	position:relative;
 	
 }
+
+.home #fundo-content-top img{ 
+	position:absolute;
+	top:0;
+	z-index:900;
+	right:-3px;
+	width: 130px;
+}
+
 #fundo-content-top img{ 
 	position:absolute;
-	top:10px;
-	z-index:999;
-	right:0;
+	top:30px;
+	z-index:900;
+	right:-3px;
 	width: 130px;
 }
 .single-post #fundo-content-bottom img{ 
@@ -3530,20 +3566,23 @@ html .widget-title{
 }
 
 .category #content .page-title{
-	margin: 0;
-	  display: inline-block;
-	  padding: 45px 51px 10px;
-	  margin-top: -1px;
+	margin: -1px 0px 0px;
+	font-weight: 600;
+	max-width: 300px;
+	display: inline-block;
+	line-height: 1.1;
 }
 .category-de-bertioga #content .page-title, .category-de-ilhabela #content .page-title, .category-de-mongagua #content .page-title, .category-de-peruibe #content .page-title,.category-de-ubatuba #content .page-title, .category-diagnostico #content .page-title, .category-em-bertioga #content .page-title, .category-em-ilhabela #content .page-title, .category-em-santos #content .page-title, .category-em-ubatuba #content .page-title, .category-inscricao #content .page-title, .category-transmissao #content .page-title{
 	padding: 23px 51px 10px;
   
 }
 .category .page-title span{ 
-	padding: 54px 15px;
+	padding: 5px 10px 5px 15px;
+	display: block;
 	}
 #query-categories{
 	border-bottom:10px solid #407D3C;
+	margin-top: 30px;
 }
 .category #slider-section{
 	background:url('imagens/fundo-destaque-cat.png') bottom right no-repeat;
@@ -3551,6 +3590,7 @@ html .widget-title{
 	
 }
 #section-single{
+	margin-top: -35px;
 }
 .single-post #oque-resumo{
 	margin-top: 66px;
@@ -3570,17 +3610,20 @@ html .widget-title{
 }
 .single-post #content h1.entry-title{
 	font-size: 2.4em;
-	font-weight: 400;
+	font-weight: 600;
 	font-family: 'Source Sans Pro',sans-serif;
 	color:#58585b;
-    text-transform: uppercase;
 }
 .single-post .entry-meta a, .single-post .entry-meta a:visited,.single-post .entry-meta a:hover{
-	color:#5ba8d9;
-	font-weight:300;
-	font-family: 'Source Sans Pro',sans-serif;
-	font-size:2em;
-	
+	color: #5BA8D9;
+	font-weight: 600;
+	font-family: "Source Sans Pro",sans-serif;
+	font-size: 1.4em;
+	padding: 10px 0;
+	position: relative;
+	display: block;
+	clear: both;
+	text-transform: uppercase;
 	
 }
 .single-post #primary-menu .container{
@@ -3663,10 +3706,12 @@ p{
 	text-decoration: none;
 }
 .fotos-eventos{
-	overflow:hidden;
+	overflow: hidden;
+	padding: 0px !important;
 }
 .cada-evento{
 	margin-bottom:10px;
+	padding: 0 !important;
 }
 @media (max-width: 990px){
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
