@@ -7,6 +7,11 @@
 				$image[1] >= HEADER_IMAGE_WIDTH ) :
 			// Houston, we have a new header image!
 			echo get_the_post_thumbnail( $post->ID );
+<<<<<<< HEAD
+		elseif ( get_header_image() ) : ?>
+			<img id="img_header"  src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+		<?php endif; 
+=======
 			elseif ( get_header_image() ) : 
 			$redimensionada = resize('946', '266', get_header_image() );
 
@@ -20,6 +25,7 @@
 			imagepng( $redimensionada, 'temp.png');?>
 				<img id="img_header"  src="/temp.png" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 			<?php endif;
+>>>>>>> 7a83384b58480e4d9c367100c8f1e1789d5608ac
 ?>
 </div>
 		

@@ -30,8 +30,7 @@ get_header(); ?>
 			<div id="categoria-archive-titulo"> <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
 				<div id="conteudo-post">
 
-					<?php if ( has_post_thumbnail()) :
-?>
+					<?php if ( has_post_thumbnail()) : ?>
 						<div class="thumb-apresentacoes">
 							
 			                <a href="<?php the_permalink() ?>" rel="bookmark">
