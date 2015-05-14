@@ -88,38 +88,7 @@ $options = get_option('social_cfg');
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 pull-left">
-				<nav id="main-navigation" class="navbar navbar-default" role="navigation">
-			
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
-						<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<?php /*
-
-						<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-
-						*/ ?>
-					</div>
-
-					<div class="collapse navbar-collapse navbar-main-navigation">
-						<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'primary',
-									'depth'          => 2,
-									'container'      => false,
-									'menu_class'     => 'nav navbar-nav',
-									'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								)
-							);
-						?>
-
-						
-					</div><!-- .navbar-collapse -->
-				</nav><!-- #main-menu -->
+				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'depth' => -1 ) ); ?>
 		    </div><!-- .col-md-6 pull-left -->
 		    <div class="col-md-3 pull-right icons">
 		    	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -136,3 +105,20 @@ $options = get_option('social_cfg');
 		</div><!-- .row -->
 	</div><!-- .container -->
 </nav><!-- #primary-menu -->
+<div id="fundo">
+	<div id="img-cabecalho" class="container">
+		<div class="col-md-1"></div>
+		<div id="logo-single" class="col-md-6">
+			<img id="logo-home" src="<?php echo get_stylesheet_directory_uri();?>/imagens/logo.png">
+		</div>
+		<div id="oque-resumo" class="col-md-4">
+			<img src="<?php get_stylesheet_directory_uri();?>/imagens/fundo-content-bottom.png">
+			
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	
+	<div class="clearfix"></div>
+	
+</div>
+<section id="section-single" class="container">

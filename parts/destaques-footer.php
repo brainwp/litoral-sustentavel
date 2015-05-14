@@ -6,7 +6,7 @@ $options = get_option('footer_cfg' );
 	<div class="container">
 		<div class="row">
 			<div class="padding">
-				<article class="col-md-6 pull-left">
+				<article class="col-md-6 ">
 					<h2><?php echo $options['footer_destaque_1_title'];?></h2>
 					<div class="content"><?php echo $options['footer_destaque_1_text']; ?></div><!-- .content -->
 					<?php if($link = $options['footer_destaque_1_link']): ?>
@@ -15,7 +15,7 @@ $options = get_option('footer_cfg' );
 					    </a>
 					<?php endif;?>
 				</article><!-- .col-md-6 pull-left -->
-				<article class="col-md-6 pull-right">
+				<article class="col-md-6 ">
 					<h2><?php echo $options['footer_destaque_2_title'];?></h2>
 					<div class="content"><?php echo $options['footer_destaque_2_text']; ?></div><!-- .content -->
 					<?php if($link = $options['footer_destaque_2_link']): ?>

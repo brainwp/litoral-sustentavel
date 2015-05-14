@@ -23,5 +23,4 @@ jQuery(function($) {
 		$('#reveal-modal-id').css('visibility', 'hidden');
 		
 	});
-	$(".content").fitVids();
 })

@@ -87,7 +87,7 @@ return $output;
 	
 function meu_logo_login()
 {
-    echo '<style  type="text/css"> h1 a {  background-image:url('.get_bloginfo('stylesheet_directory').'/imagens/logo-login.png)  !important;  height: 150px !important; width: 182px !important;
+    echo '<style  type="text/css"> h1 a {  background-image:url('.get_bloginfo('stylesheet_directory').'/imagens/logo_header_peq.png)  !important;  height: 150px !important; width: 182px !important;
     margin-top: -50px !important;  margin-left: 75px !important; background-size: 182px 150px !important; } </style>';
 }
 add_action('login_head',  'meu_logo_login');
@@ -174,6 +174,12 @@ function size($size){
 add_filter('brasa_slider_img_size','size');
 
 
+function enqueue_bootstrap(){
+	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/assets/js/libs/bootstrap.min.js', array(), null, true );
+	wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_bootstrap', 1 );
 
+require_once get_stylesheet_directory() . '/inc/class-bootstrap-nav.php';
 
 ?>
