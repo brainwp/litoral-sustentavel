@@ -18,13 +18,9 @@ jQuery(function($) {
 			}, 1300);
 		}
 	});
-
 	$('.close-reveal-modal').click(function() {
 		$('#fundo-modal').css('width', '0');
 		$('#reveal-modal-id').css('visibility', 'hidden');
 		
 	});
-
-	$(".content").fitVids();
-
 })
