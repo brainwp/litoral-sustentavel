@@ -3601,8 +3601,9 @@ html .widget-title{
 	height:auto;
 }
 .single-post img#logo-home, .single-post #content{
-	margin-left:0;
-	padding-left:0;
+	margin-left: -75px;
+	padding-left: 0;
+	margin-top: 40px;
 }
 .single-post #primary{
 	width: 25%; 
@@ -3627,7 +3628,7 @@ html .widget-title{
 	
 }
 .single-post #primary-menu .container{
-	padding:0 9.3%;
+	padding:0 15px;
 }
 #posts-relacionados{
 	border-top:10px solid #FDEB0F;
