@@ -635,21 +635,7 @@ pre code {
     padding-left: 15px;
     padding-right: 15px
 }
-@media (min-width: 768px) {
-    .container {
-        width: 750px
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        width: 970px
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px
-    }
-}
+
 .container-fluid {
     margin-right: auto;
     margin-left: auto;
@@ -1463,6 +1449,23 @@ pre code {
 .visible-lg-inline-block {
     display: none !important
 }
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
 @media (max-width: 767px) {
     .visible-xs {
         display: block !important
@@ -1606,51 +1609,14 @@ pre code {
 .visible-print {
     display: none !important
 }
-@media print {
-    .visible-print {
-        display: block !important
-    }
-    table.visible-print {
-        display: table
-    }
-    tr.visible-print {
-        display: table-row !important
-    }
-    th.visible-print,
-    td.visible-print {
-        display: table-cell !important
-    }
-}
+
 .visible-print-block {
     display: none !important
 }
-@media print {
-    .visible-print-block {
-        display: block !important
-    }
-}
+
 .visible-print-inline {
     display: none !important
 }
-@media print {
-    .visible-print-inline {
-        display: inline !important
-    }
-}
-.visible-print-inline-block {
-    display: none !important
-}
-@media print {
-    .visible-print-inline-block {
-        display: inline-block !important
-    }
-}
-@media print {
-    .hidden-print {
-        display: none !important
-    }
-}
-
 
 @charset "utf-8";
 /* CSS Document */
@@ -1727,7 +1693,7 @@ a:hover {
 /* RODAPE */
 #footer{
 	position: relative;
-	z-index: 1000;
+	z-index: 990;
 	background:url('imagens/bg-footer.jpg') no-repeat;
 	background-size:cover;
 	padding:20px;
@@ -1794,7 +1760,7 @@ a:hover {
 	display:block;
 }
 #creditos-footer{
-	background:#5aa9dc;
+	background:#679BDF;
 }
 #creditos-footer h2{
 	 margin-top: 7px; 
@@ -1816,6 +1782,7 @@ a:hover {
 }
 #creditos-footer .copyright{
 	padding-top: 12px;
+	padding-bottom: 12px;
 }
 #creditos-footer .copyright p{
 	display:inline-block;
@@ -1824,14 +1791,16 @@ a:hover {
 #destaques-footer{
 	background:url('imagens/fundo-rodape.png') no-repeat;
 	background-size:cover;
+	padding-bottom: 15px
 }
 #destaques-footer .padding{
-  padding-top: 125px;
+	padding-top: 125px;
 }
 #destaques-footer .content{
 	font-family: 'Source Sans Pro',sans-serif;
 	font-size:1.0em;
 	font-weight: normal;
+	margin-bottom: 20px;
 }
 #fundo-top-rodape{
 	position:absolute;
@@ -2178,7 +2147,7 @@ color: #104493;
 #content.home {
     float: left;
     margin: -5px 15px 0 40px;
-    width: 280px;
+    max-width: 280px;
 }
 
 #content.single {
@@ -2186,45 +2155,38 @@ color: #104493;
     float: left;
     margin: 0 0 40px 45px;
     padding: 30px;
-    width: 600px;
+    max-width: 600px;
 }
 
 #content.municipios {
     float: left;
     margin: 0 0 30px 30px;
-    width:660px;
+    max-width:660px;
 }
 
 #content.biblioteca {
     float: left;
     margin: 10px 30px 30px 30px;
-    width:936px;
+    max-width:936px;
 }
-
 
 #content {
-    float: left;
-margin:0;
-/*    margin: 0 0 30px 45px;
-*/    width:660px;
+	float: left;
+	margin:0;
+	max-width:660px;
 }
 
-#mapa-home {
-	
+#mapa-home {	
 	float: right;
 	width: 639px;
-    margin: -40px 0 0 0;
+	margin: -40px 0 0 0;
 	height: 369px;
-	background: #183052; 
-	
+	background: #183052; 	
 }
-
 
 #mapa-home.mapa-arcgis {
-position: absolute
+	position: absolute
 }
-
-
 
 a.tela-cheia {
     background: url("imagens/telacheia-icon.png") no-repeat scroll center bottom transparent;
@@ -2247,9 +2209,6 @@ a.tela-cheia {
     width: 300px;
 }
 
-	
-}
-
 #video-institucional{
     float: left;
     height: 369px;
@@ -2259,16 +2218,15 @@ a.tela-cheia {
 }
 
 #video-institucional-soon{
-    float: left;
-    height: 369px;
-    width: 630px;
+	float: left;
+	height: 369px;
+	width: 630px;
 	border: 5px dashed #CCC;
 	margin: 0 auto;
 	background: #EEE;
 }
 
 #video-institucional-soon p{
-
     color: #CCCCCC;
     font-family: 'Source Sans Pro',sans-serif;
     font-size: 2.3em;
@@ -2281,31 +2239,28 @@ a.tela-cheia {
 }
 
 #mapas-soon{
-    float: left;
-    width: 285px;
+	float: left;
+	width: 285px;
 	border: 5px dashed #CCC;
 	margin: 0 auto;
 	background: #EEE;
 }
 
 #mapas-soon p{
-
 	color: #CCCCCC;
-    font-family: 'Source Sans Pro',sans-serif;
-    font-size: 1.8em;
-    font-weight: bolder;
-    letter-spacing: 0;
-    line-height: 1.4em;
-    margin: 20% auto;
-    text-align: center;
-    width: 260px;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size: 1.8em;
+	font-weight: bolder;
+	letter-spacing: 0;
+	line-height: 1.4em;
+	margin: 20% auto;
+	text-align: center;
+	width: 260px;
 }
 
 #primeira-linha {
-
 	min-height: 340px;
   	margin: 30px 0 0;
-
 	float: left;
 }
 
@@ -2313,13 +2268,11 @@ a.tela-cheia {
     float: left;
     margin: 25px 0 0 0;
     min-height: 340px;
-
 }
 
 #terceira-linha {
     float: left;
     min-height: 340px;
-
 }
 
 #flickr-linha {
@@ -2329,7 +2282,6 @@ a.tela-cheia {
     width: 998px;
 }
 
-
 #galeria-linha {
     float: left;
     margin: 25px 0 0 0;
@@ -2338,11 +2290,11 @@ a.tela-cheia {
 }
 
 #mapa-linha {
-    float: left;
-    margin: 0px 0 35px;
+	float: left;
+	margin: 0px 0 35px;
 	padding: 20px 0;
-    height: 205px;
-    width: 998px;
+	height: 205px;
+	width: 998px;
 	background: none;
 }
 
@@ -3122,7 +3074,7 @@ font-family: 'Passion One', cursive;
 }
 #primary-menu{
 	position:relative;
-	z-index:999;
+	z-index:990;
 	background:#5aa9dc;
 }
 #primary-menu ul{
@@ -3255,8 +3207,9 @@ html .dropdown-menu{
 	width:100%;
 }
 .content-noticias{
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 	margin-top:20px;
+	padding-bottom: 20px;
 }
 .content-noticias img{
     border-radius: 3px;
@@ -3556,7 +3509,7 @@ html .widget-title{
 	position: absolute;
 	bottom: -9px;
 	left: -25px;
-	z-index: 999;
+	z-index: 990;
 }
  h1.page-title {
 	background:url('imagens/fundo-titulo-cat.png') no-repeat;
@@ -3600,7 +3553,7 @@ html .widget-title{
 	max-width:100%;
 	height:auto;
 }
-.single-post img#logo-home, .single-post #content{
+.single-post img#logo-home {
 	margin-left: -75px;
 	padding-left: 0;
 	margin-top: 40px;
@@ -3718,6 +3671,14 @@ p{
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
 	   clear: both;
 	}
+
+	#primary-menu {
+	  margin-left: -30px;
+	}
+
+	#primary-menu ul ul.dropdown-menu {
+  		display:none;
+	}
 	#primary-menu ul li a{
 		float:left;
 	}
@@ -3728,7 +3689,7 @@ p{
 		float:left;
 	}
 	#primary-menu li>ul, #primary-menu li:hover>ul {
-	  margin: 20px 0px 0px;
+	  margin: 0px 0px 0px -10px;
 	  position: relative;
 	  display: block;
 	  margin-left: -6px;
@@ -3744,6 +3705,20 @@ p{
 	#img-cabecalho{
 		height:initial;
 	}
+
+	#primary-menu .icons {
+	    position: absolute;
+	    right: 20px;
+	    top: 10px;
+	    padding-top: 0px;
+	}
+
+	#primary-menu .searchform {
+		display: normal;
+		position: absolute;
+		margin-top: 35px;
+	}
+
 	#primary-menu li>ul>li, #primary-menu li:hover>ul>li {
 	  padding: 5px 10px;
 	  background: transparent;
@@ -3751,6 +3726,10 @@ p{
 	  margin: 0px;
 	}
 	
+	.navbar-collapse {
+	   padding-left: 0 !important;
+	   margin-bottom: 15px;
+	}
 	img#logo-home {
 	  width: 55vw;
 	  margin: 35px auto;
@@ -3767,8 +3746,67 @@ p{
 	#primary-menu ul li{
 		display:block;
 		clear:both;
+		padding: 10px 5px;
 	}
+
 	#primary-menu ul li:hover, #primary-menu li:hover>ul>li:hover{
 		background:transparent;
+	}
+
+	.single-post img#logo-home {
+		margin: 30px auto;
+		padding-bottom: 35px;
+	}
+
+	#oque-resumo {
+	    display: none;
+	}
+
+	#destaques-footer .padding {
+		padding-top: 0px;
+	}
+	#destaques-footer article {
+	    padding-bottom: 5px;
+	}
+	#footer-widget-area {
+		display: none;
+	}
+	#footer .apoio {
+	    max-width: 285px;
+	}
+
+	#thumb-single {
+	padding: 0 0;
+	}
+	#content-page {
+	margin-bottom: 40px;
+	}
+	#content.single {
+	    margin: 0px 0px 40px 0px;
+	}
+	.col-md-7 #content {
+	    padding: 0px 30px 70px;
+	}
+
+	#query-noticias, #query-categories {
+	    min-height: 200px;
+	}
+
+	#primary {
+		display: none;
+	}
+}
+
+@media (max-width: 360px){
+	#primary-menu .icons {
+	    display: none;
+	}
+	
+	#creditos-footer p.cc {
+	display: none;
+	}
+
+	#fundo-content-top img {
+	    display: none;
 	}
 }

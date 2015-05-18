@@ -90,7 +90,7 @@ $options = get_option('footer_cfg');
 						<p><?php echo $options['footer_tel']; ?></p>
 					</div><!-- .col-md-8 -->
 					<div class="col-md-4 pull-right copyright">
-						<p><?php _e('Alguns direitos reservados','litoral-sustentavel'); ?></p>
+						<p class="cc"><?php _e('Alguns direitos reservados','litoral-sustentavel'); ?></p>
 						<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/cc.jpg">
 						<a href="http://brasa.art.br">
 							<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/brasa.jpg">
