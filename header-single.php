@@ -109,7 +109,7 @@ $options = get_option('social_cfg');
 								wp_nav_menu(
 									array(
 										'theme_location' => 'primary',
-										'depth'          => 2,
+										'depth'          => 0,
 										'container'      => false,
 										'menu_class'     => 'nav navbar-nav',
 										'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
