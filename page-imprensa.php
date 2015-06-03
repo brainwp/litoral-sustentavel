@@ -78,19 +78,13 @@ get_header(); ?>
 			
 
 			<div id="galeria-linha">
-				<div id="galeria-imprensa"class="col-md-8">
+				<div id="galeria-imprensa"class="col-md-12">
 					<h1 class="title-query"><span class="query-destaques">Fotos de Divulga&ccedil;&atilde;o</span></h1>
 					<?php
 					echo do_shortcode('[satellite post_id=846]');
 					?>
 				</div>
-				<div id="player-musica" class="col-md-4">
-					<h1 class="title-query"><span class="query-destaques">&Aacute;udios</span></h1>
-					<?php 
-					   // mp3j_put( '[mp3-jplayer tracks=""]' );
-					 ?>
-				</div>
-				
+						
 			</div><!-- #galeria-linha -->
 
 			<div class="clearfix"></div>

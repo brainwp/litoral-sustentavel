@@ -274,7 +274,7 @@ dfn {
 h1,
 #content h1 {
     font-size: 2em;
-    margin: 0.67em 0
+    margin: 0.67em 0 0.2em 0 
 }
 mark {
     background: #ff0;
@@ -1918,7 +1918,7 @@ a.leia-mais {
     background: none repeat scroll 0 0 #BABABA;
     border: 1px solid #8A8A8A;
     color: #FFFFFF;
-    font-family: 'Passion One',sans-serif;
+    font-family: "Source Sans Pro",sans-serif;
     font-size: 1.8em;
     font-weight: bold;
     height: 16px;
@@ -2055,7 +2055,11 @@ a.link_youtube:hover {
 .thumb-noticias a img {
 	border: 0;
 }
-
+.cada-evento img{
+	width:100%;
+	height:auto;
+	max-width:280px;
+}
 .cada-evento {
 	background: #FFF;
 	min-height: 130px;
@@ -2177,7 +2181,7 @@ color: #104493;
 #content {
 	float: left;
 	margin:0;
-	max-width:660px;
+	max-width:1000px;
 }
 
 #mapa-home {	
@@ -2435,9 +2439,9 @@ h1.linkcat {
 
 
 #info-evento p.archive {
-	margin: 0 0 0 10px;
+	margin: 0 0 0 0px;
 	float: left;
-	width: 155px;
+	width: 100%;
 	}
 	
 
@@ -2591,18 +2595,20 @@ display: none;
 
 #leia-mais-agenda {
     background: none repeat scroll 0 0 #BABABA;
-    font-family: 'Passion One',sans-serif;
+    font-family: "Source Sans Pro",sans-serif;
     font-size: 0.8em;
     letter-spacing: 1px;
 	float: right;
     padding: 0 6px;
     text-transform: uppercase;
-    width: 55px;
+    width: 75px;
 	margin-top: 7px;
 	    margin-right: 6px;
 }
 
 #leia-mais-agenda.archive {
+	clear: both;
+  	float: right;
     margin-right: -2px;
     margin-top: -15px;
 	margin-bottom: 2px;
@@ -2890,6 +2896,7 @@ width: 910px;
 #agenda-geral {
     margin: -10px 0 0;
     padding: 0;
+width:20%;
 }
 
 #agenda-geral .evento-agenda {
@@ -2914,10 +2921,10 @@ width: 910px;
     background: none repeat scroll 0 0 #007B5B;
     color: #FFFFFF;
     float: left;
-    height: 45px;
+
     margin-top: 10px;
-    padding: 5px;
-    width: 45px;
+    padding: 10px;
+
 }
 
 #agenda-geral .data-evento-agenda-single {
@@ -2955,16 +2962,22 @@ width: 910px;
 }
 
 
-#cada-dia {
+.cada-dia {
     background: none repeat scroll 0 0 #FFFFFF;
-    float: left;
-    margin: 0 20px 20px 0;
+/*    float: left;*/
+/*    margin: 0 20px 20px 0;*/
     min-height: 210px;
     padding: 15px 15px 5px;
-    width: 260px;
+/*    width: 260px;*/
+	border:solid 2px #F8E818;
 	}
 
-#cada-dia.passado {
+	@media (min-width: 992px){
+	.cada-dia {
+		height:350px;
+	}
+	}
+.cada-dia.passado {
     background: none repeat scroll 0 0 #DDD;
 	opacity:0.5;
 	-moz-opacity: 0.5;
@@ -2992,9 +3005,9 @@ width: 910px;
 
 #agenda-archive-titulo {
 	float: left;
-    margin: 2px 0 0 15px;
-	width: 190px;
-
+	  margin: 9px 0 0 7%;
+	  /* width: 190px; */
+	  width: 70%;
 }
 
 #agenda-archive-titulo h2{
@@ -3090,13 +3103,14 @@ font-family: 'Passion One', cursive;
 	content:" ";
 	width: 0; 
 		height: 0; 
-		border-left: 5px solid transparent;
-		border-right: 5px solid transparent;
-
-		border-top: 5px solid #ffffff;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 0 5px 5px;
+		border-color: transparent transparent transparent #ffffff;
 		display:inline-block;
 		position:absolute;
-		top:20px;
+		top:10px;
 		right:10px;
 }
 #primary-menu ul li ul{
@@ -3123,12 +3137,17 @@ html .dropdown-menu{
 #primary-menu ul.sub-menu{
 	display:none;
 }
-#primary-menu li:hover>ul {
 
-  position: absolute;
-  display: block;
-  border: none;
-  padding: 0;
+#menu-principal li ul li:hover ul{
+	left: 98%;
+	  top: 0px;
+}
+#primary-menu li:hover>ul {
+	
+  	position: absolute;
+  	display: block;
+  	border: none;
+  	padding: 0;
 }
 #primary-menu li:hover>ul>li{
 	padding: 5px 10px;
@@ -3685,6 +3704,27 @@ p{
 .fotos-eventos{
 	overflow: hidden;
 	padding: 0px !important;
+}
+.category-fotos-eventos #content{
+/*	max-width:800px;*/
+	margin:0 auto;
+	float:none;
+	display:block;
+	
+}
+#content {
+	margin:0 auto;
+	display:block;
+	float:none;
+}
+.fotos-eventos img{
+	border: none;
+  	padding: 15px;
+  	width: 100%;
+  	height: auto;
+  margin: 0 auto;
+  float: none;
+  display: block;
 }
 .cada-evento{
 	margin-bottom:10px;
