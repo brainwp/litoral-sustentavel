@@ -22,6 +22,10 @@ $odin_theme_options->set_tabs(
         ),
     )
 );
+
+
+
+
 $odin_theme_options->set_fields(
     array(
         'social_section' => array(
@@ -43,6 +47,12 @@ $odin_theme_options->set_fields(
                 array(
                     'id' => 'youtube',
                     'label' => __('URL do youtube','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Descrition Example', 'odin' )
+                ),
+				array(
+                    'id' => 'youtube_playlist',
+                    'label' => __('ID da Playlist do youtube','litoral-sustentavel'),
                     'type' => 'text',
                     //'description' => __( 'Descrition Example', 'odin' )
                 ),

@@ -62,7 +62,7 @@ get_header(); ?>
                     // Condição: Se a data do evento for maior ou igual que a data de expiração, exibe normalmente!
                     if ( $ag_data_time >= $dataexpira ) { ?>
                     
-                                    <div id="cada-dia">
+                                    <div class="cada-dia col-md-4 ">
                                     <div id="agenda-geral">	
                                         <div class="evento-agenda">
                                                 <a href="<?php the_permalink() ?>">
@@ -114,7 +114,7 @@ get_header(); ?>
                     <?php } 
                      // Condição: Se a data do evento for menor que a data de expiração, exibe! Evento Passado
                     if ( $ag_data_time < $dataexpira ) { ?>
-                                    <div id="cada-dia" class="passado">
+                                    <div class="cada-dia col-md-4 passado">
                                     <div id="agenda-geral">	
                                         <div class="evento-agenda">
                                                 <a href="<?php the_permalink() ?>">

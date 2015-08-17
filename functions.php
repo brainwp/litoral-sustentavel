@@ -184,4 +184,18 @@ add_action( 'wp_enqueue_scripts', 'enqueue_bootstrap', 1 );
 
 require_once get_stylesheet_directory() . '/inc/class-bootstrap-nav.php';
 
+/* Class Brasa Social Feed */
+
+require_once get_stylesheet_directory() . '/inc/youtube-api-class.php';
+global $brasa_social_feed;
+$option_home = get_option('social_cfg');
+
+$brasa_social_feed = new Brasa_Social_Feed(
+	array(
+		'youtube_auth'     => 'AIzaSyC5UL0Us0mOCh2wx_kkCi6JjEQ0niM_YiM',
+		'youtube_playlist' => $option_home['youtube_playlist'],
+	)
+);
+
+
 ?>
