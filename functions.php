@@ -197,5 +197,11 @@ $brasa_social_feed = new Brasa_Social_Feed(
 	)
 );
 
+wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), null, true );
+wp_localize_script( 'odin-main', 'odin', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+
+// Main jQuery.
+wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), null, true );
+
 
 ?>
