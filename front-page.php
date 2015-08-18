@@ -5,9 +5,7 @@ $option_home = get_option('home_cfg');
 ?>
 
 <?php 
-$option_soc = get_option('social_cfg');
-echo '<div id="youtube-feed"></div>';
-echo "option_soc['youtube_playlist']: ". $option_soc['youtube_playlist'];
+
 
 	if ($option_home['modal_na_home'] != ""){?>
 		<div id="fundo-modal" 

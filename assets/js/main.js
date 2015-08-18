@@ -3,7 +3,7 @@ jQuery(document).on('click', '.youtube-video-open', function(e){
 		var src = 'https://www.youtube.com/embed/'+jQuery(this).attr('data-id');
 		jQuery('#youtube-video iframe').attr('src',src);
 		if(jQuery('#youtube-video').is(':hidden')){
-			jQuery('#youtube-video').fadeIn('slow')
+			jQuery('#youtube-video').fadeIn('slow');
 		}
 		jQuery('html, body').animate({
 			scrollTop: jQuery('#youtube-video').offset().top - 50
