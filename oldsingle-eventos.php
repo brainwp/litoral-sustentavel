@@ -8,12 +8,12 @@
  */
 
 get_header(); ?>
-<?php get_template_part('parts/comp-header'); ?>
 
 		<div id="container">
+			<div id="content" class="single">
 			<div id="agenda-geral">	
 						
-						<div class="data-evento-agenda">
+						<div class="data-evento-agenda-single">
 							<?php 	global $post;
 						//Pega a data escolhida no admin e grava em $ag_data, $ag_inicio...
 						$ag_data = get_post_meta($post->ID,'agenda-event-date',TRUE);
@@ -55,5 +55,9 @@ get_header(); ?>
 			 */
 			get_template_part( 'loop', 'singleagenda' );
 			?>
-			</div><!-- #container -->
-			<?php get_footer('cat'); ?>
+			</div><!-- #content -->
+			<div id="single-voltar"><a class="query-agenda" href="<?php echo home_url( '/eventos' ); ?>"><h1 class="title-query">voltar para eventos</h1></a></div>
+		</div><!-- #container -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

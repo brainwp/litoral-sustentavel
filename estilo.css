@@ -3894,3 +3894,9 @@ p{
 #youtube-video{
 	display:none;
 }
+#youtube-feed .thumb.nopadding, #youtube-feed  .description{
+	padding:0!important;
+}
+#youtube-feed img{
+	width:100%;
+}
