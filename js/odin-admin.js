@@ -93,7 +93,10 @@
 		/**
 		 * Color Picker.
 		 */
-		$( '.odin-color-field' ).wpColorPicker();
+		if ( typeof $.fn.wpColorPicker !== 'undefined' ) { 
+			$( '.odin-color-field' ).wpColorPicker();
+		}
+		
 
 		/**
 		 * Image plupload adds.
