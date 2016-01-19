@@ -208,3 +208,4 @@ wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/mai
  * ACF and fields.
  */
 require_once get_stylesheet_directory() . '/inc/acf/acf.php';
+require_once get_stylesheet_directory() . '/fields.php';
