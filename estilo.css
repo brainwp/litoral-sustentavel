@@ -3904,6 +3904,7 @@ p{
 /* page-triagem.php */
 .triagem-container {
 	background: #e6ebef;
+	padding-bottom:30px;
 }
 .triagem-container h1.the-title {
 	font-size:3.0em;
