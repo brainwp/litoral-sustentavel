@@ -42,7 +42,7 @@ $option_home = get_option('home_cfg');
 		// // Output
 		// header( "Content-type: image/png");
 		imagepng( $redimensionada, 'temp.png');?>
-			<img id="img_header"  src="/temp.png" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+			<img id="img_header"  src="<?php echo get_home_url('/');?>/temp.png" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 		<?php endif; 
 ?>
 </div>

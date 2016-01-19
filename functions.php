@@ -204,4 +204,7 @@ wp_localize_script( 'odin-main', 'odin', array( 'ajax_url' => admin_url( 'admin-
 wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), null, true );
 
 
-?>
+/**
+ * ACF and fields.
+ */
+require_once get_stylesheet_directory() . '/inc/acf/acf.php';
