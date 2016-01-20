@@ -36,9 +36,11 @@ get_header(); ?>
 								<?php $class = 'pull-right';?>
 							<?php endif;?>
 							<div class="col-md-6 each-triagem <?php echo $class;?>">
-								<div class="col-md-12 the-thumb">
-									<?php the_post_thumbnail( 'large' );?>
-								</div><!-- .col-md-12 the-thumb -->
+								<?php if ( has_post_thumbnail() ) : ?>
+									<div class="col-md-12 the-thumb">
+										<?php the_post_thumbnail( 'large' );?>
+									</div><!-- .col-md-12 the-thumb -->
+								<?php endif;?>
 								<div class="col-md-12 regiao-title">
 									<h3><?php the_title();?></h3>
 								</div><!-- .col-md-12 regiao-title -->

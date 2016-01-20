@@ -3918,8 +3918,10 @@ p{
 }
 .triagem-container .the-thumb img {
 	width:100%;
-	height:420px;
-	border-radius:50%;
+}
+.triagem-container .the-thumb {
+	height:240px;
+	overflow: hidden;
 }
 .triagem-each-container {
 	padding-left:10%;
@@ -3952,4 +3954,9 @@ p{
 }
 .triagem-each-container {
 	background: url( 'imagens/separator-each-triagem.jpg' ) center center no-repeat;
+}
+@media screen and (max-width: 900px) {
+	.triagem-each-container {
+		background: transparent !important;
+	}
 }
