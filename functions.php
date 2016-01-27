@@ -139,7 +139,7 @@ function slider_resumo($str){
 	
     
   if(get_the_title($brasa_slider_id) != 'Home'){
-	return $str;
+		return $str;
 	}
  else{
 
@@ -209,3 +209,24 @@ wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/mai
  */
 require_once get_stylesheet_directory() . '/inc/acf/acf.php';
 require_once get_stylesheet_directory() . '/fields.php';
+
+function slider_resumo_equipe($str){
+  	global $brasa_slider_id, $brasa_slider_item_id;
+	
+    
+  if( ! is_page_template( 'page-equipe.php' ) && strpos( get_the_title( $brasa_slider_id ), 'Destaques' ) == false ){
+		return $str;
+	}
+		//aqui vc retorna o resumo
+    	$the_post = get_post($brasa_slider_item_id);
+		$category = get_the_category($brasa_slider_item_id); 
+		$content = $the_post->post_content;
+		$excerpt = wp_trim_words( $content, 60, $more = null );
+
+		$permalink = get_permalink( $brasa_slider_item_id);
+		if ($str){
+			$str .= "<div class='excerpt-slider'><h2>".$the_post->post_title."</h2><span>".$excerpt."</span></div><a href=".$permalink." class='bt-readmore-equipe'>Veja Mais >></a>";
+			return $str;
+		}
+}
+add_filter('brasa_slider_loop_after_image','slider_resumo_equipe', 99999);
