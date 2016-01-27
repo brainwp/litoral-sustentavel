@@ -4088,3 +4088,25 @@ section.equipe-midia h2 {
 	font-size:2.4em;
 	color: #34332e;
 }
+section.equipe-contato {
+	background: #FFF;
+}
+section.equipe-contato .container {
+	padding-top:30px;
+	padding-bottom: 30px;
+}
+section.equipe-contato .the-title{
+	text-align: center;
+	font-weight: 300;
+	font-size:2.5em;
+	color: #34332e;
+}
+section.equipe-contato .the-content > div {
+	text-align: center;
+}
+section.equipe-contato .the-content input, section.equipe-contato .the-content textarea{
+	width:40% !important;
+	border: transparent !important;
+	background: #efefe5 !important;
+	padding:10px;
+}

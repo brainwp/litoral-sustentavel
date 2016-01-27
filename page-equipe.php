@@ -15,5 +15,6 @@ get_header( 'equipe' ); ?>
 	<?php get_template_part( 'parts/equipe-destaques' );?>
 	<?php get_template_part( 'parts/equipe-conteudo' );?>
 	<?php get_template_part( 'parts/equipe-midia' );?>
+	<?php get_template_part( 'parts/equipe-contato' );?>
 <?php endwhile;?>
 <?php get_footer( 'simples' ); ?>
