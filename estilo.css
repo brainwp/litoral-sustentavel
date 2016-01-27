@@ -4049,3 +4049,42 @@ section.equipe-conteudo .container {
 	color: #333333;
 	font-weight: 300;
 }
+section.equipe-midia {
+	background: #efefe5;
+}
+section.equipe-midia .container {
+	padding-top:30px;
+	padding-bottom:30px;
+}
+section.equipe-midia .gallery img {
+	transition:400ms ease all;
+	border: none !important;
+	height:200px;
+}
+section.equipe-midia .gallery-icon > a {
+	display: inline-block;
+	padding:0 !important;
+	transition:400ms ease all;
+	background-image: url( 'imagens/lupa-icon-gallery.jpg' );
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+}
+section.equipe-midia .gallery img:hover {
+	transition:300ms ease all;
+	opacity: 0.60;
+}
+section.equipe-midia .gallery-icon > a:hover {
+	background-position: center;
+	transition:400ms ease all;
+}
+section.equipe-midia .gallery-icon > a {
+	height:200px;
+	overflow: hidden;
+}
+section.equipe-midia h2 {
+	text-align: center;
+	font-weight: 300;
+	font-size:2.4em;
+	color: #34332e;
+}

@@ -2,6 +2,7 @@
 /* Equipe destaques */
 global $post;
 $page = get_page_by_path( $post->post_name . '/destaques' );
+if ( $page && is_object( $page ) ) :
 ?>
 <section class="equipe-destaques col-md-12">
 	<div class="container">
@@ -21,3 +22,4 @@ $page = get_page_by_path( $post->post_name . '/destaques' );
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- .equipe-destaques col-md-12 -->
+<?php endif;?>
