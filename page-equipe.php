@@ -11,5 +11,8 @@
  */
 
 get_header( 'equipe' ); ?>
-<?php get_template_part( 'parts/equipe-destaques' );?>
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<?php get_template_part( 'parts/equipe-destaques' );?>
+	<?php get_template_part( 'parts/equipe-conteudo' );?>
+<?php endwhile;?>
 <?php get_footer( 'simples' ); ?>

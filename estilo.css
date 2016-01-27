@@ -4040,3 +4040,12 @@ section.equipe-destaques .slick-prev::before, section.equipe-destaques .slick-ne
 	display: none;
 	content: '';
 }
+section.equipe-conteudo {
+	background: #FFF;
+}
+section.equipe-conteudo .container {
+	padding-top:30px;
+	padding-bottom:30px;
+	color: #333333;
+	font-weight: 300;
+}
