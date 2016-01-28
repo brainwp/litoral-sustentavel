@@ -149,5 +149,5 @@ $options = get_option('social_cfg');
 	
 </div>
 <?php if ( has_post_thumbnail() ) : ?>
-	<?php the_post_thumbnail( 'full' );?>
+	<?php the_post_thumbnail( 'full', array( 'class' => 'header-camara-thumb' ) );?>
 <?php endif;?>

@@ -4137,7 +4137,7 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	width: 100%;
 	color:#6f80b6;
 }
-.page-template-page-camara .wp-post-image {
+.page-template-page-camara .header-camara-thumb {
 	width: 100%;
 	border-top:10px solid #10379c;
 }
@@ -4205,4 +4205,33 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	width:100%;
 	height:70px;
 	background: url('imagens/loader.gif') center center no-repeat;
+}
+.camara-destaque {
+	background: url( 'imagens/bg-camaras-destaque.jpg' ) repeat;
+	padding-top:20px;
+	padding-bottom:20px;
+	background-attachment: fixed;
+}
+.camara-destaque .content .the-title {
+	color:#8a8a8a;
+	font-weight: 300;
+	font-size:2.5em;
+	margin:0;
+}
+.camara-destaque .content .the-content {
+	font-weight: 300;
+}
+.btn-readmore-destaques {
+	background: #0d379b;
+	color:#FFF !important;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:30px !important;
+	padding-right:40px !important;
+	border-radius: 0 !important;
+	font-weight: 300 !important;
+	font-size:1.6em !important;
+}
+.camara-destaque .image img {
+	width: 100%;
 }
