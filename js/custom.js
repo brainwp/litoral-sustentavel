@@ -27,4 +27,19 @@ jQuery(function($) {
 
 	$(".content").fitVids();
 
+	/* page-camara.php */
+	$('.abas-nav ul li.menu-item-object-page a').on('click',function(e){
+		e.preventDefault();
+		var data = {
+			'action': 'abas_camara',
+			'url': $( this ).attr( 'href' )
+		};
+		$('#abas-content').html( '' );
+		$('#abas-content').addClass('load');
+		$.post(ajax.ajax_url, data, function(response) {
+			$( '#abas-content' ).removeClass( 'load' );
+			$( '#abas-content' ).html( response );
+			$( '.zilla-tabs' ).tabs({ fx: { opacity: 'show' } });
+		});
+	});
 })

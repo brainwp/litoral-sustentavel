@@ -124,6 +124,10 @@ function admin_scripts() {
 add_action( 'admin_enqueue_scripts', 'admin_scripts' );
 function scripts(){
     wp_enqueue_script( 'custom-js',  get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
+   	wp_localize_script( 'custom-js', 'ajax',
+            array( 'ajax_url' => admin_url( 'admin-ajax.php' ) 
+        ) 
+    );
     wp_enqueue_script( 'fitvids',  get_stylesheet_directory_uri() . '/assets/js/libs/jquery.fitvids.js', array( 'jquery' ), '1.0', true );
 
     wp_enqueue_style( 'source-sans', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,200,200italic,300,300italic,900italic,900,700italic,700,600italic,600' );
@@ -230,3 +234,20 @@ function slider_resumo_equipe($str){
 		}
 }
 add_filter('brasa_slider_loop_after_image','slider_resumo_equipe', 99999);
+
+
+/* AJAX abas */
+add_action( 'wp_ajax_abas_camara', 'abas_camara_ajax' );
+add_action( 'wp_ajax_nopriv_abas_camara', 'abas_camara_ajax' );
+function abas_camara_ajax() {
+	if ( ! isset( $_POST['url'] ) ) {
+		return;
+	}
+	$page = get_page_by_path( str_replace( get_home_url(), '', $_POST['url'] ), OBJECT, 'page' );
+	if ( $page && is_object( $page ) ) {
+		echo '<div class="content animated fadeInUp">';
+		echo apply_filters( 'the_content', $page->post_content );
+		echo '</div>';
+	}
+	wp_die();
+}
