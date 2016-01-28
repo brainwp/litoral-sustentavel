@@ -4110,3 +4110,22 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	background: #efefe5 !important;
 	padding:10px;
 }
+/* page-camara.php */
+.header-camara {
+	padding-top:105px;
+}
+.header-camara .the-title h1 {
+	font-weight: bold;
+	color: #666666;
+	font-size: 2.7em;
+}
+.header-camara .the-title span {
+	display: inline-block;
+	clear: both;
+	width: 100%;
+	color:#6f80b6;
+}
+.page-template-page-camara .wp-post-image {
+	width: 100%;
+	border-top:10px solid #10379c;
+}
