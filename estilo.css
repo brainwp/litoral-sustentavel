@@ -4023,7 +4023,7 @@ section.equipe-destaques .slick-slide h2{
 	color:#5e5e5e;
 	font-size:1.3em;
 }
-section.equipe-destaques .slick-slide .bt-readmore-equipe {
+.bt-readmore-equipe {
 	width:auto;
 	display: inline-block;
 	padding-right:20px !important;
@@ -4173,6 +4173,7 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	display:inline-block;
 	padding-right:10px;
 	padding-left: 10px;
+	text-align: left !important;
 }
 .abas-nav ul.menu {
 	margin:0 !important;
@@ -4234,4 +4235,73 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 }
 .camara-destaque .image img {
 	width: 100%;
+}
+.camara-publicacoes {
+	background:#e2e7eb;
+}
+.camara-publicacoes > div.container {
+	padding-top:30px;
+	padding-bottom: 30px;
+}
+.camara-publicacoes .the-title {
+	font-size:2.6em;
+	color:#8a8a8a;
+	font-weight: 300;
+	text-align: center;
+	padding-bottom:15px;
+}
+.each-publicacoes > .col-md-12 {
+	padding-left:0 !important;
+	padding-right: 0 !important;
+}
+.each-publicacoes .image img {
+	width:100%;
+	min-height:130px;
+}
+.each-publicacoes .image {
+	height:130px;
+	overflow: hidden;
+}
+.each-publicacoes .content {
+	background: #FFF;
+	width:100%;
+	padding-left:10px;
+	padding-right:10px;
+}
+.each-publicacoes {
+	padding-right:10px !important;
+	padding-left:10px !important;
+	padding-bottom:10px;
+}
+.each-publicacoes .content {
+	color:#8a8a8a;
+	padding-bottom:30px;
+}
+.each-publicacoes .the-title-content {
+	padding-top:5px;
+	color:#8a8a8a;
+	font-weight: 300;
+	font-size:1.6em;
+}
+.btn-readmore-publicacoes {
+	width:auto;
+	display: inline-block;
+	padding-right:20px !important;
+	padding-left:20px !important;
+	padding-top:10px !important;
+	padding-bottom: 10px !important;
+	color:#FFF !important;
+	background: #0d379b;
+	font-size:1.4em;
+	margin-top:-30px;
+	float:left;
+}
+.readmore-archive {
+	display: inline-block;
+	height:46px;
+	padding-left:50px;
+	background: url('imagens/readmore-icon.jpg') left no-repeat;
+	font-size:1.8em;
+	color:#8a8a8a !important;
+	padding-top:8px;
 }

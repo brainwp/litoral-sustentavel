@@ -9,18 +9,6 @@ if(function_exists("register_field_group"))
 		'title' => 'Configuração de template',
 		'fields' => array (
 			array (
-				'key' => 'field_56a793a912c60',
-				'label' => 'Categoria dos Destaques',
-				'name' => 'featured_cat',
-				'type' => 'taxonomy',
-				'taxonomy' => 'category',
-				'field_type' => 'select',
-				'allow_null' => 1,
-				'load_save_terms' => 0,
-				'return_format' => 'id',
-				'multiple' => 0,
-			),
-			array (
 				'key' => 'field_56aa619cd54ec',
 				'label' => 'Link no botão Leia Mais na sub-página de destaque',
 				'name' => 'link-readmore',
@@ -110,6 +98,18 @@ if(function_exists("register_field_group"))
 				'append' => '',
 				'formatting' => 'html',
 				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_56a793a912c60',
+				'label' => 'Categoria das Publicações',
+				'name' => 'featured_cat',
+				'type' => 'taxonomy',
+				'taxonomy' => 'category',
+				'field_type' => 'select',
+				'allow_null' => 1,
+				'load_save_terms' => 0,
+				'return_format' => 'id',
+				'multiple' => 0,
 			),
 		),
 		'location' => array (

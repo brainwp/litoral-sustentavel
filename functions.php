@@ -80,6 +80,7 @@ return $output;
 		'sitemap-5' => __( 'Site Map Coluna 5' )			
 		)
 		);
+
 		}
 
 		
