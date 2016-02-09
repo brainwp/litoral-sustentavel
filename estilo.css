@@ -4100,6 +4100,9 @@ section.equipe-midia h2 {
 	font-size:2.4em;
 	color: #34332e;
 }
+section.equipe-midia h2.the-title {
+	padding-top:20px;
+}
 section.equipe-contato {
 	background: #FFF;
 }
