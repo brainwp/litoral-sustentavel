@@ -148,6 +148,8 @@ $options = get_option('social_cfg');
 	<div class="clearfix"></div>
 	
 </div>
-<?php if ( has_post_thumbnail() ) : ?>
-	<?php the_post_thumbnail( 'full', array( 'class' => 'header-camara-thumb' ) );?>
-<?php endif;?>
+<div class="col-md-12 header-camara-thumb-container">
+	<?php if ( has_post_thumbnail() ) : ?>
+		<?php the_post_thumbnail( 'full', array( 'class' => 'header-camara-thumb' ) );?>
+	<?php endif;?>
+</div><!-- .col-md-12 header-camara-thumb-container -->

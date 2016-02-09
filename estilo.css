@@ -4154,16 +4154,24 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	font-weight: bold;
 	color: #666666;
 	font-size: 2.7em;
+	margin-bottom: 5px;
 }
 .header-camara .the-title span {
 	display: inline-block;
 	clear: both;
 	width: 100%;
 	color:#6f80b6;
+	font-size: 1.3em;
 }
 .page-template-page-camara .header-camara-thumb {
 	width: 100%;
-	border-top:10px solid #10379c;
+	border-top:3px solid #10379c;
+	min-height:400px;
+}
+.header-camara-thumb-container {
+	height:400px;
+	overflow: hidden;
+	padding:0 !important;
 }
 #camara-abas {
 	background: #e6ebef;
