@@ -3955,17 +3955,40 @@ p{
 	border-left-style: solid;
 	background: #FFF;
 }
-.each-triagem-menu li, .each-triagem-menu a {
-	list-style-type: none !important;
+.each-triagem-menu a {
 	font-size:1.2em;
 	font-weight: 200;
 	color:#7e7e7e;
+	padding-left:10px;
+	padding-right:10px;
+	display: inline-block;
+	width:100%;
+	text-align: left;
+}
+.each-triagem-menu li {
+	padding-top:12px;
+	padding-bottom: 12px;
+	display: block;
+	padding-left:0 !important;
+	padding-right:0 !important;
+	width: 100%;
+	clear: both;
+	border-bottom: 1px solid #dadadc;
+	list-style-type: none !important;	
+}
+.each-triagem-menu li:last-child {
+	border:none !important;
+}
+.each-triagem-menu ul {
+	margin: 0 0 10px 0;
 }
 .each-triagem-menu a:hover {
 	color:#000 !important;
 }
 .triagem-each-container {
 	background: url( 'imagens/separator-each-triagem.jpg' ) center center no-repeat;
+	margin-top:30px;
+	margin-bottom: 30px
 }
 @media screen and (max-width: 900px) {
 	.triagem-each-container {
