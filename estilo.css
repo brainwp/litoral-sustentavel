@@ -4261,7 +4261,7 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	width: 100%;
 }
 .camara-publicacoes {
-	background:#e2e7eb;
+	background:#e4e7ec;
 }
 .camara-publicacoes > div.container {
 	padding-top:30px;
@@ -4308,23 +4308,23 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	font-size:1.6em;
 }
 .btn-readmore-publicacoes {
-	width:auto !important;
+	width: auto !important;
 	display: inline-block !important;
-	padding-right:20px !important;
-	padding-left:20px !important;
-	padding-top:10px !important;
-	padding-bottom: 10px !important;
-	color:#FFF !important;
+	padding-right: 40px !important;
+	padding-left: 40px !important;
+	padding-top: 6px !important;
+	padding-bottom: 6px !important;
+	color: #FFF !important;
 	background: #0d379b;
-	font-size:1.4em;
-	margin-top:-30px;
-	float:left;
+	font-size: 1.2em;
+	margin-top: -30px;
+	float: left;
 }
 .readmore-archive {
 	display: inline-block;
 	height:46px;
 	padding-left:50px;
-	background: url('imagens/readmore-icon.jpg') left no-repeat;
+	background: url('imagens/readmore-icon.png') left no-repeat;
 	font-size:1.8em;
 	color:#8a8a8a !important;
 	padding-top:8px;
