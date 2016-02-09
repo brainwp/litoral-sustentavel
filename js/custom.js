@@ -42,4 +42,13 @@ jQuery(function($) {
 			$( '.zilla-tabs' ).tabs({ fx: { opacity: 'show' } });
 		});
 	});
+	/* page-equipe.php */
+	if ( $( 'header.equipe-header-title .image' ).length > 0 ) {
+		console.log( 'ahoy' );
+		var equipe_header_image_size = function(){
+			var height = $( 'header.equipe-header-title .container' ).outerHeight( true ) + 'px';
+			$( 'header.equipe-header-title .image' ).css( 'height', height );
+		}
+		equipe_header_image_size();
+	}
 })

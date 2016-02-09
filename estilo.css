@@ -3986,13 +3986,13 @@ p{
 }
 .equipe-header-title .image {
 	opacity:0.40;
-	height:260px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .equipe-header-title .container {
 	position: absolute;
+	padding-bottom:30px;
 }
 .equipe-header-title .container h1 {
 	width:100%;
