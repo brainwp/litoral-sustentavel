@@ -49,9 +49,9 @@ $options = get_option('footer_cfg');
 					</div><!-- .col-md-8 -->
 					<div class="col-md-4 pull-right copyright">
 						<p class="cc"><?php _e('Alguns direitos reservados','litoral-sustentavel'); ?></p>
-						<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/cc.jpg">
+							<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/cc.png">
 						<a href="http://brasa.art.br">
-							<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/brasa.jpg">
+							<img src="<?php echo get_stylesheet_directory_uri();?>/imagens/brasa.png">
 						</a>
 					</div><!-- .copyright -->
 				</div><!-- .col-md-12 -->
