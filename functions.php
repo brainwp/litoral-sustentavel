@@ -247,6 +247,7 @@ function abas_camara_ajax() {
 	$page = get_page_by_path( str_replace( get_home_url(), '', $_POST['url'] ), OBJECT, 'page' );
 	if ( $page && is_object( $page ) ) {
 		echo '<div class="content animated fadeInUp">';
+		printf( '<h3 class="page-the-title">%s</h3>', apply_filters( 'the_title', $page->post_title ) );
 		echo apply_filters( 'the_content', $page->post_content );
 		echo '</div>';
 	}

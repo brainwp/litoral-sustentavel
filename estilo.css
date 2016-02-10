@@ -4262,6 +4262,9 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	height:70px;
 	background: url('imagens/loader.gif') center center no-repeat;
 }
+.page-template-page-camara #abas-content .page-the-title {
+	display: none !important;
+}
 .camara-destaque {
 	background: url( 'imagens/bg-camaras-destaque.jpg' ) repeat;
 	padding-top:20px;
@@ -4375,6 +4378,65 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 }
 
 /* page-agenda-desenvolvimento.php */
+body.page-template-page-agenda-desenvolvimento #abas-content {
+	font-weight: 300;
+	color:#666666;
+	font-size:1.0em;
+}
 body.page-template-page-agenda-desenvolvimento #img-cabecalho .the-title {
 	padding-top:25px;
+}
+body.page-template-page-agenda-desenvolvimento #abas-content .page-the-title {
+	color:#666666;
+	font-size:1.8em;
+	font-weight: 500;
+}
+body.page-template-page-agenda-desenvolvimento #camara-abas {
+	background: #f5f5f5;
+}
+body.page-template-page-agenda-desenvolvimento .abas-nav {
+	background: #e3e3e3 !important;
+	border: none !important;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+body.page-template-page-agenda-desenvolvimento .abas-nav ul li a {
+	color:#666666 !important;
+	padding-left:20px;
+	padding-right:20px;
+	transtion:300ms ease all;
+	font-weight: 500;
+	font-size:1.4em;
+	width:100%;
+}
+body.page-template-page-agenda-desenvolvimento .abas-nav ul li {
+	border: none !important;
+	padding-top:10px;
+	transition:500ms ease all;
+}
+body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active {
+	background-color:#00abdf;
+	transition: 500ms ease all;
+
+}
+body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active a {
+	transtion:300ms ease all;
+	color: #FFF !important;
+}
+body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon {
+	display: inline-block;
+	position: absolute;
+	margin-right: -4px;
+	margin-left: -3px;
+	margin-top: -10px;
+	background-size: cover;
+	display: inline-block;
+ 	vertical-align: middle;
+ 	width: 0; 
+ 	height: 0; 
+ 	border-style: solid;
+
+ 	border-top-color:transparent;
+ 	border-bottom-color: transparent;
+ 	border-left-color: #00abdf;
 }

@@ -8,9 +8,11 @@
 				<?php echo wp_nav_menu( array( 'menu' => get_the_title() ) );?>
 			</div><!-- .col-md-4 abas-nav -->
 			<div class="col-md-8 pull-right" id="abas-content">
-				<div class="content animated fadeInUp">
-					<?php the_content();?>
-				</div><!-- .content animated fadeInUp -->
+				<?php if ( is_page_template( 'page-camara.php' ) ) : ?>
+					<div class="content animated fadeInUp">
+						<?php the_content();?>
+					</div><!-- .content animated fadeInUp -->
+				<?php endif;?>
 			</div><!-- #abas-content.col-md-7 pull-right -->
 		</div><!-- .row -->
 	</div><!-- .container -->
