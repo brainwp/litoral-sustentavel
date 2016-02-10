@@ -4373,3 +4373,8 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	margin-top:-30px;
 	float:left;
 }
+
+/* page-agenda-desenvolvimento.php */
+body.page-template-page-agenda-desenvolvimento #img-cabecalho .the-title {
+	padding-top:25px;
+}

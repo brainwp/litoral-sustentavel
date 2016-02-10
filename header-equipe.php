@@ -143,7 +143,7 @@ $options = get_option('social_cfg');
 	<div class="clearfix"></div>
 	
 </div>
-<?php if ( has_post_thumbnail() ) : ?>
+<?php if ( has_post_thumbnail() && is_page_template( 'page-equipe.php' ) ) : ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', true ); ?>
 <header class="equipe-header-title">
 	<div class="col-md-12 image" style="background-image:url( <?php echo $image[0];?> );"></div><!-- .col-md-12 image -->
