@@ -3934,13 +3934,11 @@ p{
 .triagem-container .the-thumb {
 	height:240px;
 	overflow: hidden;
-}
-.triagem-each-container {
-	padding-left:10%;
-	padding-right:10%;
+	width:100%;
 }
 .triagem-container .regiao-title {
 	padding-top:20px;
+	padding-bottom: 14px;
 }
 .triagem-container .regiao-title h3{
 	font-size:2em;
@@ -3995,6 +3993,14 @@ p{
 		background: transparent !important;
 	}
 }
+@media screen and (min-width: 800px) {
+	.triagem-each-container {
+		padding-left:15% !important;
+		padding-right:15% !important;
+	}
+}
+
+
 /* page-equipe.php */
 #equipe-header-logo img {
 	max-width: 402px;

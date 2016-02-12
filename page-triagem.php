@@ -37,7 +37,7 @@ get_header(); ?>
 							<?php endif;?>
 							<div class="col-md-6 each-triagem <?php echo $class;?>">
 								<?php if ( has_post_thumbnail() ) : ?>
-									<div class="col-md-12 the-thumb">
+									<div class="the-thumb">
 										<?php the_post_thumbnail( 'large' );?>
 									</div><!-- .col-md-12 the-thumb -->
 								<?php endif;?>
