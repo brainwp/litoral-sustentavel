@@ -4015,7 +4015,7 @@ p{
 }
 .equipe-header-title .container {
 	position: absolute;
-	padding-bottom:30px;
+	padding-bottom:60px;
 }
 .equipe-header-title .container h1 {
 	width:100%;
@@ -4258,8 +4258,7 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	border: 0 !important
 }
 #abas-content.load {
-	width:100%;
-	height:70px;
+	height:200px;
 	background: url('imagens/loader.gif') center center no-repeat;
 }
 .page-template-page-camara #abas-content .page-the-title {
