@@ -9,7 +9,6 @@
  * @package Odin
  * @since 2.2.0
  */
-
 get_header(); ?>
 <?php get_template_part('parts/comp-header-simples'); ?>
 	<div class="col-md-12 triagem-container">
@@ -31,11 +30,13 @@ get_header(); ?>
 						<?php $i = 0;?>
 						<?php while ( $query->have_posts() ) : ?>
 							<?php $query->the_post();?>
+							<?php global $post;?>
+
 							<?php $class = '';?>
 							<?php if ( $i == 1 ) : ?>
 								<?php $class = 'pull-right';?>
 							<?php endif;?>
-							<div class="col-md-6 each-triagem <?php echo $class;?>">
+							<div class="col-md-6 each-triagem <?php echo $class;?>" id="<?php echo esc_attr( $post->post_name );?>">
 								<?php if ( has_post_thumbnail() ) : ?>
 									<div class="the-thumb">
 										<?php the_post_thumbnail( 'large' );?>
@@ -47,6 +48,7 @@ get_header(); ?>
 								<?php $style = '';?>
 								<?php if ( $color = get_post_meta( get_the_ID(), 'menu_color', true ) ) : ?>
 									<?php $style = 'border-left-color:' . $color;?>
+									<?php echo '<style>' . sprintf( '#%s li:hover', $post->post_name ) . '{ background:' . $color . '; } </style>';?>
 								<?php endif;?>
 								<div class="col-md-12 each-triagem-menu" style="<?php echo $style;?>">
 									<?php echo wp_nav_menu( array( 'menu' => get_the_title() ) );?>

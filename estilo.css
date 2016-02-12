@@ -3952,6 +3952,7 @@ p{
 	border-left-width: 4px;
 	border-left-style: solid;
 	background: #FFF;
+	padding-right:0 !important;
 }
 .each-triagem-menu a {
 	font-size:1.2em;
@@ -3978,10 +3979,12 @@ p{
 	border:none !important;
 }
 .each-triagem-menu ul {
-	margin: 0 0 10px 0;
+	margin: 0 0 0 0;
 }
-.each-triagem-menu a:hover {
-	color:#000 !important;
+.each-triagem-menu ul li:hover a {
+	color:#FFF !important;
+	text-decoration: none !important;
+	transition:200ms ease-out all;
 }
 .triagem-each-container {
 	background: url( 'imagens/separator-each-triagem.jpg' ) center center no-repeat;
