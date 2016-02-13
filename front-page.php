@@ -41,8 +41,8 @@ $option_home = get_option('home_cfg');
 		imagealphamask( $redimensionada, $mask );
 		// // Output
 		// header( "Content-type: image/png");
-		imagepng( $redimensionada, 'temp.png');?>
-			<img id="img_header"  src="<?php echo get_home_url('/');?>/temp.png" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+		imagepng( $redimensionada, get_stylesheet_directory() . '/imagens/temp.png' );?>
+			<img id="img_header"  src="<?php echo get_stylesheet_directory_uri();?>/imagens/temp.png" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 		<?php endif; 
 ?>
 </div>
