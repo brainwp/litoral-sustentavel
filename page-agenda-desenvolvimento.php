@@ -13,7 +13,6 @@
 get_header( 'camara' ); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<?php get_template_part( 'parts/camara-abas' );?>
-	<?php get_template_part( 'parts/agenda-filtro' );?>
-
+	<?php get_template_part( 'parts/agenda-filtros' );?>
 <?php endwhile;?>
 <?php get_footer( 'simples' ); ?>

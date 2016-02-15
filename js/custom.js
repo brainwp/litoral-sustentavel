@@ -76,4 +76,12 @@ jQuery(function($) {
 	if ( $( 'body' ).hasClass( 'page-template-page-agenda-desenvolvimento' ) ) {
 		$( '.abas-nav ul li.menu-item-object-page' ).first().children( 'a' ).trigger( 'click' ); 
 	}
+	$( '.each-agenda-filter-btn' ).on( 'click', function(e) {
+		if( $( this ).hasClass( 'selected' ) ) {
+			$( this ).removeClass( 'selected' );
+		}
+		else {
+			$( this ).addClass( 'selected' );
+		}
+	} );
 })
