@@ -132,3 +132,74 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+
+//ACF OPTIONS
+if(function_exists("register_field_group"))
+{
+    register_field_group(array (
+        'id' => 'acf_eixos',
+        'title' => 'Eixos',
+        'fields' => array (
+            array (
+                'key' => 'field_56c20d07ccc1c',
+                'label' => 'Ícone',
+                'name' => 'thumbnail',
+                'type' => 'image',
+                'save_format' => 'object',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'ef_taxonomy',
+                    'operator' => '==',
+                    'value' => 'eixos',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'side',
+            'layout' => 'default',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+    register_field_group(array (
+        'id' => 'acf_temas',
+        'title' => 'Temas',
+        'fields' => array (
+            array (
+                'key' => 'field_56c20f44270ee',
+                'label' => 'Cor',
+                'name' => 'color',
+                'type' => 'color_picker',
+                'instructions' => 'Selecione a cor do tema',
+                'default_value' => '#' . dechex( rand( 0x000000, 0xFFFFFF ) ),
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'ef_taxonomy',
+                    'operator' => '==',
+                    'value' => 'temas',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+}

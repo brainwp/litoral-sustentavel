@@ -4,6 +4,80 @@ require_once get_stylesheet_directory() . '/inc/options.php';
 //mascara da imagem da home
 require_once get_stylesheet_directory() . '/inc/mask-image.php';
 
+if ( ! function_exists( 'custom_taxonomy_agenda' ) ) {
+
+// Register Custom Taxonomy
+function custom_taxonomy_agenda() {
+
+	$labels = array(
+		'name'                       => _x( 'Eixos', 'Taxonomy General Name', 'litoralsustentavel' ),
+		'singular_name'              => _x( 'Eixo', 'Taxonomy Singular Name', 'litoralsustentavel' ),
+		'menu_name'                  => __( 'Eixos', 'litoralsustentavel' ),
+		'all_items'                  => __( 'Todos eixos', 'litoralsustentavel' ),
+		'parent_item'                => __( 'Item parente', 'litoralsustentavel' ),
+		'parent_item_colon'          => __( 'Item parente:', 'litoralsustentavel' ),
+		'new_item_name'              => __( 'Novo nome de eixo', 'litoralsustentavel' ),
+		'add_new_item'               => __( 'Adicionar novo eixo', 'litoralsustentavel' ),
+		'edit_item'                  => __( 'Editar Eixo', 'litoralsustentavel' ),
+		'update_item'                => __( 'Atualizar Eixo', 'litoralsustentavel' ),
+		'view_item'                  => __( 'Ver Eixo', 'litoralsustentavel' ),
+		'separate_items_with_commas' => __( 'Eixos separados por virgula', 'litoralsustentavel' ),
+		'add_or_remove_items'        => __( 'Editar ou remover Eixos', 'litoralsustentavel' ),
+		'choose_from_most_used'      => __( 'Escolha pelos mais usados', 'litoralsustentavel' ),
+		'popular_items'              => __( 'Itens populares', 'litoralsustentavel' ),
+		'search_items'               => __( 'Buscar itens', 'litoralsustentavel' ),
+		'not_found'                  => __( 'Não encontrado', 'litoralsustentavel' ),
+		'no_terms'                   => __( 'Sem itens', 'litoralsustentavel' ),
+		'items_list'                 => __( 'Lista de eixos', 'litoralsustentavel' ),
+		'items_list_navigation'      => __( 'Navegação da lista de itens', 'litoralsustentavel' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'eixos', array( 'post' ), $args );
+	
+	$labels = array(
+		'name'                       => _x( 'Temas', 'Taxonomy General Name', 'litoralsustentavel' ),
+		'singular_name'              => _x( 'Tema', 'Taxonomy Singular Name', 'litoralsustentavel' ),
+		'menu_name'                  => __( 'Temas', 'litoralsustentavel' ),
+		'all_items'                  => __( 'Todos temas', 'litoralsustentavel' ),
+		'parent_item'                => __( 'Tema parente', 'litoralsustentavel' ),
+		'parent_item_colon'          => __( 'Tema parente:', 'litoralsustentavel' ),
+		'new_item_name'              => __( 'Novo nome do tema', 'litoralsustentavel' ),
+		'add_new_item'               => __( 'Adicionar novo tema', 'litoralsustentavel' ),
+		'edit_item'                  => __( 'Editar tema', 'litoralsustentavel' ),
+		'update_item'                => __( 'Atualizar tema', 'litoralsustentavel' ),
+		'view_item'                  => __( 'Editar tema', 'litoralsustentavel' ),
+		'separate_items_with_commas' => __( 'Temas separados por virgula', 'litoralsustentavel' ),
+		'add_or_remove_items'        => __( 'Editar ou remover temas', 'litoralsustentavel' ),
+		'choose_from_most_used'      => __( 'Escolha pelos mais usados', 'litoralsustentavel' ),
+		'popular_items'              => __( 'Itens populares', 'litoralsustentavel' ),
+		'search_items'               => __( 'Buscar itens', 'litoralsustentavel' ),
+		'not_found'                  => __( 'Não encontrado', 'litoralsustentavel' ),
+		'no_terms'                   => __( 'Sem itens', 'litoralsustentavel' ),
+		'items_list'                 => __( 'Lista de Temas', 'litoralsustentavel' ),
+		'items_list_navigation'      => __( 'Navegação da lista de itens', 'litoralsustentavel' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'temas', array( 'post' ), $args );
+}
+add_action( 'init', 'custom_taxonomy_agenda', 0 );
+
+}
 
 // Redefine o tamanho do Cabeçalho
 define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyten_header_image_width', 946 ) );
