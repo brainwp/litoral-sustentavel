@@ -327,3 +327,71 @@ function abas_camara_ajax() {
 	}
 	wp_die();
 }
+
+add_action( 'wp_ajax_agenda', 'agenda_ajax' );
+add_action( 'wp_ajax_nopriv_agenda', 'agenda_ajax' );
+
+function agenda_ajax() {
+	if ( ! isset( $_POST [ 'page' ] ) ) {
+		return;
+	}
+
+	$args = array( 
+		'posts_per_page' => 16,
+		'post_type' => 'post',
+		'tax_query' => array(
+			'relation' => 'AND',
+		),
+		'paged' => $_POST[ 'page' ],
+		'meta_query' => array(
+			array(
+				'key'     => 'show_in_agenda',
+				'value'   => 'true',
+			),
+		)
+	);
+
+	if ( isset( $_POST[ 'eixos']  ) ) {
+		$args[ 'tax_query' ][] = array(
+			'taxonomy' => 'eixos',
+			'field'    => 'term_id',
+			'terms'    => $_POST[ 'eixos'],
+			'operator' => 'AND'
+		); 
+	}
+	if ( isset( $_POST[ 'temas']  ) ) {
+		$args[ 'tax_query' ][] = array(
+			'taxonomy' => 'temas',
+			'field'    => 'term_id',
+			'terms'    => $_POST[ 'temas'],
+			'operator' => 'AND'
+
+		); 
+	}
+	if ( ! isset( $_POST[ 'eixos' ] ) && ! isset( $_POST[ 'temas' ] ) ) {
+		unset( $args[ 'tax_query' ] );	
+	}
+
+	if ( isset( $_POST[ 'key' ] ) ) {
+		$args[ 's' ] = $_POST[ 'key' ];
+	}
+	$query = new WP_Query( $args );
+	header( 'max-pages: ' . $query->max_num_pages );
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			if ( ! get_the_terms( get_the_ID(), 'eixos' ) && ! get_the_terms( get_the_ID(), 'temas' ) ) {
+				continue;
+			} 
+			if ( ! has_post_thumbnail() ) {
+				continue;
+			}
+			get_template_part( 'parts/content-agenda-posts' );
+		} 
+	}
+	else {
+		_e( 'Nada encontrado com esses termos de busca. ', 'litoralsustentavel' );
+	}
+
+	wp_die();
+}

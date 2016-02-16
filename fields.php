@@ -203,3 +203,44 @@ if(function_exists("register_field_group"))
         'menu_order' => 0,
     ));
 }
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_agenda-de-desenvolvimento',
+		'title' => 'Agenda de Desenvolvimento',
+		'fields' => array (
+			array (
+				'key' => 'field_56c349d659282',
+				'label' => 'Exibir post na página Agenda de Desenvolvimento?',
+				'name' => 'show_in_agenda',
+				'type' => 'radio',
+				'choices' => array (
+					'true' => 'Sim',
+					'false' => 'Não',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => 'false',
+				'layout' => 'vertical',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}

@@ -76,6 +76,55 @@ jQuery(function($) {
 	if ( $( 'body' ).hasClass( 'page-template-page-agenda-desenvolvimento' ) ) {
 		$( '.abas-nav ul li.menu-item-object-page' ).first().children( 'a' ).trigger( 'click' ); 
 	}
+	ajaxAgendaRequest = null;
+	var ajaxAgenda = function( next_page ) {
+		if ( typeof( next_page ) === 'undefined' ) { next_page = 1; }
+		console.log( next_page );
+		if( ajaxAgendaRequest != null ) {
+                ajaxAgendaRequest.abort();
+                ajaxAgendaRequest = null;
+        }
+		var eixos = [];
+		var temas = [];
+		$( '.each-agenda-filter-btn.selected' ).each( function() {
+			if ( $( this ).attr( 'data-taxonomy' ) == 'eixos' ) {
+				eixos.push( $(this).attr( 'data-term-id' ) );
+			}
+			if ( $( this ).attr( 'data-taxonomy' ) == 'temas' ) {
+				temas.push( $(this).attr( 'data-term-id' ) );
+			}
+		});
+		var data = {
+			'action': 'agenda',
+			'eixos': eixos,
+			'temas': temas,
+			'page': next_page
+		};
+		var key = $( '#agenda-search-key' ).val();
+		if ( key != '' ) {
+			data.key = key;
+		}
+		$( '.agenda-posts' ).addClass( 'load' );
+		ajaxAgendaRequest = $.post( odin.ajax_url, data, function(response) {
+			var max_pages = ajaxAgendaRequest.getResponseHeader( 'max-pages' );
+			if ( next_page == 1 ) {
+				$( '.agenda-posts .all-posts' ).html( response );
+				$( '.agenda-posts' ).attr( 'data-max-pages', max_pages );
+			}
+			else {
+				$( '.agenda-posts .all-posts' ).append( response );
+			}
+			if ( parseInt( max_pages ) <= next_page ) {
+				$( '.agenda-posts .load-more-agenda' ).css( 'display', 'none' );
+			}
+			else {
+				$( '.agenda-posts .load-more-agenda' ).css( 'display', 'inline-block' );
+			}
+			$( '.agenda-posts' ).attr( 'data-page', next_page );
+			$( '.agenda-posts' ).removeClass( 'load' );
+		});
+	}
+
 	$( '.each-agenda-filter-btn' ).on( 'click', function(e) {
 		if( $( this ).hasClass( 'selected' ) ) {
 			$( this ).removeClass( 'selected' );
@@ -83,5 +132,20 @@ jQuery(function($) {
 		else {
 			$( this ).addClass( 'selected' );
 		}
+		ajaxAgenda();
 	} );
+	$( '.busca .search-btn-icon' ).on( 'click', function(e) {
+		ajaxAgenda();
+	} );
+
+	if ( $( '.agenda-posts' ).length > 0 ) {
+		ajaxAgenda();
+	}
+	$( '.agenda-posts .load-more-agenda' ).on( 'click', function(e) {
+		e.preventDefault();
+		var page = parseInt( $( '.agenda-posts').attr( 'data-page' ) ) + 1;
+		console.log( page );
+		ajaxAgenda( page );
+	} );
+
 })
