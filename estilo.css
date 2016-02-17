@@ -4031,7 +4031,7 @@ p{
 	padding-top:20px;
 	text-align: center;
 	font-weight: bold;
-	font-size:2.5em;
+	font-size:2.9em;
 	opacity: 0.80;
 }
 @media only screen and (min-width: 800px) {
@@ -4064,6 +4064,8 @@ section.equipe-destaques {
 section.equipe-destaques .the-content {
 	color:#74736e;
 	font-size:1.5em;
+	padding-top:50px;
+	padding-bottom: 50px;
 }
 section.equipe-destaques .excerpt-slider {
 	background:#FFF;
