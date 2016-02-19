@@ -4103,6 +4103,7 @@ section.equipe-destaques .the-content {
 }
 section.equipe-destaques .excerpt-slider {
 	background:#FFF;
+	padding-bottom: 50px;
 }
 section.equipe-destaques .excerpt-slider span {
 	display: block;
@@ -4147,10 +4148,10 @@ section.equipe-destaques .slick-prev::before, section.equipe-destaques .slick-ne
 	content: '';
 }
 section.equipe-destaques .bottom {
-	width: 90%;
+	width: 80%;
 	height: 100px;
 	position: absolute;
-	bottom: 20px;
+	bottom: 10%;
 	background: url('imagens/bg-bottom-each-slider.png') center -11px repeat-x;
 	z-index: 0;
 }
