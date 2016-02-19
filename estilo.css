@@ -4104,6 +4104,11 @@ section.equipe-destaques .the-content {
 section.equipe-destaques .excerpt-slider {
 	background:#FFF;
 }
+section.equipe-destaques .excerpt-slider span {
+	display: block;
+	height:150px;
+	overflow: hidden;
+}
 section.equipe-destaques .slick-slide {
 	padding-left:10px;
 	padding-right:10px;
@@ -4115,15 +4120,15 @@ section.equipe-destaques .slick-slide h2{
 .bt-readmore-equipe {
 	width:auto;
 	display: inline-block;
-	padding-right:20px !important;
-	padding-left:20px !important;
+	padding-right:40px !important;
+	padding-left:40px !important;
 	padding-top:10px !important;
 	padding-bottom: 10px !important;
 	color:#FFF;
 	background: #0d379b;
 	font-size:1.4em;
 	margin-top:-30px;
-	z-index: 999;
+	z-index: 999999;
 }
 section.equipe-destaques .slick-next, section.equipe-destaques .slick-prev {
     font-size: 0px;
@@ -4140,6 +4145,14 @@ section.equipe-destaques .slick-prev {
 section.equipe-destaques .slick-prev::before, section.equipe-destaques .slick-next::before {
 	display: none;
 	content: '';
+}
+section.equipe-destaques .bottom {
+	width: 90%;
+	height: 100px;
+	position: absolute;
+	bottom: 20px;
+	background: url('imagens/bg-bottom-each-slider.png') center -11px repeat-x;
+	z-index: 0;
 }
 section.equipe-conteudo {
 	background: #FFF;
@@ -4416,8 +4429,8 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 .is_slider .slick-slide > a.btn-readmore-publicacoes {
 	width:auto !important;
 	display: inline-block !important;
-	padding-right:20px !important;
-	padding-left:20px !important;
+	padding-right:50px !important;
+	padding-left:50px !important;
 	padding-top:10px !important;
 	padding-bottom: 10px !important;
 	color:#FFF !important;

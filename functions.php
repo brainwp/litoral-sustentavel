@@ -304,7 +304,7 @@ function slider_resumo_equipe($str){
 
 		$permalink = get_permalink( $brasa_slider_item_id);
 		if ($str){
-			$str .= "<div class='excerpt-slider'><h2>".$the_post->post_title."</h2><span>".$excerpt."</span></div><a href=".$permalink." class='btn-readmore-publicacoes'><span>Veja Mais ></span>></a>";
+			$str .= "<div class='excerpt-slider'><h2>".$the_post->post_title."</h2><span>".$excerpt."</span><div class='bottom'></div></div><a href=".$permalink." class='btn-readmore-publicacoes'><span>Veja Mais ></span>></a>";
 			return $str;
 		}
 }
