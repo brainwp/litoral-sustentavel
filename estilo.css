@@ -4673,3 +4673,18 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 	font-weight: 400;
 	padding-left:5px;
 }
+@media only screen and (max-width: 1000px) {
+	.filter .help, 
+	.filter > div.pull-right {
+		width: 100%;
+		display: block;
+		clear: both;
+		float:left !important;
+	}
+	body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon {
+		display: none !important;
+	}
+	body.page-template-page-agenda-desenvolvimento #abas-content .page-the-title {
+		padding-top:20px;
+	}
+}
