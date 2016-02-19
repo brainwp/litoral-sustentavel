@@ -4005,14 +4005,27 @@ p{
 
 
 /* page-equipe.php */
+
 #equipe-header-logo img {
 	max-width: 402px;
 	position: relative;
 	z-index: 9;
 	width: 100%;
-	margin: 40px 0 0 40%;
 	display: block;
 }
+@media screen and (min-width: 1000px) {
+	#equipe-header-logo img {
+		margin: 40px 0 0 40%;
+	}
+}
+@media screen and (max-width: 1000px) {
+	#equipe-header-logo {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}
+
 .equipe-header-title {
 	width:100%;
 }
@@ -4034,7 +4047,7 @@ p{
 	font-size:2.9em;
 	opacity: 0.80;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 	.equipe-header-title .container h1 {
 		max-width: 600px;
 		position: relative;
@@ -4047,12 +4060,25 @@ p{
 		height:270px;
 	}
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
 	.equipe-header-title .container {
 		margin-top: -40%;
 	}
+	.equipe-header-title .container h1 {
+		padding-top: 120px;
+	}
 	#equipe-header-logo img {
 		margin: 40px 0px 20px 0;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.equipe-header-title .container h1 {
+		padding-top: 0 !important;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.equipe-header-title .container {
+		margin-top:-70%;
 	}
 }
 section.equipe-destaques {

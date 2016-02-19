@@ -14,9 +14,8 @@ if ( $page && is_object( $page ) ) :
 			<?php $slider = get_page_by_title( $slider_name, OBJECT, 'brasa_slider_cpt' );?>
 			<?php if ( $slider && is_object( $slider ) ) : ?>
 			<div class="equipe-slider">
-				<?php $json = '{"dots": false,"infinite": true,"speed": 3000, "autoplay":true, "autoplaySpeed": 5000, "slidesToShow": 3}';?>
-				<?php $json = esc_attr( $json );?>
-				<?php echo do_shortcode( sprintf( '[brasa_slider name="%s" json="%s"]', $slider_name, $json ) );?>
+				<?php $json = '{"dots": false,"infinite": true,"speed": 3000, "autoplay":true, "autoplaySpeed": 5000, "slidesToShow": 3, "responsive": [ {"breakpoint": 800, "settings": { "slidesToShow": 1, "slidesToScroll": 1 }}]}';?>
+				<?php echo do_shortcode( sprintf( '[brasa_slider name="%s"]', $slider_name, $json ) );?>
 			</div><!-- .col-md-12 equipe-slider -->
 			<?php endif;?>
 		</div><!-- .row -->
