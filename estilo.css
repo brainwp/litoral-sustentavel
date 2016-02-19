@@ -4155,6 +4155,11 @@ section.equipe-destaques .bottom {
 	background: url('imagens/bg-bottom-each-slider.png') center -11px repeat-x;
 	z-index: 0;
 }
+@media only screen and (min-width: 1000px) {
+	section.equipe-destaques .bottom {
+		width:90%;
+	}
+}
 section.equipe-conteudo {
 	background: #FFF;
 }
