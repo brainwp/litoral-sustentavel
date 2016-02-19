@@ -3936,6 +3936,14 @@ p{
 	overflow: hidden;
 	width:100%;
 }
+@media (max-width: 800px){
+	.triagem-container .the-thumb {
+		height: auto !important;
+	}
+	.each-triagem {
+		padding-bottom: 20px;
+	}
+}
 .triagem-container .regiao-title {
 	padding-top:20px;
 	padding-bottom: 14px;
