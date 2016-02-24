@@ -137,8 +137,15 @@ $options = get_option('social_cfg');
 			</a>
 		</div>
 		<div class="col-md-10 pull-left the-title">
-			<h1><?php the_title();?></h1>
-			
+			<?php if ( get_post_type( get_the_ID() ) == 'acoes' ) : ?>
+				<?php if ( $option = get_option( 'acoes_cfg' ) ) : ?>
+					<h1><?php echo apply_filters( 'the_title', $option[ 'title' ] ); ?></h1>
+				<?php else : ?>
+					<h1><?php _e( 'Agenda de Desenvolvimento Sustentável', 'litoralsustentavel' );?></h1>
+				<?php endif;?>
+			<?php else : ?>
+				<h1><?php the_title();?></h1>
+			<?php endif;?>
 			<?php if ( $field = get_post_meta( get_the_ID(), 'sub_title', true ) ) : ?>
 				<span><?php echo apply_filters( 'the_title', $field );?></span>
 			<?php endif;?>

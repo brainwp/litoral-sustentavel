@@ -40,7 +40,7 @@ function custom_taxonomy_agenda() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'eixos', array( 'post' ), $args );
+	register_taxonomy( 'eixos', array( 'acoes' ), $args );
 	
 	$labels = array(
 		'name'                       => _x( 'Temas', 'Taxonomy General Name', 'litoralsustentavel' ),
@@ -73,7 +73,57 @@ function custom_taxonomy_agenda() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'temas', array( 'post' ), $args );
+	register_taxonomy( 'temas', array( 'acoes' ), $args );
+
+	$labels = array(
+		'name'                  => _x( 'Ações', 'Post Type General Name', 'litoralsustentavel' ),
+		'singular_name'         => _x( 'Ação', 'Post Type Singular Name', 'litoralsustentavel' ),
+		'menu_name'             => __( 'Ações', 'litoralsustentavel' ),
+		'name_admin_bar'        => __( 'Ações', 'litoralsustentavel' ),
+		'archives'              => __( 'Arquivo de Ações', 'litoralsustentavel' ),
+		'parent_item_colon'     => __( 'Ação parente:', 'litoralsustentavel' ),
+		'all_items'             => __( 'Todas ações', 'litoralsustentavel' ),
+		'add_new_item'          => __( 'Adicionar nova Ação', 'litoralsustentavel' ),
+		'add_new'               => __( 'Adicionar nova', 'litoralsustentavel' ),
+		'new_item'              => __( 'Nova ação', 'litoralsustentavel' ),
+		'edit_item'             => __( 'Editar ação', 'litoralsustentavel' ),
+		'update_item'           => __( 'Atualizar ação', 'litoralsustentavel' ),
+		'view_item'             => __( 'Ver ação', 'litoralsustentavel' ),
+		'search_items'          => __( 'Buscar ação', 'litoralsustentavel' ),
+		'not_found'             => __( 'Não encontrado', 'litoralsustentavel' ),
+		'not_found_in_trash'    => __( 'Não encontrado na lixeira', 'litoralsustentavel' ),
+		'featured_image'        => __( 'Imagem destacada', 'litoralsustentavel' ),
+		'set_featured_image'    => __( 'Setar imagem destacada', 'litoralsustentavel' ),
+		'remove_featured_image' => __( 'Remover imagem destacada', 'litoralsustentavel' ),
+		'use_featured_image'    => __( 'Usar como imagem destacada', 'litoralsustentavel' ),
+		'insert_into_item'      => __( 'Inserir na ação', 'litoralsustentavel' ),
+		'uploaded_to_this_item' => __( 'Enviar para essa ação', 'litoralsustentavel' ),
+		'items_list'            => __( 'Lista de ações', 'litoralsustentavel' ),
+		'items_list_navigation' => __( 'Navegação da lista de ações', 'litoralsustentavel' ),
+		'filter_items_list'     => __( 'Filtrar lista de ações', 'litoralsustentavel' ),
+	);
+	$args = array(
+		'label'                 => __( 'Ação', 'litoralsustentavel' ),
+		'description'           => __( 'Ações', 'litoralsustentavel' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
+		'taxonomies'            => array( 'temas', 'eixos' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-clipboard',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'acoes', $args );
+
 }
 add_action( 'init', 'custom_taxonomy_agenda', 0 );
 
@@ -338,17 +388,11 @@ function agenda_ajax() {
 
 	$args = array( 
 		'posts_per_page' => 16,
-		'post_type' => 'post',
+		'post_type' => 'acoes',
 		'tax_query' => array(
 			'relation' => 'AND',
 		),
-		'paged' => $_POST[ 'page' ],
-		'meta_query' => array(
-			array(
-				'key'     => 'show_in_agenda',
-				'value'   => 'true',
-			),
-		)
+		'paged' => $_POST[ 'page' ]
 	);
 
 	if ( isset( $_POST[ 'eixos']  ) ) {
@@ -394,4 +438,30 @@ function agenda_ajax() {
 	}
 
 	wp_die();
+}
+function brasa_get_page_by_template( $template ) {
+	$pages = get_pages(	array(
+  	  	'meta_key' => '_wp_page_template',
+    	'meta_value' => $template
+	) );
+	if ( is_array( $pages ) && isset( $pages[0] ) ) {
+		return $pages[0]->ID;
+	}
+	return false;
+}
+function brasa_hex2rgb($hex) {
+   $hex = str_replace("#", "", $hex);
+
+   if(strlen($hex) == 3) {
+      $r = hexdec(substr($hex,0,1).substr($hex,0,1));
+      $g = hexdec(substr($hex,1,1).substr($hex,1,1));
+      $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+   } else {
+      $r = hexdec(substr($hex,0,2));
+      $g = hexdec(substr($hex,2,2));
+      $b = hexdec(substr($hex,4,2));
+   }
+   $rgb = sprintf( '%s, %s, %s', $r, $g, $b );
+   //return implode(",", $rgb); // returns the rgb values separated by commas
+   return $rgb; // returns an array with the rgb values
 }

@@ -3,9 +3,9 @@
 ?>
 <article class="col-md-3 each-agenda-post animated bounceIn">
 	<?php $style = '';?>
-	<?php if ( $terms = get_the_terms( get_the_ID(), 'temas' ) ) : ?>
+	<?php if ( $terms = get_the_terms( get_the_ID(), 'eixos' ) ) : ?>
 		<?php if ( $color = get_field( 'color', $terms[0] ) ) : ?>
-			<?php $style = sprintf( 'border-left:7px solid %s;', $color );?>
+			<?php $style = sprintf( 'border-left:10px solid %s;', $color );?>
 		<?php endif;?>
 	<?php endif;?>
 	<a href="<?php the_permalink();?>" style="<?php echo esc_attr( $style );?>">
@@ -22,13 +22,5 @@
 				<?php endif;?>
 			<?php endif;?>
 		</div><!-- .post-infos -->
-		<div class="col-md-12 tax-info">
-			<?php if ( $terms = get_the_terms( get_the_ID(), 'eixos' ) ) : ?>
-				<?php echo apply_filters( 'the_title', $terms[0]->name );?>
-			<?php endif;?>
-			<?php if ( $terms = get_the_terms( get_the_ID(), 'temas' ) ) : ?>
-				• <?php echo apply_filters( 'the_title', $terms[0]->name );?>
-			<?php endif;?>
-		</div><!-- .col-md-12 tax-info -->
 	</a>
 </article><!-- .col-md-3 each-agenda-post -->

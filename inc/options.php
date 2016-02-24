@@ -17,6 +17,11 @@ $odin_theme_options->set_tabs(
             'title' => __('Home','litoral-sustentavel'), // Título da aba.
         ),
         array(
+            'id' => 'acoes_cfg', // ID da aba e nome da entrada no banco de dados.
+            'title' => __('Agenda de Ações','litoral-sustentavel'), // Título da aba.
+        ),
+
+        array(
             'id' => 'footer_cfg', // ID da aba e nome da entrada no banco de dados.
             'title' => __('Rodapé','litoral-sustentavel'), // Título da aba.
         ),
@@ -91,6 +96,19 @@ $odin_theme_options->set_fields(
                 ),
             )
         ),
+        'home_section' => array(
+            'tab'   => 'acoes_cfg', // Sessão da aba odin_general
+            'title' => __('Configurações da Agenda de Ações','litoral-sustentavel'),
+            'fields' => array(
+                array(
+                    'id' => 'title',
+                    'label' => __('Título no cabeçalho de cada Ação','litoral-sustentavel'),
+                    'type' => 'text',
+                    //'description' => __( 'Descrition Example', 'odin' )
+                ),
+            )
+        ),
+
         'footer_section' => array(
             'tab'   => 'footer_cfg', // Sessão da aba odin_general
             'title' => __('Configurações do rodapé','litoral-sustentavel'),

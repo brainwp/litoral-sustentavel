@@ -4654,7 +4654,7 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 .each-agenda-post .post-infos {
 	background: url( 'imagens/post-infos.png' ) no-repeat center top;
 	background-size: cover;
-	width: 95%;
+	width: 92%;
 	padding-bottom: 10px;
 	position: absolute;
 	top: 0;
@@ -4677,9 +4677,11 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 	background: #FFF;
 	padding: 3px;
 	position: absolute;
-	right: 0;
-	bottom:22px;
-	margin-right: 15px;	
+	left: -21px;
+	bottom: -20px;
+	margin-left: 15px;
+	width: 64px;
+	height: 64px;	
 }
 .load-more-agenda {
 	color: #FFF !important;
@@ -4706,4 +4708,120 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 	body.page-template-page-agenda-desenvolvimento #abas-content .page-the-title {
 		padding-top:20px;
 	}
+}
+/* single-acoes.php */
+body.single-acoes .header-camara .the-title {
+	padding-top:20px;
+}
+.acoes-header-bg {
+	width: 100%;
+	background: url( 'imagens/fundo-home.png' );
+	height:40px;
+}
+.acoes-header {
+	background-color:rgba(146,2,2,0.80);
+}
+.acoes-header > div.container {
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+.acoes-header .tax-eixos img {
+	border-radius: 50%;
+	background: #FFF;
+	padding: 3px;
+	margin-right:5px;
+}
+.acoes-header .tax-eixos span {
+	color:#FFF;
+	font-size:1.2em;
+	padding-top:2px;
+}
+.acoes-header a {
+	text-decoration: none !important;
+}
+.acoes-header .search-btn-icon {
+	background: #FFF;
+	color:#920202;
+	font-size:32px;
+	border-radius: 50%;
+	padding:3px;
+}
+.acoes-header a .text {
+	color:#FFF;
+	font-size:1.2em;
+	padding-top:7px;
+	padding-left: 3px;
+	display: inline-block;
+}
+@media only screen and (min-width: 1000px) {
+	.acoes-container {
+		padding-left: 10% !important;
+		padding-right: 20% !important;
+		margin:0 !important;
+	}
+	.acoes-content .wp-caption.alignleft, 
+	.acoes-content .alignleft {
+		margin-left:-15%;
+	}
+	.acoes-content .wp-caption.alignright, 
+	.acoes-content .alignright {
+		margin-right:-15%;
+	}
+
+}
+@media only screen and (max-width: 700px) {
+	.acoes-header .tax-eixos {
+		clear: both;
+		width:100%;
+		margin-bottom:15px;
+	}
+	.acoes-header .search-btn {
+		clear: both;
+		float:left !important;
+		width: 100%;
+	}
+	.acoes-content .wp-caption.alignleft, 
+	.acoes-content .alignleft {
+		float: left !important;
+		clear: both;
+		width:100%;
+	}
+	.acoes-content .wp-caption.alignright, 
+	.acoes-content .alignright {
+		float: left !important;
+		clear: both;
+		width:100%;
+	}
+
+}
+.acoes-content {
+	background: #e3e3e3;
+	padding-bottom: 80px;
+}
+.acoes-content * {
+	font-weight: 300 !important;
+	color:#595959 !important;
+}
+.acoes-content h1 {
+	font-weight: 300;
+	color:#595959;
+	font-size:2.5em;
+}
+.acoes-footer {
+	min-height: 300px;
+	box-shadow: 0px -25px 23px 0px rgba(0,0,0,0.10);
+	background: #FFF;
+	border-top: #FFF solid 1px;
+}
+.acoes-footer h2 {
+	font-weight: 300;
+	color:#595959;
+	font-size:2.5em;
+	text-align: center;
+	width: 100%;
+	padding-bottom:20px;
+}
+.acoes-footer  > div.container {
+	padding-top:30px;
+	padding-bottom: 10px;
 }

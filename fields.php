@@ -139,7 +139,7 @@ if(function_exists("register_field_group"))
 {
     register_field_group(array (
         'id' => 'acf_eixos',
-        'title' => 'Eixos',
+        'title' => 'Eixos - Imagem',
         'fields' => array (
             array (
                 'key' => 'field_56c20d07ccc1c',
@@ -172,14 +172,14 @@ if(function_exists("register_field_group"))
     ));
     register_field_group(array (
         'id' => 'acf_temas',
-        'title' => 'Temas',
+        'title' => 'Eixo - Cor',
         'fields' => array (
             array (
                 'key' => 'field_56c20f44270ee',
                 'label' => 'Cor',
                 'name' => 'color',
                 'type' => 'color_picker',
-                'instructions' => 'Selecione a cor do tema',
+                'instructions' => 'Selecione a cor do eixo',
                 'default_value' => '#' . dechex( rand( 0x000000, 0xFFFFFF ) ),
             ),
         ),
@@ -188,7 +188,7 @@ if(function_exists("register_field_group"))
                 array (
                     'param' => 'ef_taxonomy',
                     'operator' => '==',
-                    'value' => 'temas',
+                    'value' => 'eixos',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
