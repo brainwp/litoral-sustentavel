@@ -4654,7 +4654,7 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 .each-agenda-post .post-infos {
 	background: url( 'imagens/post-infos.png' ) no-repeat center top;
 	background-size: cover;
-	width: 92%;
+	width: 93%;
 	padding-bottom: 10px;
 	position: absolute;
 	top: 0;
@@ -4680,8 +4680,8 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 	left: -21px;
 	bottom: -20px;
 	margin-left: 15px;
-	width: 64px;
-	height: 64px;	
+	width: 48px;
+	height: 48px;	
 }
 .load-more-agenda {
 	color: #FFF !important;
@@ -4734,7 +4734,8 @@ body.single-acoes .header-camara .the-title {
 .acoes-header .tax-eixos span {
 	color:#FFF;
 	font-size:1.2em;
-	padding-top:2px;
+	padding-top:7px;
+	font-weight: 300;
 }
 .acoes-header a {
 	text-decoration: none !important;
@@ -4750,8 +4751,9 @@ body.single-acoes .header-camara .the-title {
 	color:#FFF;
 	font-size:1.2em;
 	padding-top:7px;
-	padding-left: 3px;
+	padding-left: 7px;
 	display: inline-block;
+	font-weight: 300;
 }
 @media only screen and (min-width: 1000px) {
 	.acoes-container {

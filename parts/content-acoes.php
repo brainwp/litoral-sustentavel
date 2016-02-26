@@ -5,12 +5,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<div class="col-md-12">
-					<div class="col-md-12">
-						<h1 class="the-title"><?php the_title();?></h1><!-- .the-title -->
-						<?php the_content();?>
-					</div><!-- .col-md-12 -->
-				</div><!-- .col-md-12 acoes-container -->
+				<h1 class="the-title"><?php the_title();?></h1><!-- .the-title -->
+				<?php the_content();?>
 			</div><!-- .col-md-12 -->
 		</div><!-- .row -->
 	</div><!-- .container -->

@@ -22,17 +22,11 @@ endif;
 <section class="col-md-12 acoes-footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="col-md-12">
-					<div class="col-md-12">
-						<h2><?php printf( __( 'Outras agendas em %s', 'litoralsustentavel' ), $term_name );?></h2><!-- .the-title -->
-						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-							<?php get_template_part( 'parts/content-agenda-posts' );?>
-						<?php endwhile;?>
-						<?php wp_reset_postdata();?>
-					</div><!-- .col-md-12 -->
-				</div><!-- .col-md-12 acoes-container -->
-			</div><!-- .col-md-12 -->
+			<h2><?php printf( __( 'Outras agendas em %s', 'litoralsustentavel' ), $term_name );?></h2><!-- .the-title -->
+			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				<?php get_template_part( 'parts/content-agenda-posts' );?>
+			<?php endwhile;?>
+			<?php wp_reset_postdata();?>
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- .col-md-12 acoes-content -->

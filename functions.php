@@ -41,7 +41,7 @@ function custom_taxonomy_agenda() {
 		'show_tagcloud'              => true,
 	);
 	register_taxonomy( 'eixos', array( 'acoes' ), $args );
-	
+	/*
 	$labels = array(
 		'name'                       => _x( 'Temas', 'Taxonomy General Name', 'litoralsustentavel' ),
 		'singular_name'              => _x( 'Tema', 'Taxonomy Singular Name', 'litoralsustentavel' ),
@@ -74,15 +74,16 @@ function custom_taxonomy_agenda() {
 		'show_tagcloud'              => true,
 	);
 	register_taxonomy( 'temas', array( 'acoes' ), $args );
+	*/
 
 	$labels = array(
 		'name'                  => _x( 'Ações', 'Post Type General Name', 'litoralsustentavel' ),
 		'singular_name'         => _x( 'Ação', 'Post Type Singular Name', 'litoralsustentavel' ),
-		'menu_name'             => __( 'Ações', 'litoralsustentavel' ),
-		'name_admin_bar'        => __( 'Ações', 'litoralsustentavel' ),
+		'menu_name'             => __( 'Ações da Agenda', 'litoralsustentavel' ),
+		'name_admin_bar'        => __( 'Ações da Agenda', 'litoralsustentavel' ),
 		'archives'              => __( 'Arquivo de Ações', 'litoralsustentavel' ),
 		'parent_item_colon'     => __( 'Ação parente:', 'litoralsustentavel' ),
-		'all_items'             => __( 'Todas ações', 'litoralsustentavel' ),
+		'all_items'             => __( 'Todas as ações', 'litoralsustentavel' ),
 		'add_new_item'          => __( 'Adicionar nova Ação', 'litoralsustentavel' ),
 		'add_new'               => __( 'Adicionar nova', 'litoralsustentavel' ),
 		'new_item'              => __( 'Nova ação', 'litoralsustentavel' ),
@@ -104,7 +105,7 @@ function custom_taxonomy_agenda() {
 	);
 	$args = array(
 		'label'                 => __( 'Ação', 'litoralsustentavel' ),
-		'description'           => __( 'Ações', 'litoralsustentavel' ),
+		'description'           => __( 'Ações da', 'litoralsustentavel' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
 		'taxonomies'            => array( 'temas', 'eixos' ),
