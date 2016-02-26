@@ -21,21 +21,6 @@
 						<?php endforeach;?>
 					</div><!-- .col-md-10 eixos-buttons -->
 				</div><!-- .col-md-12 filter eixos -->
-				<div class="col-md-12 filter temas">
-					<span class="help col-md-2 pull-left">
-						<?php _e( 'Temas', 'litoralsustentavel' );?>
-					</span>
-					<div class="col-md-10 pull-right temas-buttons">
-						<?php $terms = get_terms( 'temas', array( 'hide_empty' => 1 ) );?>
-						<?php foreach ( $terms as $term ) : ?>
-							<?php if ( $color = get_field( 'color', $term ) ) : ?>
-								<span class="temas-btn each-agenda-filter-btn" data-term-id="<?php echo esc_attr( $term->term_id );?>" data-taxonomy="temas" style="border-left-color:<?php echo esc_attr( $color );?>">
-									<?php echo apply_filters( 'the_title', $term->name );?>
-								</span>
-							<?php endif;?>
-						<?php endforeach;?>
-					</div><!-- .col-md-10 eixos-buttons -->
-				</div><!-- .col-md-12 filter eixos -->
 				<div class="col-md-12 filter temas busca">
 					<span class="help col-md-2 pull-left">
 						<?php _e( 'Palavras chaves', 'litoralsustentavel' );?>

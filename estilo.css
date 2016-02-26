@@ -4510,7 +4510,8 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
  	border-left-color: #00abdf;
 }
 .agenda-filtros {
-	background: #008cb7;
+	background: url( 'imagens/bg-agendas-filtros.jpg') left no-repeat;
+	background-size: cover;
 }
 .agenda-filtros > div.container {
 	padding-top: 20px;
@@ -4527,6 +4528,7 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 	font-size: 1.3em;
 	margin-right:10px;
 	margin-top:15px;
+	transition:300ms ease all;
 }
 .eixo-btn img {
 	position: absolute;
@@ -4535,10 +4537,14 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 	padding: 5px;
 	margin-left:-47px;
 	margin-top: -10px;
+	width:43px;
+	height:43px;
 }
 .eixo-btn.selected, 
 .temas-btn.selected {
 	text-decoration: underline;
+	background: #c8c3c3 !important;
+	transition:300ms ease all;
 }
 .agenda-filtros .help {
 	font-size: 1.2em;
@@ -4636,6 +4642,7 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 .each-agenda-post a {
 	width:100%;
 	display: inline-block;
+	transition:400ms ease all;
 }
 .each-agenda-post {
 	padding-left: 5px !important;
@@ -4682,6 +4689,13 @@ body.page-template-page-agenda-desenvolvimento .abas-nav ul li.active span.icon 
 	margin-left: 15px;
 	width: 48px;
 	height: 48px;	
+}
+.all-posts:hover > .each-agenda-post > a {
+	opacity: 0.50;
+	transition:500ms ease all;
+} 
+.each-agenda-post a:hover {
+	opacity: 1.0 !important;
 }
 .load-more-agenda {
 	color: #FFF !important;

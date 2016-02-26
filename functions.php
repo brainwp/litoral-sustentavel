@@ -401,16 +401,7 @@ function agenda_ajax() {
 			'taxonomy' => 'eixos',
 			'field'    => 'term_id',
 			'terms'    => $_POST[ 'eixos'],
-			'operator' => 'AND'
-		); 
-	}
-	if ( isset( $_POST[ 'temas']  ) ) {
-		$args[ 'tax_query' ][] = array(
-			'taxonomy' => 'temas',
-			'field'    => 'term_id',
-			'terms'    => $_POST[ 'temas'],
-			'operator' => 'AND'
-
+			'operator' => 'OR'
 		); 
 	}
 	if ( ! isset( $_POST[ 'eixos' ] ) && ! isset( $_POST[ 'temas' ] ) ) {
@@ -435,7 +426,7 @@ function agenda_ajax() {
 		} 
 	}
 	else {
-		_e( 'Nada encontrado com esses termos de busca. ', 'litoralsustentavel' );
+		_e( '<h1>Ooops! Não existem ações com estas características, desculpe!</h1>', 'litoralsustentavel' );
 	}
 
 	wp_die();
