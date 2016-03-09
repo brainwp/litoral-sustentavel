@@ -2,9 +2,11 @@
 /* Each publicações */
 ?>
 <article class="col-md-3 each-publicacoes">
+	<?php if( has_post_thumbnail() ) : ?>
 	<div class="col-md-12 image">
-		<?php the_post_thumbnail( 'medium' );?>
+ 		<?php the_post_thumbnail( 'medium' );?>
 	</div><!-- .col-md-12 image -->
+	<?php endif;?>
 	<div class="content">
 		<h3 class="the-title-content"><?php the_title();?></h3><!-- .the-title -->
 		<div class="the-content">
