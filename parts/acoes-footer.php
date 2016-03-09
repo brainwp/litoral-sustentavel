@@ -22,7 +22,7 @@ endif;
 <section class="col-md-12 acoes-footer">
 	<div class="container">
 		<div class="row">
-			<h2><?php printf( __( 'Outras agendas em %s', 'litoralsustentavel' ), $term_name );?></h2><!-- .the-title -->
+			<h2><?php printf( __( 'Outras Ações em %s', 'litoralsustentavel' ), $term_name );?></h2><!-- .the-title -->
 			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<?php get_template_part( 'parts/content-agenda-posts' );?>
 			<?php endwhile;?>
