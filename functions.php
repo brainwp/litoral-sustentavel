@@ -390,9 +390,7 @@ function agenda_ajax() {
 	$args = array( 
 		'posts_per_page' => 16,
 		'post_type' => 'acoes',
-		'tax_query' => array(
-			'relation' => 'AND',
-		),
+		'tax_query' => array(),
 		'paged' => $_POST[ 'page' ]
 	);
 
@@ -401,7 +399,6 @@ function agenda_ajax() {
 			'taxonomy' => 'eixos',
 			'field'    => 'term_id',
 			'terms'    => $_POST[ 'eixos'],
-			'operator' => 'OR'
 		); 
 	}
 	if ( ! isset( $_POST[ 'eixos' ] ) ) {
