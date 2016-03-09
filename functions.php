@@ -404,7 +404,7 @@ function agenda_ajax() {
 			'operator' => 'OR'
 		); 
 	}
-	if ( ! isset( $_POST[ 'eixos' ] ) && ! isset( $_POST[ 'temas' ] ) ) {
+	if ( ! isset( $_POST[ 'eixos' ] ) ) {
 		unset( $args[ 'tax_query' ] );	
 	}
 
@@ -413,10 +413,11 @@ function agenda_ajax() {
 	}
 	$query = new WP_Query( $args );
 	header( 'max-pages: ' . $query->max_num_pages );
+	header( 'num_posts: ' . $query->found_posts );
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			if ( ! get_the_terms( get_the_ID(), 'eixos' ) && ! get_the_terms( get_the_ID(), 'temas' ) ) {
+			if ( ! get_the_terms( get_the_ID(), 'eixos' ) ) {
 				continue;
 			} 
 			if ( ! has_post_thumbnail() ) {
