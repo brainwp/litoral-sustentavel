@@ -34,7 +34,7 @@ $options = get_option('footer_cfg');
 					<div class="coluna-sitemap">
 						<?php wp_nav_menu( array( 'theme_location' => 'sitemap-4' ) ); ?>
 					</div>
-					<div class="coluna-sitemap">				 
+					<div class="coluna-sitemap five-map">				 
 						<?php wp_nav_menu( array( 'theme_location' => 'sitemap-5' ) ); ?>
 					</div>
 				</div><!-- footer-widget-area -->
