@@ -4400,9 +4400,22 @@ section.equipe-contato .the-content input, section.equipe-contato .the-content t
 	padding-left:10px !important;
 	padding-bottom:10px;
 }
+.each-publicacoes .bottom {
+	width: 90%;
+	height: 70px;
+	position: absolute;
+	bottom: 12%;
+	background: url('imagens/bg-bottom-each-slider.png') center -11px repeat-x;
+	z-index: 0;
+}
 .each-publicacoes .content {
 	color:#8a8a8a;
-	padding-bottom:30px;
+	height: 250px;
+	overflow: hidden;
+}
+.each-publicacoes .content .the-content {
+	overflow: hidden;
+	height:95px;
 }
 .each-publicacoes .the-title-content {
 	padding-top:5px;
