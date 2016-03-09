@@ -89,7 +89,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_56aa6211e29f8',
-				'label' => 'Link no botão Leia Mais na sub-página de destaque',
+				'label' => 'Link no botão Veja Mais na sub-página de destaque',
 				'name' => 'link-readmore',
 				'type' => 'text',
 				'default_value' => '',
