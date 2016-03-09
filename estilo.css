@@ -1725,7 +1725,7 @@ a:hover {
 
 }
 .coluna-sitemap {
-  max-width:  22%;
+  max-width:18%;
 }
 .home #fundo-content-bottom img{
 	bottom:-15px;
@@ -2154,9 +2154,6 @@ span.current {
 }
 span.dots {
 color: #104493;
-}
-.coluna-sitemap.five-map {
-	margin-left:0 !important;
 }
 
 
