@@ -4757,6 +4757,8 @@ body.single-acoes .header-camara .the-title {
 	background: #FFF;
 	padding: 3px;
 	margin-right:5px;
+	height:48px;
+	width:48px;
 }
 .acoes-header .tax-eixos span {
 	color:#FFF;
@@ -4766,6 +4768,9 @@ body.single-acoes .header-camara .the-title {
 }
 .acoes-header a {
 	text-decoration: none !important;
+}
+.acoes-header .search-btn {
+	padding-top:5px;
 }
 .acoes-header .search-btn-icon {
 	background: #FFF;
