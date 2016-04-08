@@ -6,9 +6,6 @@
 		<div class="row">
 			<div class="col-md-7 pull-left">
 				<div class="col-md-12 filter eixos">
-					<span class="help col-md-2 pull-left">
-						<?php _e( 'Eixos', 'litoralsustentavel' );?>
-					</span>
 					<div class="col-md-10 pull-right eixos-buttons">
 						<?php $terms = get_terms( 'eixos', array( 'hide_empty' => 1 ) );?>
 						<?php foreach ( $terms as $term ) : ?>
