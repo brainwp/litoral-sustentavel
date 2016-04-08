@@ -6,7 +6,7 @@ if ( $field = get_post_meta( get_the_ID(), 'featured_cat', true ) ) :
 	<div class="container">
 		<div class="row">
 			<h3 class="the-title">
-				<?php _e( 'Ultimas Publicações', 'litoralsustentavel' );?>
+				<?php _e( 'Últimas Publicações', 'litoralsustentavel' );?>
 			</h3><!-- .the-title -->
 			<?php $args = array(
 			'post_type' => 'post',
