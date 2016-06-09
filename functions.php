@@ -141,11 +141,11 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 2
 	add_image_size( 'thumb-noticias', 255, 130, true );
 	add_image_size( 'thumb-apresentacoes', 255, 195, true );
 	add_image_size( 'thumb-boletins', 255, 255, true );
-	add_image_size( 'thumb-destaques', 710, 260, true );
+	add_image_size( 'thumb-destaques',  600, 270, true);
 	add_image_size( 'thumb-single', 1023, 320, true );
 	add_image_size( 'slider-4-colunas', 255, 130, true );
 	add_image_size( 'slider-3-colunas', 510, 230, true );
-	add_image_size( 'slider-2-colunas', 700, 540, true );
+	add_image_size( 'slider-2-colunas', 700, 316, true );
 	
 	
 }

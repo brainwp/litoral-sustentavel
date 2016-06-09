@@ -22,7 +22,7 @@ $option_home = get_option('home_cfg');
 <?php }
 ?>
 <div id="div_img_header">
-// <?php
+ <?php
 // 		// Check if this is a post or page, if it has a thumbnail, and if it's a big one
 // 		if ( is_singular() && current_theme_supports( 'post-thumbnails' ) &&
 // 				has_post_thumbnail( $post->ID ) &&
