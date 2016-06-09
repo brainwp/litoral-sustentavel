@@ -3101,6 +3101,17 @@ font-family: 'Candal', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Passion One', cursive;
 }
+html .navbar-collapse.collapse{
+	display: none;
+}
+@media (min-width: 991px){
+	html  #main-navigation .navbar-collapse.collapse{
+		display: none;
+	}
+}
+html .navbar-toggle{
+	display: block;
+}
 #primary-menu{
 	position:relative;
 	z-index:990;
@@ -3423,7 +3434,9 @@ img#logo-home{
 	padding-top:40px;
 
 }
-
+.sliders-home  .is_slider img{
+	padding: 2%!important;
+}
 .slick-slider{
 	position:relative;
 	z-index:100;

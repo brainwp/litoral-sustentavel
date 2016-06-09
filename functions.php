@@ -143,6 +143,9 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 2
 	add_image_size( 'thumb-boletins', 255, 255, true );
 	add_image_size( 'thumb-destaques', 710, 260, true );
 	add_image_size( 'thumb-single', 1023, 320, true );
+	add_image_size( 'slider-4-colunas', 255, 130, true );
+	add_image_size( 'slider-3-colunas', 510, 230, true );
+	add_image_size( 'slider-2-colunas', 700, 540, true );
 	
 	
 }
@@ -268,10 +271,10 @@ function slider_resumo($str){
   	global $brasa_slider_id, $brasa_slider_item_id;
 	
     
-  if(get_the_title($brasa_slider_id) != 'Home'){
-		return $str;
-	}
- else{
+ //  if(get_the_title($brasa_slider_id) != 'Home'){
+	// 	return $str;
+	// }
+ // else{
 
 	//aqui vc retorna o resumo
 		$categoria_html ="";
@@ -295,18 +298,35 @@ function slider_resumo($str){
 			return $str;
 		}
 		
-	}
+	// }
 }
 add_filter('brasa_slider_loop_after_image','slider_resumo');
+function adiciona_css_slider($classes, $id){
+	$tamanho = get_post_meta( $id, 'brasa_slider_size', true );
 
-function size($size){
-	$size="thumb-destaques";
-	return $size;
+	return $classes." ".$tamanho;
 }
-add_filter('brasa_slider_img_size','size');
+
+add_filter('brasa_slider_css_classes','adiciona_css_slider', 10, 2 );
+
+// function size($size){
+// 	if (condition) {
+// 		# code...
+// 	}
+// 	$size="thumb-destaques";
+// 	return $size;
+// }
+// add_filter('brasa_slider_img_size','size');
 
 
 function enqueue_bootstrap(){
+
+	wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), null, true );
+	wp_localize_script( 'odin-main', 'odin', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+
+// Main jQuery.
+	wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), null, true );
+
 	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/assets/js/libs/bootstrap.min.js', array(), null, true );
 	wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css' );
 }
@@ -326,12 +346,6 @@ $brasa_social_feed = new Brasa_Social_Feed(
 		'youtube_playlist' => $option_soc['youtube_playlist'],
 	)
 );
-
-wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), null, true );
-wp_localize_script( 'odin-main', 'odin', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
-
-// Main jQuery.
-wp_enqueue_script( 'odin-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), null, true );
 
 
 /**

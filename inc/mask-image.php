@@ -29,6 +29,7 @@ function resize($newWidth, $newHeight, $originalFile) {
     }
 
     $img = $image_create_func($originalFile);
+    echo $img;
     list($width, $height) = getimagesize($originalFile);
 
     $tmp = imagecreatetruecolor($newWidth, $newHeight);
