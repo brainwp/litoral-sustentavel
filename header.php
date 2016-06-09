@@ -87,7 +87,6 @@ $options = get_option('social_cfg');
 <nav id="primary-menu" class="col-md-12">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 pull-left">
 				<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 			
 					<div class="navbar-header">
@@ -118,11 +117,7 @@ $options = get_option('social_cfg');
 							);
 						?>
 
-						
-					</div><!-- .navbar-collapse -->
-				</nav><!-- #main-menu -->
-		    </div><!-- .col-md-8 pull-left -->
-		    <div class="col-md-4 pull-right icons">
+						 <div class="pull-right icons">
 				<?php $link = (!empty($options['facebook']))? $options['facebook'] : '#'; ?>
 		    	<a class="genericon genericon-facebook-alt" href="<?php echo $link; ?>"></a>
 		    		<?php $link = (!empty($options['twitter']))? $options['twitter'] : '#'; ?>
@@ -134,7 +129,10 @@ $options = get_option('social_cfg');
 		    	<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="search-input" placeholder="<?php _e('Pressione enter','litoral-sustentavel');?>" />
 		    	</form>
 
-		    </div><!-- .col-md-4 pull-right -->
+					</div><!-- .navbar-collapse -->
+				</nav><!-- #main-menu -->
+		    </div><!-- .col-md-8 pull-left -->
+		   
 		</div><!-- .row -->
 	</div><!-- .container -->
 </nav><!-- #primary-menu .col-md-12 -->
