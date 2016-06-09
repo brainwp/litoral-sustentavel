@@ -65,7 +65,7 @@ $option_home = get_option('home_cfg');
 		</div>
 		<div class="container" id="container-slider">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8">
 					<h2 class="title-section">Destaques</h2>	
 					<div id="slider" class="col-md-12">
 						<img id="fundo-destaque" src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-destaque.png">

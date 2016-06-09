@@ -104,7 +104,7 @@ $options = get_option('social_cfg');
 						*/ ?>
 					</div>
 
-					<div class="collapse navbar-collapse navbar-main-navigation">
+					<div class="collapse  navbar-main-navigation">
 						<?php
 							wp_nav_menu(
 								array(
