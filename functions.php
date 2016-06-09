@@ -469,3 +469,62 @@ function brasa_hex2rgb($hex) {
    //return implode(",", $rgb); // returns the rgb values separated by commas
    return $rgb; // returns an array with the rgb values
 }
+
+
+// ACF Sliders
+// ACF Sliders
+// ACF Sliders
+// ACF Sliders
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_sliders',
+		'title' => 'Sliders',
+		'fields' => array (
+			array (
+				'key' => 'field_5756bf01218e9',
+				'label' => 'Slider da home',
+				'name' => 'slider-home',
+				'type' => 'true_false',
+				'instructions' => 'Selecione essa caixa para utilizar esse slider na home',
+				'message' => '',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_57577611218ea',
+				'label' => 'Ordem',
+				'name' => 'ordem',
+				'type' => 'number',
+				'instructions' => 'Ordem do slider na home (precisa selecionar o campo "slider da home")',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'min' => '',
+				'max' => '',
+				'step' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'brasa_slider_cpt',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+// ACF Sliders
+// ACF Sliders
+// ACF Sliders
