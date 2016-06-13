@@ -112,3 +112,22 @@
 	border-top: 1px solid #dfdfdf;
 	display: block;
 }
+#acf-slider-home{
+	width: 47%;
+    float: left;
+}
+#acf-ordem .label{
+	font-size: 15px;
+}
+#acf-field-ordem{
+    width: 39px;
+    padding: 2px 5px 2px 2px;
+    text-align: center;
+    }
+#advanced-sortables{
+	clear:both;
+
+}
+#acf_acf_sliders{
+	padding: 10px;
+}
