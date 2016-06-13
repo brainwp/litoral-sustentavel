@@ -7,11 +7,12 @@ $option_home = get_option('home_cfg');
 <?php 
 
 
-	if ($option_home['modal_na_home'] != ""){?>
+	if ($option_home['modal_na_home'] == "nao"){?>
 		<div id="fundo-modal" 
 		id="fundo-modal"></div>
 		<div id="reveal-modal-id" class="reveal-modal open" data-reveal="" >
-			<?php echo $option_home['modal_na_home']?>
+			<?php 
+			// echo $option_home['modal_na_home']?>
 			<a style="position: absolute;
 			  top: 30px;
 			  right: 30px;
