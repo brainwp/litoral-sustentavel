@@ -4,10 +4,6 @@
 <section id="query-noticias">
 	<div class="container">
 		<div class="row">
-			<h2 class="title-section title-section-homequery">
-				<?php _e('Notícias','litoral-sustentavel'); ?>
-			</h2>
-			
 			
 			<?php
 			// WP_Query arguments
