@@ -4887,3 +4887,18 @@ body.single-acoes .header-camara .the-title {
 	padding-top:30px;
 	padding-bottom: 10px;
 }
+html .navbar-default .navbar-toggle, html .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+html .navbar-default .navbar-toggle:focus, html .navbar-default .navbar-toggle:focus .icon-bar {
+}
+
+html #query-noticias .slick-dots {
+   
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    left: 0;
+}
+html #query-noticias .slick-dots li{
+	}
