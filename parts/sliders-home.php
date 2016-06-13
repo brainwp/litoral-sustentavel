@@ -4,7 +4,6 @@
 <section id="query-noticias">
 	<div class="container">
 		<div class="row">
-			
 			<?php
 			// WP_Query arguments
 			$args = array (
