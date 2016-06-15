@@ -504,6 +504,19 @@ if(function_exists("register_field_group"))
 				'max' => '',
 				'step' => '',
 			),
+			array (
+				'key' => 'field_5760d09d92bcd',
+				'label' => 'Link',
+				'name' => 'link',
+				'type' => 'text',
+				'instructions' => 'Escrever o endereço completo do link (com http:// ou https:// para o título do slider.',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
 		),
 		'location' => array (
 			array (

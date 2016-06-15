@@ -31,7 +31,19 @@
 					?>
 					<div class="sliders-home row">
 					<h2 class="title-section title-section-homequery">
-						<?php $nome=get_the_title( );echo $nome;?>
+						<?php $link = get_field('link');
+							if ($link!="") {
+						?>
+							<a href="<?php echo $link?>">
+								<?php $nome=get_the_title( );echo $nome;?>
+							</a>
+							<?php 
+						}
+						else{
+							$nome=get_the_title( );echo $nome;
+
+						}
+						?>
 					</h2>
 					<?php 
 					    echo do_shortcode('[brasa_slider name="'.$nome.'"]' );
