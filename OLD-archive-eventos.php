@@ -4,7 +4,6 @@ Template name: Agenda
  */
 
 get_header(); ?>
-<?php get_template_part('parts/comp-header-simples'); ?>
 
 <div id="container">
 		<div id="area-select" class="agenda">

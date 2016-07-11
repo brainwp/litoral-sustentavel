@@ -34,7 +34,13 @@
 	display: block;
 }
 
-
+#acf-destaque-home{
+	    float: left;
+    width: 47%;
+}
+#acf-ordem{
+	clear: both;
+}
 /* =Image upload
 -------------------------------------------------------------- */
 

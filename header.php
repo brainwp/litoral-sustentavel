@@ -12,6 +12,8 @@ $options = get_option('social_cfg');
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
 <title><?php
@@ -90,8 +92,8 @@ $options = get_option('social_cfg');
 			<div class="col-md-12 pull-left">
 				<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 			
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
+					<div class="navbar-header ">
+						<button type="button" class="navbar-toggle" data-toggle="esconder" data-target=".navbar-main-navigation">
 						<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -103,8 +105,21 @@ $options = get_option('social_cfg');
 
 						*/ ?>
 					</div>
+					<div class=" pull-right icons">
+						<?php $link = (!empty($options['facebook']))? $options['facebook'] : '#'; ?>
+				    	<a class="genericon genericon-facebook-alt" href="<?php echo $link; ?>"></a>
+				    		<?php $link = (!empty($options['twitter']))? $options['twitter'] : '#'; ?>
+				    	<a class="genericon genericon-twitter" href="<?php echo $link; ?>"></a>
+						<?php $link = (!empty($options['youtube']))? $options['youtube'] : '#'; ?>
+				    	<a class="genericon genericon-youtube" href="<?php echo $link; ?>"></a>
+				    	<a id="search-toggle" class="genericon genericon-search" href="#" data-open="false"></a>
+				    	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				    	<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="search-input" placeholder="<?php _e('Pressione enter','litoral-sustentavel');?>" />
+				    	</form>
 
-					<div class="collapse  navbar-main-navigation">
+				    </div><!-- .col-md-4 pull-right -->
+
+					<div class="navbar-main-navigation esconder">
 						<?php
 							wp_nav_menu(
 								array(
@@ -117,19 +132,6 @@ $options = get_option('social_cfg');
 								)
 							);
 						?>
-					<div class="col-md-4 pull-right icons">
-				<?php $link = (!empty($options['facebook']))? $options['facebook'] : '#'; ?>
-		    	<a class="genericon genericon-facebook-alt" href="<?php echo $link; ?>"></a>
-		    		<?php $link = (!empty($options['twitter']))? $options['twitter'] : '#'; ?>
-		    	<a class="genericon genericon-twitter" href="<?php echo $link; ?>"></a>
-				<?php $link = (!empty($options['youtube']))? $options['youtube'] : '#'; ?>
-		    	<a class="genericon genericon-youtube" href="<?php echo $link; ?>"></a>
-		    	<a id="search-toggle" class="genericon genericon-search" href="#" data-open="false"></a>
-		    	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-		    	<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="search-input" placeholder="<?php _e('Pressione enter','litoral-sustentavel');?>" />
-		    	</form>
-
-		    </div><!-- .col-md-4 pull-right -->
 						
 					</div><!-- .navbar-collapse -->
 				</nav><!-- #main-menu -->

@@ -147,5 +147,14 @@ jQuery(function($) {
 		console.log( page );
 		ajaxAgenda( page );
 	} );
-
+    $('button.navbar-toggle').on( 'click', function(e) {
+    	if ($('.navbar-main-navigation.esconder').attr('data-visibilidade')=='visivel') {
+    		$('.navbar-main-navigation.esconder').attr('data-visibilidade', 'invisivel');
+    		$('.navbar-main-navigation.esconder').fadeOut();
+    	}
+    	else{
+    		$('.navbar-main-navigation.esconder').attr('data-visibilidade', 'visivel');
+    		$('.navbar-main-navigation.esconder').fadeIn();
+    	}
+    });
 })

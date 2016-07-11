@@ -66,9 +66,9 @@ $option_home = get_option('home_cfg');
 		</div>
 		<div class="container" id="container-slider">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-6 destaque-home">
 					<h2 class="title-section">Destaques</h2>	
-					<div id="slider" class="col-md-12">
+					<div id="slider" class="col-md-12 ">
 						<img id="fundo-destaque" src="<?php echo get_stylesheet_directory_uri();?>/imagens/fundo-destaque.png">
 						<?php 
 							echo do_shortcode('[brasa_slider name="home"]');
@@ -77,8 +77,7 @@ $option_home = get_option('home_cfg');
 				
 				
 				</div>
-				<div class="col-md-1"></div>
-				<div id="widgets" class="col-md-4">
+				<div id="widgets" class="col-md-6">
 					<?php dynamic_sidebar( 'secondary-widget-area' ); ?>
 				</div>
 			</div>

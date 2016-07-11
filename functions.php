@@ -143,7 +143,7 @@ define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 2
 	add_image_size( 'thumb-boletins', 255, 255, true );
 	add_image_size( 'thumb-destaques',  600, 270, true);
 	add_image_size( 'thumb-single', 1023, 320, true );
-	add_image_size( 'slider-4-colunas', 255, 130, true );
+	add_image_size( 'slider-4-colunas', 287, 130, true );
 	add_image_size( 'slider-3-colunas', 510, 230, true );
 	add_image_size( 'slider-2-colunas', 700, 316, true );
 	
@@ -270,11 +270,27 @@ add_post_type_support('page','excerpt');
 function slider_resumo($str){
   	global $brasa_slider_id, $brasa_slider_item_id;
 	
-    
- //  if(get_the_title($brasa_slider_id) != 'Home'){
-	// 	return $str;
-	// }
- // else{
+  if(get_field('destaque-home', $brasa_slider_id) == 1){
+		$categoria_html ="";
+    	$the_post = get_post($brasa_slider_item_id);
+		$category = get_the_category($brasa_slider_item_id); 
+		$ultimo = end($category);
+
+		foreach ($category as $categoria){
+			$categoria_html .= '<h3><a href="'.get_category_link($categoria->term_id ).'"> '.$categoria->cat_name;
+			if ($categoria != $ultimo){
+				$categoria_html .=", ";
+			}
+			$categoria_html .='</a></h3>';
+		}
+		
+		$permalink = get_permalink( $brasa_slider_item_id);
+		if ($str){
+			$str .= "<div class='excerpt-slider destaque'><a href=".$permalink." class='bt-readmore'><h2>".$the_post->post_title."</h2></a></div>";
+			return $str;
+		}	
+	}
+ 	else if (get_field('slider-home', $brasa_slider_id) == 1){
 
 	//aqui vc retorna o resumo
 		$categoria_html ="";
@@ -282,7 +298,12 @@ function slider_resumo($str){
 		$category = get_the_category($brasa_slider_item_id); 
 		$ultimo = end($category);
 		$content = $the_post->post_content;
-		$excerpt = wp_trim_words( $content, 60, $more = null );
+		if (has_excerpt( $brasa_slider_item_id )) {
+			$excerpt=get_the_excerpt($brasa_slider_item_id );
+		}
+		else{
+			$excerpt = wp_trim_words( $content, 15, $more = null );
+		}
 
 		foreach ($category as $categoria){
 			$categoria_html .= '<h3><a href="'.get_category_link($categoria->term_id ).'"> '.$categoria->cat_name;
@@ -298,8 +319,12 @@ function slider_resumo($str){
 			return $str;
 		}
 		
-	// }
+	}
+	else{
+		return $str;
+	}
 }
+
 add_filter('brasa_slider_loop_after_image','slider_resumo');
 function adiciona_css_slider($classes, $id){
 	$tamanho = get_post_meta( $id, 'brasa_slider_size', true );
@@ -487,6 +512,15 @@ if(function_exists("register_field_group"))
 				'name' => 'slider-home',
 				'type' => 'true_false',
 				'instructions' => 'Selecione essa caixa para utilizar esse slider na home',
+				'message' => '',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_5713bb39seopd',
+				'label' => 'Destaque principal da home',
+				'name' => 'destaque-home',
+				'type' => 'true_false',
+				'instructions' => 'Selecione essa caixa para utilizar esse slider como principal da home',
 				'message' => '',
 				'default_value' => 0,
 			),
