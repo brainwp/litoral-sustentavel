@@ -299,7 +299,7 @@ function slider_resumo($str){
 		$ultimo = end($category);
 		$content = $the_post->post_content;
 		if (has_excerpt( $brasa_slider_item_id )) {
-			$excerpt=get_the_excerpt($brasa_slider_item_id );
+			$excerpt=$the_post->post_excerpt ;
 		}
 		else{
 			$excerpt = wp_trim_words( $content, 15, $more = null );
@@ -391,7 +391,6 @@ function slider_resumo_equipe($str){
 		$category = get_the_category($brasa_slider_item_id); 
 		$content = $the_post->post_content;
 		$excerpt = wp_trim_words( $content, 60, $more = null );
-
 		$permalink = get_permalink( $brasa_slider_item_id);
 		if ($str){
 			$str .= "<div class='excerpt-slider'><h2>".$the_post->post_title."</h2><span>".$excerpt."</span><div class='bottom'></div></div><a href=".$permalink." class='btn-readmore-publicacoes'><span>Veja Mais ></span>></a>";
